@@ -1,0 +1,70 @@
+/* .search
+-------------------------------------------------------------*/
+$r: '.search';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  position: relative;
+  border-radius: 100vw;
+  background-color: var(--color-3);
+
+  @media (width >= 62rem) {
+    max-width: 16rem;
+  }
+
+  // element
+  //---------------------------------------------------------
+  &__input {
+    width: 100%;
+    height: 100%;
+    font-size: 0.875rem;
+    border-radius: 100vw;
+    padding-inline: 2.75rem 1rem;
+
+    &::placeholder {
+      color: var(--color-6);
+    }
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    inset: 0;
+    right: auto;
+    color: var(--color-6);
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    border-radius: 100%;
+    transition:
+      color 0.3s,
+      background-color 0.3s;
+
+    &:hover,
+    &:focus {
+      color: var(--color-1);
+      background-color: var(--color-6);
+    }
+  }
+
+  // modifier
+  //---------------------------------------------------------
+  &__isAside {
+    @media (width >= 62rem) {
+      display: none;
+    }
+  }
+
+  &__isHeader {
+    @media (width < 61.9375rem) {
+      display: none;
+    }
+  }
+}
+
+// influence
+//-----------------------------------------------------------

@@ -1,0 +1,42 @@
+/* .themeSwitcher
+-------------------------------------------------------------*/
+$r: '.themeSwitcher';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--color-6);
+  font-size: 1.25rem;
+  border-radius: 100%;
+  background-color: var(--color-3);
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: var(--color-4);
+  }
+
+  // element
+  //---------------------------------------------------------
+
+  // modifier
+  //---------------------------------------------------------
+  &__isAside {
+    @media (width >= 62rem) {
+      display: none;
+    }
+  }
+
+  &__isHeader {
+    @media (width < 61.9375rem) {
+      display: none;
+    }
+  }
+}
+
+// influence
+//-----------------------------------------------------------

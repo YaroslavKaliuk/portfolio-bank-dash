@@ -1,0 +1,57 @@
+{
+  "common": {
+    "copyright": "Copyright",
+    "made": "Made with love ❤ by Yaroslav Kaliuk",
+    "selectTheme": "Select a theme",
+    "selectLanguage": "Select a language",
+    "notifications": "Notifications",
+    "save": "Save",
+    "avatar": "User avatar",
+    "unknown": "Unknown"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "transactions": "Transactions",
+    "accounts": "Accounts",
+    "investments": "Investments",
+    "creditCards": "Credit Cards",
+    "loans": "Loans",
+    "services": "Services",
+    "settings": "Settings"
+  },
+  "search": {
+    "placeholder": "Search for something..."
+  },
+  "form": {
+    "yourName": "Your Name",
+    "userName": "User Name",
+    "email": "Email",
+    "password": "Password",
+    "dateOfBirth": "Date of Birth",
+    "presentAddress": "Present Address",
+    "permanentAddress": "Permanent Address",
+    "city": "City",
+    "postalCode": "Postal Code",
+    "country": "Country",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "twoFactorAuth": "Two-factor Authentication",
+    "enableTwoFactor": "Enable or disable two factor authentication",
+    "currency": "Currency",
+    "timeZone": "Time Zone",
+    "notification": "Notification",
+    "digitalCurrency": "I send or receive digital currency",
+    "merchantOrder": "I receive merchant order",
+    "accountRecommendations": "There are recommendation for my account"
+  },
+  "meta": {
+    "title": "BankDash",
+    "description": "Created by Yaroslav Kaliuk"
+  },
+  "settings": {
+    "notification": "Notification",
+    "profile": "Profile",
+    "preferences": "Preferences",
+    "security": "Security"
+  }
+}

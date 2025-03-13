@@ -1,0 +1,64 @@
+/* .formSettings
+-------------------------------------------------------------*/
+$r: '.formSettings';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  display: grid;
+
+  @media (width < 74.9375rem) {
+    gap: 1rem 2rem;
+  }
+
+  @media (width >= 75rem) {
+    gap: 2rem 3rem;
+    grid-template-columns: max-content 1fr;
+  }
+
+  // element
+  //---------------------------------------------------------
+  &__avatar {
+    display: flex;
+
+    @media (width < 74.9375rem) {
+      justify-content: center;
+    }
+  }
+
+  &__inputs {
+    display: grid;
+
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (width < 74.9375rem) {
+      gap: 1rem 2rem;
+    }
+
+    @media (width >= 75rem) {
+      gap: 2rem 3rem;
+    }
+  }
+
+  &__button {
+    display: flex;
+
+    @media (width < 74.9375rem) {
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    @media (width >= 75rem) {
+      grid-column: 1 / -1;
+      justify-content: flex-end;
+    }
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}
+
+// influence
+//-----------------------------------------------------------

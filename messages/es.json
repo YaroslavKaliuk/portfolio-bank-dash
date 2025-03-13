@@ -1,0 +1,57 @@
+{
+  "common": {
+    "copyright": "Derechos de autor",
+    "made": "Hecho con amor ❤ por Yaroslav Kaliuk",
+    "selectTheme": "Selecciona un tema",
+    "selectLanguage": "Selecciona un idioma",
+    "notifications": "Notificaciones",
+    "save": "Guardar",
+    "avatar": "Avatar del usuario",
+    "unknown": "Desconocido"
+  },
+  "nav": {
+    "dashboard": "Tablero",
+    "transactions": "Transacciones",
+    "accounts": "Cuentas",
+    "investments": "Inversiones",
+    "creditCards": "Tarjetas de crédito",
+    "loans": "Préstamos",
+    "services": "Servicios",
+    "settings": "Configuración"
+  },
+  "search": {
+    "placeholder": "Busca algo..."
+  },
+  "form": {
+    "yourName": "Tu Nombre",
+    "userName": "Nombre de Usuario",
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "dateOfBirth": "Fecha de Nacimiento",
+    "presentAddress": "Dirección Actual",
+    "permanentAddress": "Dirección Permanente",
+    "city": "Ciudad",
+    "postalCode": "Código Postal",
+    "country": "País",
+    "currentPassword": "Contraseña Actual",
+    "newPassword": "Nueva Contraseña",
+    "twoFactorAuth": "Autenticación de Dos Factores",
+    "enableTwoFactor": "Activar o desactivar la autenticación de dos factores",
+    "currency": "Moneda",
+    "timeZone": "Zona Horaria",
+    "notification": "Notificación",
+    "digitalCurrency": "Envío o recibo moneda digital",
+    "merchantOrder": "Recibo pedidos de comerciantes",
+    "accountRecommendations": "Hay recomendaciones para mi cuenta"
+  },
+  "meta": {
+    "title": "BankDash",
+    "description": "Creado por Yaroslav Kaliuk"
+  },
+  "settings": {
+    "notification": "Notificación",
+    "profile": "Perfil",
+    "preferences": "Preferencias",
+    "security": "Seguridad"
+  }
+}

@@ -1,0 +1,43 @@
+/* .copyright
+-------------------------------------------------------------*/
+$r: '.copyright';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  display: flex;
+
+  @media (width < 35.4375rem) {
+    gap: 0.5rem;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  @media (width >= 35.5rem) {
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  // element
+  //---------------------------------------------------------
+  &__year,
+  &__link {
+    color: var(--color-6);
+    font-size: 0.875rem;
+  }
+
+  &__link {
+    text-align: center;
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--color-5);
+    }
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}
+
+// influence
+//-----------------------------------------------------------

@@ -1,0 +1,31 @@
+/* .app
+-------------------------------------------------------------*/
+$r: '.app';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  min-height: 100dvh;
+  color: var(--color-2);
+  font-size: 1rem;
+  font-family: 'Inter';
+  background-color: var(--color-3);
+
+  @media (width >= 62rem) {
+    grid-template-columns: 16rem 1fr;
+  }
+
+  // element
+  //---------------------------------------------------------
+  :focus-visible {
+    outline: 0.125rem solid var(--color-6);
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}
+
+// influence
+//-----------------------------------------------------------

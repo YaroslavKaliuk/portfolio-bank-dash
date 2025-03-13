@@ -1,0 +1,49 @@
+/* vars
+-------------------------------------------------------------*/
+:root {
+  --color-1: #ffffff;
+  --color-2: #232323;
+  --color-3: #f5f7fa;
+  --color-4: #e6eff5;
+  --color-5: #343c6a;
+  --color-6: #718ebf;
+  --color-7: #999999;
+  --color-8: #2d60ff;
+  --color-9: #ff4b4a;
+  --color-10: #dfeaf2;
+  --color-11: #16dbcc;
+
+  // &[data-theme='light'] {
+  //   --color-primary: var(--color-primary-light);
+  //   --background-color: var(--background-light);
+  //   --text-color: var(--text-light);
+  // }
+
+  // &[data-theme='dark'] {
+  //   --color-primary: var(--color-primary-dark);
+  //   --background-color: var(--background-dark);
+  //   --text-color: var(--text-dark);
+  // }
+}
+
+/* breakpoints
+-------------------------------------------------------------*/
+/*
+max-width: 374px => max-width: 23.375rem
+min-width: 375px => min-width: 23.4375rem
+
+max-width: 567px => max-width: 35.4375rem
+min-width: 568px => min-width: 35.5rem
+
+max-width: 767px => max-width: 47.9375rem
+min-width: 768px => min-width: 48rem
+
+max-width: 991px => max-width: 61.9375rem
+min-width: 992px => min-width: 62rem
+
+max-width: 1199px => max-width: 74.9375rem
+min-width: 1200px => min-width: 75rem
+
+max-width: 1399px => max-width: 87.4375rem
+min-width: 1400px => min-width: 87.5rem
+*/

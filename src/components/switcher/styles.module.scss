@@ -1,0 +1,59 @@
+/* .switcher
+-------------------------------------------------------------*/
+$r: '.switcher';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  gap: 1rem;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+
+  // element
+  //---------------------------------------------------------
+  input {
+    flex: none;
+    height: 2rem;
+    cursor: pointer;
+    position: relative;
+    aspect-ratio: 16/9;
+    border-radius: 100vw;
+    background-color: var(--color-10);
+    transition: background-color 0.3s;
+
+    &::before {
+      content: '';
+      inset: 0;
+      height: 80%;
+      margin: auto;
+      aspect-ratio: 1/1;
+      position: absolute;
+      border-radius: 100%;
+      background-color: var(--color-1);
+      transform: translate3d(-48%, 0, 0);
+      transition: transform 0.3s;
+    }
+
+    &:checked {
+      background-color: var(--color-11);
+
+      &::before {
+        transform: translate3d(48%, 0, 0);
+      }
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+
+      ~ #{$r}__title {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}
