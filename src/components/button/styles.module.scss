@@ -15,7 +15,8 @@ $r: '.button';
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  padding: 0 4rem;
+  padding-inline: 4rem;
+  white-space: nowrap;
   border-radius: 100vw;
   background-color: var(--color-8);
   transition: background-color 0.3s;
@@ -32,6 +33,10 @@ $r: '.button';
     }
   }
 
+  &:active {
+    transform: translateY(0.25rem);
+  }
+
   // element
   //---------------------------------------------------------
   svg {
@@ -40,4 +45,24 @@ $r: '.button';
 
   // modifier
   //---------------------------------------------------------
+  &__isOutline {
+    height: 2.5rem;
+    color: var(--color-6);
+    font-size: 0.9375rem;
+    padding-inline: 1.5rem;
+    border: 0.0625rem solid var(--color-6);
+    background-color: transparent;
+    transition:
+      color 0.3s,
+      border-color 0.3s;
+
+    @media (pointer: fine) {
+      &:not(:disabled):hover,
+      &:not(:disabled):focus-visible {
+        color: var(--color-8);
+        border-color: var(--color-8);
+        background-color: transparent;
+      }
+    }
+  }
 }

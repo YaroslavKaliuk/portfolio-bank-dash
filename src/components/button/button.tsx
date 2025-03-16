@@ -11,6 +11,7 @@ export interface ButtonProps
   iconLeft?: ReactNode;
   iconRight?: ReactNode;
   translationKey?: string;
+  isOutline?: boolean;
 }
 
 export const Button: FC<ButtonProps> = ({
@@ -18,13 +19,14 @@ export const Button: FC<ButtonProps> = ({
   iconLeft,
   iconRight,
   translationKey,
+  isOutline,
   ...props
 }) => {
   const t = useTranslations();
   const buttonTitle = translationKey ? t(translationKey) : title;
 
   return (
-    <button className={cn(styles.button)} {...props}>
+    <button className={cn(styles.button, isOutline && styles.button__isOutline)} {...props}>
       {iconLeft}
       {buttonTitle}
       {iconRight}

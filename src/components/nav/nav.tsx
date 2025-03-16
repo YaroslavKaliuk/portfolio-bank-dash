@@ -12,11 +12,11 @@ const navItems = [
   { key: 'nav.dashboard', href: '/dashboard', icon: <Icons.IconHome /> },
   { key: 'nav.transactions', href: '/transactions', icon: <Icons.IconTransfer /> },
   { key: 'nav.accounts', href: '/accounts', icon: <Icons.IconUser /> },
-  { key: 'nav.investments', href: '/investments', icon: <Icons.IconInvestment /> },
+  { key: 'nav.investments', href: '/investments', icon: <Icons.IconGraph /> },
   { key: 'nav.creditCards', href: '/credit-cards', icon: <Icons.IconCreditCard /> },
   { key: 'nav.loans', href: '/loans', icon: <Icons.IconLoan /> },
   { key: 'nav.services', href: '/services', icon: <Icons.IconService /> },
-  { key: 'nav.settings', href: '/settings', icon: <Icons.IconSettings /> },
+  { key: 'nav.settings', href: '/settings', icon: <Icons.IconCog /> },
 ];
 
 export const Nav: FC = () => {

@@ -26,6 +26,12 @@ $r: '.main';
 
   // modifier
   //---------------------------------------------------------
+  &[data-page='services'] {
+    #{$r}__container {
+      gap: 2rem;
+      display: grid;
+    }
+  }
 }
 
 // influence

@@ -49,9 +49,28 @@
     "description": "Creado por Yaroslav Kaliuk"
   },
   "settings": {
-    "notification": "Notificación",
+    "notifications": "Notificaciones",
     "profile": "Perfil",
     "preferences": "Preferencias",
     "security": "Seguridad"
+  },
+  "financialOverview": {
+    "myBalance": "Mi Balance",
+    "income": "Ingresos",
+    "expense": "Gastos",
+    "totalSaving": "Ahorro Total",
+    "totalInvestedAmount": "Cantidad Invertida Total",
+    "numberOfInvestments": "Número de Inversiones",
+    "rateOfReturn": "Tasa de Retorno",
+    "personalLoans": "Préstamos Personales",
+    "corporateLoans": "Préstamos Corporativos",
+    "businessLoans": "Préstamos de Negocios",
+    "customLoans": "Préstamos Personalizados",
+    "lifeInsurance": "Seguro de Vida",
+    "shopping": "Compras",
+    "safety": "Seguridad",
+    "unlimitedProtection": "Protección Ilimitada",
+    "buyThinkGrow": "Compra. Piensa. Crece.",
+    "weAreYourAllies": "Somos tu aliado"
   }
 }

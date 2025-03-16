@@ -39,7 +39,7 @@ $r: '.aside';
       grid-template-columns: 1fr max-content max-content;
       padding: 1rem;
       padding-bottom: 3rem;
-      max-width: 50vw;
+      max-width: clamp(15rem, 100vw, 20rem);
       transform: translateX(-100%);
       transition: transform 0.3s;
     }

@@ -1,3 +1,4 @@
+import React from 'react';
 import { getMessages } from 'next-intl/server';
 import { Metadata } from 'next';
 import TransactionsClient from './client';

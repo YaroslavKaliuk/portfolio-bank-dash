@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { Tabs, FormSettings, FormPreferences, FormSecurity } from '@/components';
 import { useTranslations } from 'next-intl';
 
@@ -11,7 +12,7 @@ export default function SettingsClient() {
       name="settings"
       tabs={[
         {
-          nav: t('settings.notification'),
+          nav: t('settings.notifications'),
           content: <>Content2</>,
           defaultChecked: true,
         },

@@ -1,5 +1,6 @@
 import { App, Aside, Footer, Header, Main } from '@/layouts';
 import {
+  Avatar,
   Caption,
   Copyright,
   LanguageSwitcher,
@@ -14,7 +15,6 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import '@styles/index.scss';
-import { Avatar } from '@/components/avatar';
 
 type Locale = (typeof routing.locales)[number];
 

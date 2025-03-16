@@ -23,12 +23,21 @@ $r: '.nav';
     font-weight: 500;
     color: var(--color-7);
     position: relative;
-    padding-block: 1rem;
+    padding-block: 1.25rem;
     transition: color 0.3s;
 
     svg {
       flex-shrink: 0;
       font-size: 1.25rem;
+
+      &[data-icon='IconUser'],
+      &[data-icon='IconGraph'],
+      &[data-icon='IconCreditCard'],
+      &[data-icon='IconLoan'],
+      &[data-icon='IconService'] {
+        transform: scale(2.4);
+        transform-origin: center;
+      }
     }
 
     &::before {
