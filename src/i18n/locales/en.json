@@ -1,0 +1,116 @@
+{
+  "common": {
+    "copyright": "Copyright",
+    "made": "Made with love ❤ by Yaroslav Kaliuk",
+    "selectTheme": "Select a theme",
+    "selectLanguage": "Select a language",
+    "notifications": "Notifications",
+    "save": "Save",
+    "avatar": "User avatar",
+    "unknown": "Unknown",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back"
+  },
+  "nav": {
+    "en": "English",
+    "es": "Spanish",
+    "home": "Home",
+    "balance": "Balance",
+    "transfers": "Transfers",
+    "cards": "Cards",
+    "investments": "Investments",
+    "loans": "Loans",
+    "services": "Services",
+    "settings": "Settings",
+    "dashboard": "Dashboard",
+    "accounts": "Accounts",
+    "creditCards": "Credit Cards",
+    "transactions": "Transactions"
+  },
+  "search": {
+    "placeholder": "Search for something..."
+  },
+  "form": {
+    "yourName": "Your Name",
+    "userName": "User Name",
+    "email": "Email",
+    "password": "Password",
+    "dateOfBirth": "Date of Birth",
+    "presentAddress": "Present Address",
+    "permanentAddress": "Permanent Address",
+    "city": "City",
+    "postalCode": "Postal Code",
+    "country": "Country",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "twoFactorAuth": "Two-factor Authentication",
+    "enableTwoFactor": "Enable or disable two factor authentication",
+    "currency": "Currency",
+    "timeZone": "Time Zone",
+    "notification": "Notification",
+    "digitalCurrency": "I send or receive digital currency",
+    "merchantOrder": "I receive merchant order",
+    "accountRecommendations": "There are recommendation for my account"
+  },
+  "meta": {
+    "title": "BankDash",
+    "description": "Created by Yaroslav Kaliuk"
+  },
+  "settings": {
+    "profile": "Profile",
+    "preferences": "Preferences",
+    "security": "Security"
+  },
+  "financialOverview": {
+    "myBalance": "My Balance",
+    "income": "Income",
+    "expense": "Expense",
+    "totalInvestedAmount": "Total Invested Amount",
+    "numberOfInvestments": "Number of Investments",
+    "rateOfReturn": "Rate of Return",
+    "personalLoans": "Personal Loans",
+    "corporateLoans": "Corporate Loans",
+    "businessLoans": "Business Loans",
+    "lifeInsurance": "Life Insurance",
+    "shopping": "Shopping",
+    "safety": "Safety",
+    "unlimitedProtection": "Unlimited Protection",
+    "buyThinkGrow": "Buy. Think. Grow.",
+    "weAreYourAllies": "We are your allies"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot password?",
+    "rememberMe": "Remember me"
+  },
+  "bankServices": {
+    "myBalance": "My Balance",
+    "income": "Income",
+    "expense": "Expense",
+    "transfer": "Transfer",
+    "investment": "Investment",
+    "creditCard": "Credit Card",
+    "loan": "Loan",
+    "service": "Service",
+    "settings": "Settings"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "noNotifications": "No notifications",
+    "markAllAsRead": "Mark all as read"
+  },
+  "profile": {
+    "title": "Profile",
+    "personalInfo": "Personal Information",
+    "security": "Security",
+    "preferences": "Preferences"
+  }
+}
