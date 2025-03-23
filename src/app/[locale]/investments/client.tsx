@@ -2,8 +2,14 @@
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import { LayoutBox, LayoutRow } from '@/layouts';
-import { ActiveLoansOverview, FinancialOverview, Graph, Title } from '@/components';
+import { LayoutBlock, LayoutRow } from '@/layouts';
+import {
+  ActiveLoansOverview,
+  BankServicesList,
+  FinancialOverview,
+  Graph,
+  Title,
+} from '@/components';
 import * as Icons from '@/icons';
 
 export default function InvestmentsClient() {
@@ -11,51 +17,39 @@ export default function InvestmentsClient() {
   return (
     <>
       <LayoutRow isFinancialOverview>
-        <LayoutBox>
+        <LayoutBlock>
           <FinancialOverview
             icon={<Icons.IconMoney />}
             title={t('financialOverview.totalInvestedAmount')}
             value={'$150,000'}
           />
-        </LayoutBox>
-        <LayoutBox>
+        </LayoutBlock>
+        <LayoutBlock>
           <FinancialOverview
             icon={<Icons.IconNumberOfInvestments />}
             title={t('financialOverview.numberOfInvestments')}
             value={'1,250'}
           />
-        </LayoutBox>
-        <LayoutBox>
+        </LayoutBlock>
+        <LayoutBlock>
           <FinancialOverview
             icon={<Icons.IconRateOfReturn />}
             title={t('financialOverview.rateOfReturn')}
             value={'+5.80%'}
           />
-        </LayoutBox>
+        </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
         <Title title="Yearly Total Investment" />
-        <LayoutBox>
+        <LayoutBlock>
           <Graph>
             <Icons.IconGraphYearlyTotalInvestment />
           </Graph>
-        </LayoutBox>
-      </LayoutRow>
-      <LayoutRow>
-        <Title title="My Investment" />
-        <LayoutBox>Component</LayoutBox>
-      </LayoutRow>
-      <LayoutRow>
-        <Title title="Monthly Revenue" />
-        <LayoutBox>
-          <Graph>
-            <Icons.IconGraphMonthlyRevenue />
-          </Graph>
-        </LayoutBox>
+        </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
         <Title title="Trending Stock" />
-        <LayoutBox>
+        <LayoutBlock>
           <ActiveLoansOverview
             thead={[[{ th: '#' }, { th: 'Name' }, { th: 'Price' }, { th: 'Return' }]]}
             tbody={[
@@ -67,7 +61,77 @@ export default function InvestmentsClient() {
               [{ td: 'Samsung' }, { td: '$1600' }, { td: '+4%' }],
             ]}
           />
-        </LayoutBox>
+        </LayoutBlock>
+      </LayoutRow>
+      <LayoutRow isGridColumnFull>
+        <Title title="My Investment" />
+        <BankServicesList
+          rows={[
+            [
+              { icon: <Icons.IconExpense /> },
+              { title: 'Apple Store', value: 'E-commerce, Marketplace' },
+              { title: '$54,000', value: 'Investment Value' },
+              { title: '12 Months', value: 'Investment Period' },
+              { title: 'Medium', value: 'Risk Level' },
+              { title: 'Tech', value: 'Industry' },
+              { title: '+16%', value: 'Return Value' },
+            ],
+            [
+              { icon: <Icons.IconExpense /> },
+              { title: 'Amazon', value: 'E-commerce, Marketplace' },
+              { title: '$72,000', value: 'Investment Value' },
+              { title: '24 Months', value: 'Investment Period' },
+              { title: 'High', value: 'Risk Level' },
+              { title: 'Tech', value: 'Industry' },
+              { title: '-22%', value: 'Return Value' },
+            ],
+            [
+              { icon: <Icons.IconExpense /> },
+              { title: 'Tesla', value: 'Automotive, Energy' },
+              { title: '$120,000', value: 'Investment Value' },
+              { title: '36 Months', value: 'Investment Period' },
+              { title: 'High', value: 'Risk Level' },
+              { title: 'Automotive', value: 'Industry' },
+              { title: '+35%', value: 'Return Value' },
+            ],
+            [
+              { icon: <Icons.IconExpense /> },
+              { title: 'Netflix', value: 'Entertainment, Streaming' },
+              { title: '$45,000', value: 'Investment Value' },
+              { title: '18 Months', value: 'Investment Period' },
+              { title: 'Medium', value: 'Risk Level' },
+              { title: 'Media', value: 'Industry' },
+              { title: '-12%', value: 'Return Value' },
+            ],
+            [
+              { icon: <Icons.IconExpense /> },
+              { title: 'Google', value: 'Tech, Advertising' },
+              { title: '$90,000', value: 'Investment Value' },
+              { title: '24 Months', value: 'Investment Period' },
+              { title: 'Low', value: 'Risk Level' },
+              { title: 'Tech', value: 'Industry' },
+              { title: '-18%', value: 'Return Value' },
+            ],
+            [
+              { icon: <Icons.IconExpense /> },
+              { title: 'Microsoft', value: 'Tech, Software' },
+              { title: '$85,000', value: 'Investment Value' },
+              { title: '24 Months', value: 'Investment Period' },
+              { title: 'Low', value: 'Risk Level' },
+              { title: 'Tech', value: 'Industry' },
+              { title: '+20%', value: 'Return Value' },
+            ],
+            [
+              { icon: <Icons.IconExpense /> },
+              { title: 'Meta', value: 'Tech, Social Media' },
+              { title: '$60,000', value: 'Investment Value' },
+              { title: '12 Months', value: 'Investment Period' },
+              { title: 'Medium', value: 'Risk Level' },
+              { title: 'Tech', value: 'Industry' },
+              { title: '+15%', value: 'Return Value' },
+            ],
+          ]}
+        />
       </LayoutRow>
     </>
   );

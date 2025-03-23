@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   webpack(config) {
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@messages': path.resolve(__dirname, 'messages'),
+      '@locales': path.resolve(__dirname, 'src/i18n/locales'),
     };
     return config;
   },

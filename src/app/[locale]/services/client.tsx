@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import { LayoutBox, LayoutRow } from '@/layouts';
+import { LayoutBlock, LayoutRow } from '@/layouts';
 import { FinancialOverview, BankServicesList, Button, Title } from '@/components';
 import * as Icons from '@/icons';
 
@@ -11,27 +11,27 @@ export default function ServicesClient() {
   return (
     <>
       <LayoutRow isFinancialOverview>
-        <LayoutBox>
+        <LayoutBlock>
           <FinancialOverview
             icon={<Icons.IconLifeInsurance />}
             title={t('financialOverview.lifeInsurance')}
             value={t('financialOverview.unlimitedProtection')}
           />
-        </LayoutBox>
-        <LayoutBox>
+        </LayoutBlock>
+        <LayoutBlock>
           <FinancialOverview
             icon={<Icons.IconShopping />}
             title={t('financialOverview.shopping')}
             value={t('financialOverview.buyThinkGrow')}
           />
-        </LayoutBox>
-        <LayoutBox>
+        </LayoutBlock>
+        <LayoutBlock>
           <FinancialOverview
             icon={<Icons.IconSafety />}
             title={t('financialOverview.safety')}
             value={t('financialOverview.weAreYourAllies')}
           />
-        </LayoutBox>
+        </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
         <Title title="Bank Services List" />

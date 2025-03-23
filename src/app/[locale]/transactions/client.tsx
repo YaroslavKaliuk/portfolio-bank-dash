@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { LayoutBox, LayoutRow } from '@/layouts';
+import { LayoutBlock, LayoutRow } from '@/layouts';
 import { CreditCard, Title, Button, ActiveLoansOverview, Graph } from '@/components';
 import * as Icons from '@/icons';
 
@@ -30,15 +30,15 @@ export default function TransactionsClient() {
       </LayoutRow>
       <LayoutRow>
         <Title title="My Expense" />
-        <LayoutBox>
+        <LayoutBlock>
           <Graph>
             <Icons.IconGraphMyExpense />
           </Graph>
-        </LayoutBox>
+        </LayoutBlock>
       </LayoutRow>
       <LayoutRow isGridColumnFull>
         <Title title="Recent Transactions" />
-        <LayoutBox>
+        <LayoutBlock>
           <ActiveLoansOverview
             thead={[
               [
@@ -235,7 +235,7 @@ export default function TransactionsClient() {
               ],
             ]}
           />
-        </LayoutBox>
+        </LayoutBlock>
       </LayoutRow>
     </>
   );

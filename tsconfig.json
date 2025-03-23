@@ -23,9 +23,15 @@
       "@/*": ["src/*"],
       "@styles/*": ["src/scss/*"],
       "@icons/*": ["src/icons/*"],
-      "@messages/*": ["messages/*"]
+      "@locales/*": ["src/i18n/locales/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/[locale]/transactions/client.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/[locale]/transactions/client.jsx"
+  ],
   "exclude": ["node_modules"]
 }

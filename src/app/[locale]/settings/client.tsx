@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { LayoutBox, LayoutRow } from '@/layouts';
+import { LayoutBlock, LayoutRow } from '@/layouts';
 import { Tabs, FormSettings, FormPreferences, FormSecurity } from '@/components';
 import { useTranslations } from 'next-intl';
 
@@ -10,7 +10,7 @@ export default function SettingsClient() {
 
   return (
     <LayoutRow>
-      <LayoutBox>
+      <LayoutBlock>
         <Tabs
           name="settings"
           tabs={[
@@ -19,7 +19,7 @@ export default function SettingsClient() {
             { nav: t('settings.security'), content: <FormSecurity /> },
           ]}
         />
-      </LayoutBox>
+      </LayoutBlock>
     </LayoutRow>
   );
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { LayoutBox, LayoutRow } from '@/layouts';
+import { LayoutBlock, LayoutRow } from '@/layouts';
 import { CreditCard, Title, Transactions, Graph } from '@/components';
 import * as Icons from '@/icons';
 
@@ -31,7 +31,7 @@ export default function DashboardClient() {
       </LayoutRow>
       <LayoutRow>
         <Title title="Recent Transaction" />
-        <LayoutBox>
+        <LayoutBlock>
           <Transactions
             transactions={[
               {
@@ -54,35 +54,35 @@ export default function DashboardClient() {
               },
             ]}
           />
-        </LayoutBox>
+        </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
         <Title title="Weekly Activity" />
-        <LayoutBox>
+        <LayoutBlock>
           <Graph>
             <Icons.IconGraphWeeklyActivity />
           </Graph>
-        </LayoutBox>
+        </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
         <Title title="Expense Statistics" />
-        <LayoutBox>
+        <LayoutBlock>
           <Graph>
             <Icons.IconGraphExpenseStatistics />
           </Graph>
-        </LayoutBox>
+        </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
         <Title title="Balance History" />
-        <LayoutBox>
+        <LayoutBlock>
           <Graph>
             <Icons.IconGraphBalanceHistory />
           </Graph>
-        </LayoutBox>
+        </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
         <Title title="Quick Transfer" />
-        <LayoutBox>Carousel</LayoutBox>
+        <LayoutBlock>Carousel</LayoutBlock>
       </LayoutRow>
     </>
   );

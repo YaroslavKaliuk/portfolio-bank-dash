@@ -17,6 +17,7 @@ export * from './transactions';
 export * from './formSecurity';
 export * from './formSettings';
 export * from './themeSwitcher';
+export * from './formAddNewCard';
 export * from './formPreferences';
 export * from './languageSwitcher';
 export * from './bankServicesList';

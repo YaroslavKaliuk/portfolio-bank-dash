@@ -5,55 +5,32 @@ $r: '.bankServicesList';
 // block
 //-----------------------------------------------------------
 #{$r} {
-  @media (width >= 80rem) {
-    margin-block: -1rem;
-    border-spacing: 0 1rem;
-    border-collapse: separate;
-  }
-
-  @media (width >= 96rem) {
-    table-layout: fixed;
-  }
+  margin-block: -1rem;
+  overflow: auto hidden;
 
   // element
   //---------------------------------------------------------
-  tbody {
-    @media (width < 79.9380rem) {
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: repeat(auto-fit, minmax(min(14rem, 100%), 1fr));
-    }
-  }
+  table {
+    border-spacing: 0 1rem;
+    border-collapse: separate;
 
-  tr {
-    @media (width < 79.9380rem) {
-      gap: 1rem;
-      display: grid;
-      place-items: center;
-      padding: 1rem;
-      text-align: center;
-      border-radius: 1rem;
-      background-color: var(--color-1);
+    @media (width >= 96rem) {
+      table-layout: fixed;
     }
 
-    td {
-      @media (width >= 80rem) {
+    tr {
+      td {
         padding: 1rem;
         background-color: var(--color-1);
-      }
 
-      &:first-child {
-        @media (width >= 80rem) {
-          width: 5.5rem;
-          min-width: 5.5rem;
+        &:first-of-type {
+          width: 4.5rem;
+          min-width: 4.5rem;
+          padding-right: 0;
           border-radius: 1rem 0 0 1rem;
         }
-      }
 
-      &:last-child {
-        @media (width >= 80rem) {
-          width: 10.88rem;
-          min-width: 10.88rem;
+        &:last-of-type {
           border-radius: 0 1rem 1rem 0;
         }
       }
@@ -92,11 +69,13 @@ $r: '.bankServicesList';
 
   &__title {
     font-weight: 500;
+    white-space: nowrap;
   }
 
   &__value {
     color: var(--color-6);
     font-size: 0.88rem;
+    white-space: nowrap;
   }
 
   &__button {
@@ -109,6 +88,13 @@ $r: '.bankServicesList';
 
   // modifier
   //---------------------------------------------------------
+  &__isRed {
+    color: var(--color-9);
+  }
+
+  &__isGreen {
+    color: var(--color-17);
+  }
 }
 
 // influence

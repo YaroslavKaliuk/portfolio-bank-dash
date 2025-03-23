@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import { LayoutRow, LayoutBox } from '@/layouts';
+import { LayoutRow, LayoutBlock } from '@/layouts';
 import { CreditCard, FinancialOverview, Title, Transactions, Graph } from '@/components';
 import * as Icons from '@/icons';
 
@@ -11,32 +11,32 @@ export default function AccountsClient() {
   return (
     <>
       <LayoutRow isFinancialOverview>
-        <LayoutBox>
+        <LayoutBlock>
           <FinancialOverview
             icon={<Icons.IconSaving />}
             title={t('financialOverview.myBalance')}
             value={'$12,750'}
           />
-        </LayoutBox>
-        <LayoutBox>
+        </LayoutBlock>
+        <LayoutBlock>
           <FinancialOverview
             icon={<Icons.IconLoan />}
             title={t('financialOverview.income')}
             value={'$5,600'}
           />
-        </LayoutBox>
-        <LayoutBox>
+        </LayoutBlock>
+        <LayoutBlock>
           <FinancialOverview
             icon={<Icons.IconExpense />}
             title={t('financialOverview.expense')}
             value={'$3,460'}
           />
-        </LayoutBox>
+        </LayoutBlock>
       </LayoutRow>
 
       <LayoutRow>
         <Title title="Last Transactions" />
-        <LayoutBox>
+        <LayoutBlock>
           <Transactions
             transactions={[
               {
@@ -68,7 +68,7 @@ export default function AccountsClient() {
               },
             ]}
           />
-        </LayoutBox>
+        </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
         <Title title="My Card" />
@@ -85,15 +85,15 @@ export default function AccountsClient() {
       </LayoutRow>
       <LayoutRow>
         <Title title="Debit & Credit Overview" />
-        <LayoutBox>
+        <LayoutBlock>
           <Graph>
             <Icons.IconGraphDebitCreditOverview />
           </Graph>
-        </LayoutBox>
+        </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
         <Title title="Invoices Sent" />
-        <LayoutBox>
+        <LayoutBlock>
           <Transactions
             transactions={[
               {
@@ -122,7 +122,7 @@ export default function AccountsClient() {
               },
             ]}
           />
-        </LayoutBox>
+        </LayoutBlock>
       </LayoutRow>
     </>
   );

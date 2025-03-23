@@ -55,7 +55,13 @@
     "notification": "Notificación",
     "digitalCurrency": "Envío o recibo moneda digital",
     "merchantOrder": "Recibo pedidos de comerciantes",
-    "accountRecommendations": "Hay recomendaciones para mi cuenta"
+    "accountRecommendations": "Hay recomendaciones para mi cuenta",
+    "description": "Por tarjeta de crédito se entiende generalmente una tarjeta de plástico emitida por Bancos Comerciales Programados asignada a un Titular, con un límite de crédito, que puede utilizarse para adquirir bienes y servicios a crédito u obtener anticipos en efectivo",
+    "cardType": "Tipo de Tarjeta",
+    "nameOnCard": "Nombre en la Tarjeta",
+    "cardNumber": "Número de Tarjeta",
+    "expirationDate": "Fecha de Expiración",
+    "addCard": "Agregar Tarjeta"
   },
   "meta": {
     "title": "BankDash",
