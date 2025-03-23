@@ -25,8 +25,8 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ isAside, isH
   };
 
   const flags: Record<Lang, React.ReactNode> = {
-    en: <Icons.IconFlagUs />,
-    es: <Icons.IconFlagEs />,
+    en: <Icons.IconFlagUK />,
+    es: <Icons.IconFlagES />,
   };
 
   return (
