@@ -2,10 +2,11 @@ import React, { FC, ReactNode } from 'react';
 import cn from 'classnames';
 import styles from './styles.module.scss';
 
-export interface TabsItem
-  extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
+export interface TabsItem {
   nav?: string;
-  content?: any;
+  content?: ReactNode;
+  defaultChecked?: boolean;
+  disabled?: boolean;
 }
 
 export interface TabsProps {

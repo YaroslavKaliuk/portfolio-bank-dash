@@ -59,13 +59,13 @@ $r: '.languageSwitcher';
   // modifier
   //---------------------------------------------------------
   &__isAside {
-    @media (width >= 62rem) {
+    @media (width >= 64rem) {
       display: none;
     }
   }
 
   &__isHeader {
-    @media (width < 61.9375rem) {
+    @media (width < 63.9375rem) {
       display: none;
     }
   }

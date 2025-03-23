@@ -1,0 +1,42 @@
+/* .layoutHeader
+-------------------------------------------------------------*/
+$r: '.layoutHeader';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  top: 0;
+  z-index: 2;
+  position: sticky;
+  padding-block: 1rem;
+  background-color: var(--color-1);
+  border-bottom: 0.0625rem solid var(--color-4);
+
+  @media (width < 63.9375rem) {
+    height: 4.5rem;
+    padding-inline: 1rem;
+  }
+
+  @media (width >= 64rem) {
+    height: 6rem;
+    padding-inline: 2rem;
+  }
+
+  // element
+  //---------------------------------------------------------
+  &__container {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+
+    @media (width >= 80rem) {
+      gap: 1.5rem;
+    }
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}
+
+// influence
+//-----------------------------------------------------------

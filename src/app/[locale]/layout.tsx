@@ -1,4 +1,4 @@
-import { App, Aside, Footer, Header, Main } from '@/layouts';
+import { LayoutApp, LayoutAside, LayoutFooter, LayoutHeader, LayoutMain } from '@/layouts';
 import {
   Avatar,
   Caption,
@@ -6,7 +6,7 @@ import {
   LanguageSwitcher,
   Logo,
   Nav,
-  NavButton,
+  NavToggle,
   Search,
   ThemeSwitcher,
 } from '@/components';
@@ -45,27 +45,27 @@ export default async function RootLayout({
     <html lang={locale}>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <App>
-            <Header>
-              <NavButton />
+          <LayoutApp>
+            <LayoutHeader>
+              <NavToggle />
               <Caption />
               <Search isHeader />
               <LanguageSwitcher isHeader />
               <ThemeSwitcher isHeader />
               <Avatar count={10} />
-            </Header>
-            <Aside>
+            </LayoutHeader>
+            <LayoutAside>
               <Logo />
               <Search isAside />
               <LanguageSwitcher isAside />
               <ThemeSwitcher isAside />
               <Nav />
-            </Aside>
-            <Main>{children}</Main>
-            <Footer>
+            </LayoutAside>
+            <LayoutMain>{children}</LayoutMain>
+            <LayoutFooter>
               <Copyright />
-            </Footer>
-          </App>
+            </LayoutFooter>
+          </LayoutApp>
         </NextIntlClientProvider>
       </body>
     </html>

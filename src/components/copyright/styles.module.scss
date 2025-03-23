@@ -7,13 +7,13 @@ $r: '.copyright';
 #{$r} {
   display: flex;
 
-  @media (width < 35.4375rem) {
+  @media (width < 39.9375rem) {
     gap: 0.5rem;
     align-items: center;
     flex-direction: column;
   }
 
-  @media (width >= 35.5rem) {
+  @media (width >= 40rem) {
     gap: 1rem;
     justify-content: space-between;
   }
@@ -23,7 +23,7 @@ $r: '.copyright';
   &__year,
   &__link {
     color: var(--color-6);
-    font-size: 0.875rem;
+    font-size: 0.88rem;
   }
 
   &__link {

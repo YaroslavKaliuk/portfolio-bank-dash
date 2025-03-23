@@ -1,0 +1,66 @@
+/* .layoutApp
+-------------------------------------------------------------*/
+$r: '.layoutApp';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  min-height: 100dvh;
+  color: var(--color-2);
+  font-size: 1rem;
+  font-family: 'Inter';
+  background-color: var(--color-3);
+
+  @media (width >= 64rem) {
+    grid-template-columns: 16rem 1fr;
+  }
+
+  // element
+  //---------------------------------------------------------
+  :focus-visible {
+    outline: 0.125rem solid var(--color-6);
+  }
+
+  @media (pointer: fine) {
+    @supports (-moz-appearance: none) {
+      * {
+        scrollbar-color: var(--color-10) var(--color-3);
+        scrollbar-width: thin;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      -webkit-appearance: none;
+    }
+
+    ::-webkit-scrollbar:vertical {
+      width: 0.25rem;
+    }
+
+    ::-webkit-scrollbar:horizontal {
+      height: 0.25rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 100vw;
+      background-color: var(--color-10);
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+
+  @media (pointer: coarse) {
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  // modifier
+  //---------------------------------------------------------
+}
+
+// influence
+//-----------------------------------------------------------

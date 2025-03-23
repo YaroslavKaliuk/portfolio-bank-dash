@@ -3,11 +3,11 @@ import { getMessages } from 'next-intl/server';
 import { Metadata } from 'next';
 import AccountsClient from './client';
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string };
-}): Promise<Metadata> {
+type PageProps = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
   const messages = await getMessages({ locale });
   const meta = messages.meta as { title: string; description: string };
@@ -21,4 +21,8 @@ export async function generateMetadata({
 
 export default function Page() {
   return <AccountsClient />;
+}
+
+export async function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }];
 }

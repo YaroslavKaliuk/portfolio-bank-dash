@@ -5,20 +5,20 @@ $r: '.bankServicesList';
 // block
 //-----------------------------------------------------------
 #{$r} {
-  @media (width >= 75rem) {
+  @media (width >= 80rem) {
     margin-block: -1rem;
     border-spacing: 0 1rem;
     border-collapse: separate;
   }
 
-  @media (width >= 87.5rem) {
+  @media (width >= 96rem) {
     table-layout: fixed;
   }
 
   // element
   //---------------------------------------------------------
   tbody {
-    @media (width < 74.9375rem) {
+    @media (width < 79.9380rem) {
       display: grid;
       gap: 1rem;
       grid-template-columns: repeat(auto-fit, minmax(min(14rem, 100%), 1fr));
@@ -26,7 +26,7 @@ $r: '.bankServicesList';
   }
 
   tr {
-    @media (width < 74.9375rem) {
+    @media (width < 79.9380rem) {
       gap: 1rem;
       display: grid;
       place-items: center;
@@ -37,13 +37,13 @@ $r: '.bankServicesList';
     }
 
     td {
-      @media (width >= 75rem) {
+      @media (width >= 80rem) {
         padding: 1rem;
         background-color: var(--color-1);
       }
 
       &:first-child {
-        @media (width >= 75rem) {
+        @media (width >= 80rem) {
           width: 5.5rem;
           min-width: 5.5rem;
           border-radius: 1rem 0 0 1rem;
@@ -51,9 +51,9 @@ $r: '.bankServicesList';
       }
 
       &:last-child {
-        @media (width >= 75rem) {
-          width: 10.875rem;
-          min-width: 10.875rem;
+        @media (width >= 80rem) {
+          width: 10.88rem;
+          min-width: 10.88rem;
           border-radius: 0 1rem 1rem 0;
         }
       }
@@ -96,13 +96,13 @@ $r: '.bankServicesList';
 
   &__value {
     color: var(--color-6);
-    font-size: 0.875rem;
+    font-size: 0.88rem;
   }
 
   &__button {
     display: flex;
 
-    @media (width >= 75rem) {
+    @media (width >= 80rem) {
       justify-content: flex-end;
     }
   }

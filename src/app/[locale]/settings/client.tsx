@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { LayoutBox, LayoutRow } from '@/layouts';
 import { Tabs, FormSettings, FormPreferences, FormSecurity } from '@/components';
 import { useTranslations } from 'next-intl';
 
@@ -8,18 +9,17 @@ export default function SettingsClient() {
   const t = useTranslations();
 
   return (
-    <Tabs
-      name="settings"
-      tabs={[
-        {
-          nav: t('settings.notifications'),
-          content: <>Content2</>,
-          defaultChecked: true,
-        },
-        { nav: t('settings.profile'), content: <FormSettings /> },
-        { nav: t('settings.preferences'), content: <FormPreferences /> },
-        { nav: t('settings.security'), content: <FormSecurity /> },
-      ]}
-    />
+    <LayoutRow>
+      <LayoutBox>
+        <Tabs
+          name="settings"
+          tabs={[
+            { nav: t('settings.profile'), content: <FormSettings />, defaultChecked: true },
+            { nav: t('settings.preferences'), content: <FormPreferences /> },
+            { nav: t('settings.security'), content: <FormSecurity /> },
+          ]}
+        />
+      </LayoutBox>
+    </LayoutRow>
   );
 }

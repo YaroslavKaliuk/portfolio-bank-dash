@@ -25,7 +25,7 @@ export const Nav: FC = () => {
   const locale = pathname.split('/')[1] || 'en';
 
   const handleClick = () =>
-    document.querySelector<HTMLInputElement>("input[name='navButton']")?.click();
+    document.querySelector<HTMLInputElement>("input[name='navToggle']")?.click();
 
   return (
     <nav className={cn(styles.nav)}>
@@ -39,7 +39,9 @@ export const Nav: FC = () => {
           onClick={handleClick}
         >
           {icon}
-          {t(key)}
+          <span className={styles.nav__title} data-title={t(key)}>
+            {t(key)}
+          </span>
         </Link>
       ))}
     </nav>

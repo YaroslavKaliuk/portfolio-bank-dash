@@ -1,0 +1,61 @@
+/* .layoutMain
+-------------------------------------------------------------*/
+$r: '.layoutMain';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  min-width: 0;
+  position: relative;
+  background-color: var(--color-3);
+
+  // element
+  //---------------------------------------------------------
+  &__scroll {
+    inset: 0;
+    position: absolute;
+    overflow: hidden auto;
+
+    @media (width < 63.9375rem) {
+      padding-inline: 1rem;
+    }
+
+    @media (width >= 64rem) {
+      padding-inline: 2rem;
+    }
+  }
+
+  &__container {
+    gap: 2rem;
+    display: grid;
+    align-content: start;
+    width: 100%;
+    max-width: 80rem;
+    margin-inline: auto;
+
+    @media (width < 63.9375rem) {
+      padding-block: 1rem;
+    }
+
+    @media (width >= 64rem) {
+      padding-block: 2rem;
+    }
+  }
+
+  // modifier
+  //---------------------------------------------------------
+  &[data-page='accounts'],
+  &[data-page='dashboard'],
+  &[data-page='transactions'],
+  &[data-page='investments'],
+  &[data-page='credit-cards'] {
+    #{$r}__container {
+      @media (width >= 80rem) {
+        grid-template-columns: 0.68fr 0.32fr;
+      }
+    }
+  }
+}
+
+// influence
+//-----------------------------------------------------------

@@ -1,0 +1,46 @@
+/* .layoutRow
+-------------------------------------------------------------*/
+$r: '.layoutRow';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+
+  @media (width < 63.9375rem) {
+    gap: 1rem;
+  }
+
+  @media (width >= 64rem) {
+    gap: 1rem 2rem;
+  }
+
+  // element
+  //---------------------------------------------------------
+
+  // modifier
+  //---------------------------------------------------------
+  &__isFinancialOverview {
+    @media (width < 63.9375rem) {
+      overflow-x: auto;
+      flex-direction: row;
+    }
+
+    @media (width >= 64rem) {
+      display: grid;
+      grid-column: 1 / -1;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__isGridColumnFull {
+    @media (width >= 64rem) {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+// influence
+//-----------------------------------------------------------

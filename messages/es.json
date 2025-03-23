@@ -7,17 +7,30 @@
     "notifications": "Notificaciones",
     "save": "Guardar",
     "avatar": "Avatar del usuario",
-    "unknown": "Desconocido"
+    "unknown": "Desconocido",
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "back": "Atrás"
   },
   "nav": {
+    "en": "Inglés",
+    "es": "Español",
+    "home": "Inicio",
+    "balance": "Saldo",
+    "transfers": "Transferencias",
+    "cards": "Tarjetas",
+    "investments": "Inversiones",
+    "loans": "Préstamos",
+    "services": "Servicios",
+    "settings": "Configuración",
     "dashboard": "Tablero",
     "transactions": "Transacciones",
     "accounts": "Cuentas",
-    "investments": "Inversiones",
-    "creditCards": "Tarjetas de crédito",
-    "loans": "Préstamos",
-    "services": "Servicios",
-    "settings": "Configuración"
+    "creditCards": "Tarjetas de crédito"
   },
   "search": {
     "placeholder": "Busca algo..."
@@ -49,7 +62,6 @@
     "description": "Creado por Yaroslav Kaliuk"
   },
   "settings": {
-    "notifications": "Notificaciones",
     "profile": "Perfil",
     "preferences": "Preferencias",
     "security": "Seguridad"
@@ -58,19 +70,47 @@
     "myBalance": "Mi Balance",
     "income": "Ingresos",
     "expense": "Gastos",
-    "totalSaving": "Ahorro Total",
     "totalInvestedAmount": "Cantidad Invertida Total",
     "numberOfInvestments": "Número de Inversiones",
     "rateOfReturn": "Tasa de Retorno",
     "personalLoans": "Préstamos Personales",
     "corporateLoans": "Préstamos Corporativos",
     "businessLoans": "Préstamos de Negocios",
-    "customLoans": "Préstamos Personalizados",
     "lifeInsurance": "Seguro de Vida",
     "shopping": "Compras",
     "safety": "Seguridad",
     "unlimitedProtection": "Protección Ilimitada",
     "buyThinkGrow": "Compra. Piensa. Crece.",
     "weAreYourAllies": "Somos tu aliado"
+  },
+  "auth": {
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "rememberMe": "Recordarme"
+  },
+  "bankServices": {
+    "myBalance": "Mi saldo",
+    "income": "Ingresos",
+    "expense": "Gastos",
+    "transfer": "Transferencia",
+    "investment": "Inversión",
+    "creditCard": "Tarjeta de crédito",
+    "loan": "Préstamo",
+    "service": "Servicio",
+    "settings": "Configuración"
+  },
+  "notifications": {
+    "title": "Notificaciones",
+    "noNotifications": "Sin notificaciones",
+    "markAllAsRead": "Marcar todo como leído"
+  },
+  "profile": {
+    "title": "Perfil",
+    "personalInfo": "Información personal",
+    "security": "Seguridad",
+    "preferences": "Preferencias"
   }
 }

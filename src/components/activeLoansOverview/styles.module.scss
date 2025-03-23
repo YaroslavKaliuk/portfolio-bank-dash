@@ -1,0 +1,107 @@
+/* .activeLoansOverview
+-------------------------------------------------------------*/
+$r: '.activeLoansOverview';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  @media (width < 63.9375rem) {
+    overflow: auto hidden;
+  }
+
+  // element
+  //---------------------------------------------------------
+  tr {
+    th,
+    td {
+      white-space: nowrap;
+      border-bottom: 1px solid var(--color-4);
+
+      @media (width < 63.9375rem) {
+        padding: 0.5rem;
+      }
+
+      @media (width >= 64rem) {
+        padding: 1rem;
+      }
+
+      &:last-of-type {
+        text-align: center;
+      }
+    }
+  }
+
+  thead {
+    th {
+      top: 0;
+      z-index: 1;
+      color: var(--color-6);
+      font-weight: 500;
+      position: sticky;
+      text-align: left;
+      vertical-align: bottom;
+      background-color: var(--color-1);
+
+      &::before {
+        content: '';
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 0.125rem;
+        position: absolute;
+        background-color: var(--color-4);
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      &:last-of-type {
+        td {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  tfoot {
+    tr {
+      td {
+        bottom: 0;
+        z-index: 1;
+        font-weight: 600;
+        position: sticky;
+        background-color: var(--color-1);
+
+        &::before {
+          content: '';
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 0.125rem;
+          position: absolute;
+          background-color: var(--color-4);
+        }
+      }
+
+      &:last-of-type {
+        td {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  // modifier
+  //---------------------------------------------------------
+  &__isRed {
+    color: var(--color-9);
+  }
+
+  &__isGreen {
+    color: var(--color-17);
+  }
+}
+
+// influence
+//-----------------------------------------------------------

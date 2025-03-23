@@ -7,11 +7,11 @@ $r: '.formSecurity';
 #{$r} {
   display: grid;
 
-  @media (width < 74.9375rem) {
+  @media (width < 79.9380rem) {
     gap: 1rem 2rem;
   }
 
-  @media (width >= 75rem) {
+  @media (width >= 80rem) {
     gap: 2rem 3rem;
   }
 
@@ -24,11 +24,11 @@ $r: '.formSecurity';
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (width < 74.9375rem) {
+    @media (width < 79.9380rem) {
       gap: 1rem 2rem;
     }
 
-    @media (width >= 75rem) {
+    @media (width >= 80rem) {
       gap: 2rem 3rem;
     }
   }
@@ -36,12 +36,12 @@ $r: '.formSecurity';
   &__button {
     display: flex;
 
-    @media (width < 74.9375rem) {
+    @media (width < 79.9380rem) {
       justify-content: center;
       margin-top: 1rem;
     }
 
-    @media (width >= 75rem) {
+    @media (width >= 80rem) {
       justify-content: flex-end;
     }
   }

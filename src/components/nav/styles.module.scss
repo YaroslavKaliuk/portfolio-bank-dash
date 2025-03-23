@@ -8,7 +8,7 @@ $r: '.nav';
   display: flex;
   flex-direction: column;
 
-  @media (width < 61.9375rem) {
+  @media (width < 63.9375rem) {
     grid-column: 1/-1;
     align-items: flex-start;
   }
@@ -19,8 +19,6 @@ $r: '.nav';
     gap: 1rem;
     display: flex;
     align-items: center;
-    line-height: 1;
-    font-weight: 500;
     color: var(--color-7);
     position: relative;
     padding-block: 1.25rem;
@@ -41,14 +39,17 @@ $r: '.nav';
     }
 
     &::before {
-      @media (width >= 62rem) {
+      @media (width >= 64rem) {
         content: '';
         top: 0;
         left: -2rem;
         bottom: 0;
-        width: 0.375rem;
+        width: 0.38rem;
         position: absolute;
         border-radius: 0rem 0.625rem 0.625rem 0rem;
+        transform: scaleY(0);
+        transform-origin: center;
+        transition: transform 0.3s;
       }
     }
 
@@ -58,12 +59,57 @@ $r: '.nav';
       color: var(--color-8);
 
       &::before {
+        transform: scaleY(1);
         background-color: var(--color-8);
+      }
+
+      #{$r}__title {
+        &::before {
+          transform: translateY(0);
+          color: var(--color-8);
+        }
+
+        &::after {
+          transform: translateY(-100%);
+        }
       }
     }
 
     &:hover {
       color: var(--color-8);
+
+      #{$r}__title {
+        &::after {
+          transform: translateY(-100%);
+        }
+
+        &::before {
+          transform: translateY(0);
+          color: var(--color-8);
+        }
+      }
+    }
+  }
+
+  &__title {
+    line-height: 1.2;
+    font-weight: 500;
+    color: transparent;
+    position: relative;
+    overflow-y: clip;
+    transition: transform 0.3s;
+
+    &::after,
+    &::before {
+      content: attr(data-title);
+      inset: 0;
+      color: var(--color-7);
+      position: absolute;
+      transition: 0.3s;
+    }
+
+    &::before {
+      transform: translateY(100%);
     }
   }
 
