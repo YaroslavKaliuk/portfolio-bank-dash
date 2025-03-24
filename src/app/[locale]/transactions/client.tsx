@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { LayoutBlock, LayoutRow } from '@/layouts';
-import { CreditCard, Title, Button, ActiveLoansOverview, Graph } from '@/components';
+import { CreditCard, Title, Button, Table, Graph } from '@/components';
 import * as Icons from '@/icons';
 
 export default function TransactionsClient() {
@@ -39,7 +39,7 @@ export default function TransactionsClient() {
       <LayoutRow isGridColumnFull>
         <Title title="Recent Transactions" />
         <LayoutBlock>
-          <ActiveLoansOverview
+          <Table
             thead={[
               [
                 { th: '#' },

@@ -3,7 +3,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { LayoutBlock, LayoutRow } from '@/layouts';
-import { ActiveLoansOverview, Button, FinancialOverview, Title } from '@/components';
+import { Table, Button, FinancialOverview, Title } from '@/components';
 import * as Icons from '@/icons';
 
 export default function LoansClient() {
@@ -36,7 +36,7 @@ export default function LoansClient() {
       <LayoutRow>
         <Title title="Active Loans Overview" />
         <LayoutBlock>
-          <ActiveLoansOverview
+          <Table
             thead={[
               [
                 { th: '#' },

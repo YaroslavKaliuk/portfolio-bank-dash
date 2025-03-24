@@ -3,7 +3,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { LayoutRow, LayoutBlock } from '@/layouts';
-import { CreditCard, FinancialOverview, Title, Transactions, Graph } from '@/components';
+import { CreditCard, FinancialOverview, Title, Graph, TransactionsList } from '@/components';
 import * as Icons from '@/icons';
 
 export default function AccountsClient() {
@@ -37,7 +37,7 @@ export default function AccountsClient() {
       <LayoutRow>
         <Title title="Last Transactions" />
         <LayoutBlock>
-          <Transactions
+          <TransactionsList
             transactions={[
               {
                 icon: <Icons.IconService />,
@@ -94,7 +94,7 @@ export default function AccountsClient() {
       <LayoutRow>
         <Title title="Invoices Sent" />
         <LayoutBlock>
-          <Transactions
+          <TransactionsList
             transactions={[
               {
                 icon: <Icons.IconLogoApple />,

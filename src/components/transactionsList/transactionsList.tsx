@@ -14,43 +14,43 @@ export interface Transaction {
   amount?: string;
 }
 
-export interface TransactionsProps {
+interface TransactionsListProps {
   transactions: Transaction[];
 }
 
-export const Transactions: FC<TransactionsProps> = ({ transactions }) => {
+export const TransactionsList: FC<TransactionsListProps> = ({ transactions }) => {
   return (
-    <div className={cn(styles.transactions)}>
+    <div className={cn(styles.transactionsList)}>
       <table>
         <tbody>
           {transactions.map((transaction, index) => (
             <tr key={index}>
               {transaction.icon && (
-                <td className={styles.transactions__icon}>{transaction.icon}</td>
+                <td className={styles.transactionsList__icon}>{transaction.icon}</td>
               )}
               {transaction.title && (
-                <td className={styles.transactions__title}>{transaction.title}</td>
+                <td className={styles.transactionsList__title}>{transaction.title}</td>
               )}
               {transaction.date && (
-                <td className={styles.transactions__date}>{transaction.date}</td>
+                <td className={styles.transactionsList__date}>{transaction.date}</td>
               )}
               {transaction.category && (
-                <td className={styles.transactions__category}>{transaction.category}</td>
+                <td className={styles.transactionsList__category}>{transaction.category}</td>
               )}
               {transaction.card && (
-                <td className={styles.transactions__card}>{transaction.card}</td>
+                <td className={styles.transactionsList__card}>{transaction.card}</td>
               )}
               {transaction.status && (
-                <td className={styles.transactions__status}>{transaction.status}</td>
+                <td className={styles.transactionsList__status}>{transaction.status}</td>
               )}
               {transaction.amount && (
                 <td
                   className={cn(
                     styles.transactions__amount,
                     transaction.amount.startsWith('-')
-                      ? styles.transactions__amountRed
+                      ? styles.transactionsList__amountRed
                       : transaction.amount.startsWith('+')
-                        ? styles.transactions__amountGreen
+                        ? styles.transactionsList__amountGreen
                         : '',
                   )}
                 >

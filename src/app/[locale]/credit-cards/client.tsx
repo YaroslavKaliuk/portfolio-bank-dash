@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { LayoutBlock, LayoutRow } from '@/layouts';
-import { BankServicesList, Button, CreditCard, Graph, Title, FormAddNewCard } from '@/components';
+import { ServicesList, Button, CreditCard, Graph, Title, FormAddNewCard } from '@/components';
 import * as Icons from '@/icons';
 
 export default function CreditCardsClient() {
@@ -36,7 +36,7 @@ export default function CreditCardsClient() {
       </LayoutRow>
       <LayoutRow>
         <Title title="Card List" />
-        <BankServicesList
+        <ServicesList
           rows={[
             [
               { icon: <Icons.IconExpense /> },
@@ -81,7 +81,7 @@ export default function CreditCardsClient() {
       </LayoutRow>
       <LayoutRow>
         <Title title="Card Setting" />
-        <BankServicesList
+        <ServicesList
           rows={[
             [
               { icon: <Icons.IconExpense /> },

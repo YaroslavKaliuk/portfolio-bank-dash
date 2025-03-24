@@ -4,27 +4,27 @@ import React, { FC, ReactNode } from 'react';
 import cn from 'classnames';
 import styles from './styles.module.scss';
 
-export interface ActiveLoanService {
+export interface TableService {
   th?: string;
   td?: string;
   button?: ReactNode;
 }
 
-interface ActiveLoansOverviewProps {
-  tbody: ActiveLoanService[][];
-  thead?: ActiveLoanService[][];
-  tfoot?: ActiveLoanService[][];
+interface TableProps {
+  tbody: TableService[][];
+  thead?: TableService[][];
+  tfoot?: TableService[][];
 }
 
-export const ActiveLoansOverview: FC<ActiveLoansOverviewProps> = ({ tbody, thead, tfoot }) => (
-  <div className={cn(styles.activeLoansOverview)}>
+export const Table: FC<TableProps> = ({ tbody, thead, tfoot }) => (
+  <div className={cn(styles.table)}>
     <table>
       <thead>
         {thead &&
           thead.map((th, thIndex) => (
             <tr key={thIndex}>
               {th.map((item, itemIndex) => (
-                <th className={styles.activeLoansOverview__th} key={`${thIndex}-${itemIndex}`}>
+                <th className={styles.table__th} key={`${thIndex}-${itemIndex}`}>
                   {item.th && <>{item.th}</>}
                 </th>
               ))}
@@ -34,18 +34,18 @@ export const ActiveLoansOverview: FC<ActiveLoansOverviewProps> = ({ tbody, thead
       <tbody>
         {tbody.map((row, rowIndex) => (
           <tr key={rowIndex}>
-            <td className={styles.activeLoansOverview__td}>
+            <td className={styles.table__td}>
               {`${String(rowIndex + 1).padStart(2, '0')}.`}
             </td>
             {row.map((item, itemIndex) => (
               <td
                 key={`${rowIndex}-${itemIndex}`}
                 className={cn(
-                  styles.activeLoansOverview__td,
+                  styles.table__td,
                   item.td?.startsWith('-')
-                    ? styles.activeLoansOverview__isRed
+                    ? styles.table__isRed
                     : item.td?.startsWith('+')
-                      ? styles.activeLoansOverview__isGreen
+                      ? styles.table__isGreen
                       : '',
                 )}
               >
@@ -61,7 +61,7 @@ export const ActiveLoansOverview: FC<ActiveLoansOverviewProps> = ({ tbody, thead
           tfoot.map((row, rowIndex) => (
             <tr key={rowIndex}>
               {row.map((item, itemIndex) => (
-                <td className={styles.activeLoansOverview__td} key={`${rowIndex}-${itemIndex}`}>
+                <td className={styles.table__td} key={`${rowIndex}-${itemIndex}`}>
                   {item.td && <>{item.td}</>}
                 </td>
               ))}

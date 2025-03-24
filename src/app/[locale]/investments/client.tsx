@@ -4,8 +4,8 @@ import React from 'react';
 import { useTranslations } from 'next-intl';
 import { LayoutBlock, LayoutRow } from '@/layouts';
 import {
-  ActiveLoansOverview,
-  BankServicesList,
+  Table,
+  ServicesList,
   FinancialOverview,
   Graph,
   Title,
@@ -50,7 +50,7 @@ export default function InvestmentsClient() {
       <LayoutRow>
         <Title title="Trending Stock" />
         <LayoutBlock>
-          <ActiveLoansOverview
+          <Table
             thead={[[{ th: '#' }, { th: 'Name' }, { th: 'Price' }, { th: 'Return' }]]}
             tbody={[
               [{ td: 'Canon' }, { td: '$520' }, { td: '+5%' }],
@@ -65,7 +65,7 @@ export default function InvestmentsClient() {
       </LayoutRow>
       <LayoutRow isGridColumnFull>
         <Title title="My Investment" />
-        <BankServicesList
+        <ServicesList
           rows={[
             [
               { icon: <Icons.IconExpense /> },

@@ -3,7 +3,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { LayoutBlock, LayoutRow } from '@/layouts';
-import { FinancialOverview, BankServicesList, Button, Title } from '@/components';
+import { FinancialOverview, ServicesList, Button, Title } from '@/components';
 import * as Icons from '@/icons';
 
 export default function ServicesClient() {
@@ -35,7 +35,7 @@ export default function ServicesClient() {
       </LayoutRow>
       <LayoutRow>
         <Title title="Bank Services List" />
-        <BankServicesList
+        <ServicesList
           rows={[
             [
               { icon: <Icons.IconExpense /> },

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { LayoutBlock, LayoutRow } from '@/layouts';
-import { CreditCard, Title, Transactions, Graph, SwiperSlider, QuickTransfer } from '@/components';
+import { CreditCard, Title, Graph, SwiperSlider, QuickTransfer, TransactionsList } from '@/components';
 import * as Icons from '@/icons';
 import Image from 'next/image';
 
@@ -100,7 +100,7 @@ export default function DashboardClient() {
       <LayoutRow>
         <Title title="Recent Transaction" />
         <LayoutBlock>
-          <Transactions
+          <TransactionsList
             transactions={[
               {
                 icon: <Icons.IconLogoApple />,
