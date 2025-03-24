@@ -12,6 +12,13 @@ export default function CreditCardsClient() {
         <CreditCard
           cards={[
             {
+              balanceValue: '$15,084',
+              number: '3778 **** **** 8912',
+              validThruDate: '04/30',
+              holderName: 'Charlene Reed',
+              isLight: true,
+            },
+            {
               balanceValue: '$5,756',
               number: '3778 **** **** 1234',
               validThruDate: '12/29',
@@ -23,13 +30,6 @@ export default function CreditCardsClient() {
               validThruDate: '10/29',
               holderName: 'Charlene Reed',
               isDark: true,
-            },
-            {
-              balanceValue: '$15,084',
-              number: '3778 **** **** 8912',
-              validThruDate: '04/30',
-              holderName: 'Charlene Reed',
-              isLight: true,
             },
           ]}
         />

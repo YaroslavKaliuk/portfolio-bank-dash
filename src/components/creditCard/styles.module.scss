@@ -5,10 +5,17 @@ $r: '.creditCard';
 // block
 //-----------------------------------------------------------
 #{$r} {
-  gap: clamp(1rem, 1vw, 2rem);
   display: flex;
   min-width: 0;
   overflow: auto hidden;
+
+  @media (width < 63.9375rem) {
+    gap: 1rem;
+  }
+
+  @media (width >= 64rem) {
+    gap: 2rem;
+  }
 
   // element
   //---------------------------------------------------------

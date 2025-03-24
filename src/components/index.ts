@@ -1,6 +1,5 @@
 export * from './nav';
 export * from './tabs';
-export * from './user';
 export * from './logo';
 export * from './input';
 export * from './title';
