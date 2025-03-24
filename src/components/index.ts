@@ -16,6 +16,8 @@ export * from './creditCard';
 export * from './transactions';
 export * from './formSecurity';
 export * from './formSettings';
+export * from './swiperSlider';
+export * from './quickTransfer';
 export * from './themeSwitcher';
 export * from './formAddNewCard';
 export * from './formPreferences';

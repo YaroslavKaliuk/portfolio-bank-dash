@@ -2,8 +2,9 @@
 
 import React from 'react';
 import { LayoutBlock, LayoutRow } from '@/layouts';
-import { CreditCard, Title, Transactions, Graph } from '@/components';
+import { CreditCard, Title, Transactions, Graph, SwiperSlider, QuickTransfer } from '@/components';
 import * as Icons from '@/icons';
+import Image from 'next/image';
 
 export default function DashboardClient() {
   return (
@@ -28,6 +29,73 @@ export default function DashboardClient() {
             },
           ]}
         />
+      </LayoutRow>
+      <LayoutRow>
+        <Title title="Promo" />
+        <SwiperSlider
+          items={[
+            <Image src="/banner_2.jpg" alt="Promo" width={860} height={486} loading="lazy" />,
+            <Image src="/banner_1.jpg" alt="Promo" width={860} height={486} loading="lazy" />,
+          ]}
+        />
+      </LayoutRow>
+      <LayoutRow>
+        <Title title="Quick Transfer" />
+        <LayoutBlock>
+          <QuickTransfer
+            items={[
+              {
+                image: (
+                  <Image src="/user_1.jpg" alt="User" width={100} height={100} loading="lazy" />
+                ),
+                title: 'Alex Lee',
+                text: 'DevOps',
+              },
+              {
+                image: (
+                  <Image src="/user_2.jpg" alt="User" width={100} height={100} loading="lazy" />
+                ),
+                title: 'Ivan Kim',
+                text: 'QA Engineer',
+              },
+              {
+                image: (
+                  <Image src="/user_3.jpg" alt="User" width={100} height={100} loading="lazy" />
+                ),
+                title: 'Eva Fox',
+                text: 'PM',
+              },
+              {
+                image: (
+                  <Image src="/user_4.jpg" alt="User" width={100} height={100} loading="lazy" />
+                ),
+                title: 'Max Doe',
+                text: 'CEO',
+              },
+              {
+                image: (
+                  <Image src="/user_1.jpg" alt="User" width={100} height={100} loading="lazy" />
+                ),
+                title: 'Anna Wu',
+                text: 'HR Manager',
+              },
+              {
+                image: (
+                  <Image src="/user_2.jpg" alt="User" width={100} height={100} loading="lazy" />
+                ),
+                title: 'Dan Cho',
+                text: 'Designer',
+              },
+              {
+                image: (
+                  <Image src="/user_3.jpg" alt="User" width={100} height={100} loading="lazy" />
+                ),
+                title: 'Lia Tan',
+                text: 'SEO',
+              },
+            ]}
+          />
+        </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
         <Title title="Recent Transaction" />
@@ -71,18 +139,6 @@ export default function DashboardClient() {
             <Icons.IconGraphExpenseStatistics />
           </Graph>
         </LayoutBlock>
-      </LayoutRow>
-      <LayoutRow>
-        <Title title="Balance History" />
-        <LayoutBlock>
-          <Graph>
-            <Icons.IconGraphBalanceHistory />
-          </Graph>
-        </LayoutBlock>
-      </LayoutRow>
-      <LayoutRow>
-        <Title title="Quick Transfer" />
-        <LayoutBlock>Carousel</LayoutBlock>
       </LayoutRow>
     </>
   );

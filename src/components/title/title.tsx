@@ -9,5 +9,5 @@ export interface TitleProps {
 }
 
 export const Title: FC<TitleProps> = ({ title }) => {
-  return <div className={cn(styles.title)}>{title}</div>;
+  return <h3 className={cn(styles.title)}>{title}</h3>;
 };

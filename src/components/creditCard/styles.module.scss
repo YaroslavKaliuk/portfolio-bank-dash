@@ -5,7 +5,7 @@ $r: '.creditCard';
 // block
 //-----------------------------------------------------------
 #{$r} {
-  gap: clamp(1rem, 2vw, 2rem);
+  gap: clamp(1rem, 1vw, 2rem);
   display: flex;
   min-width: 0;
   overflow: auto hidden;
@@ -19,7 +19,6 @@ $r: '.creditCard';
     grid-template-rows: max-content 1fr max-content;
     width: 100%;
     max-width: 25.5rem;
-    min-height: 14rem;
     color: var(--color-1);
     padding: 1.5rem;
     font-family: 'Lato';
@@ -31,10 +30,13 @@ $r: '.creditCard';
     background-repeat: no-repeat;
     background-blend-mode: overlay;
     background-position: center, bottom;
-
     background-image:
       linear-gradient(107deg, #2d60ff 2.61%, #539bff 101.2%),
       linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+
+    @media (width < 47.9380rem) {
+      min-height: 14rem;
+    }
   }
 
   &__balance {

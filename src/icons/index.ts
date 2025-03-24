@@ -31,6 +31,7 @@ export { default as IconLogoApple } from './iconLogoApple';
 export { default as IconLogoGoogle } from './iconLogoGoogle';
 export { default as IconLogoAmazon } from './iconLogoAmazon';
 export { default as IconLogoSpotify } from './iconLogoSpotify';
+export { default as IconPaperPlane } from './iconPaperPlane';
 export { default as IconGraphWeeklyActivity } from './iconGraphWeeklyActivity';
 export { default as IconGraphExpenseStatistics } from './iconGraphExpenseStatistics';
 export { default as IconGraphBalanceHistory } from './iconGraphBalanceHistory';
