@@ -37,5 +37,5 @@ export { default as IconGraphExpenseStatistics } from './iconGraphExpenseStatist
 export { default as IconGraphBalanceHistory } from './iconGraphBalanceHistory';
 export { default as IconGraphMyExpense } from './iconGraphMyExpense';
 export { default as IconGraphDebitCreditOverview } from './iconGraphDebitCreditOverview';
-export { default as IconGraphYearlyTotalInvestment } from './iconGraphYearlyTotalInvestment';
+export { default as IconGraphInvestmentMapping } from './iconGraphInvestmentMapping';
 export { default as IconGraphCardExpenseStatistics } from './iconGraphCardExpenseStatistics';

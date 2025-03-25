@@ -6,7 +6,7 @@ const IconGraphWeeklyActivity = () => (
     viewBox="0 0 730 322"
   >
     <path
-      fill="#F3F3F5"
+      fill="var(--base-light-blue)"
       d="M69 76h631v1H69zm0 37h631v1H69zm0 37h631v1H69zm0 37h631v1H69zm0 37h631v1H69zm0 37h631v1H69z"
     />
     <path

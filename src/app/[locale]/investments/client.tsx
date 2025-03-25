@@ -3,13 +3,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { LayoutBlock, LayoutRow } from '@/layouts';
-import {
-  Table,
-  ServicesList,
-  FinancialOverview,
-  Graph,
-  Title,
-} from '@/components';
+import { Table, ServicesList, FinancialOverview, Graph, Title } from '@/components';
 import * as Icons from '@/icons';
 
 export default function InvestmentsClient() {
@@ -40,10 +34,10 @@ export default function InvestmentsClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
-        <Title title="Yearly Total Investment" />
+        <Title title="Investment mapping by country" />
         <LayoutBlock>
           <Graph>
-            <Icons.IconGraphYearlyTotalInvestment />
+            <Icons.IconGraphInvestmentMapping />
           </Graph>
         </LayoutBlock>
       </LayoutRow>

@@ -35,9 +35,11 @@ $r: '.graph';
     }
   }
 
-  [data-icon='IconGraphWeeklyActivity'] {
+  [data-icon='IconGraphMyExpense'],
+  [data-icon='IconGraphWeeklyActivity'],
+  [data-icon='IconGraphDebitCreditOverview'] {
     rect {
-      animation: scaleY 1s;
+      animation: scaleY 0.8s;
 
       &:hover {
         opacity: 0.5;
@@ -56,13 +58,15 @@ $r: '.graph';
     }
   }
 
-  [data-icon='IconGraphExpenseStatistics'] {
-    animation: scale 1s;
+  [data-icon='IconGraphInvestmentMapping'],
+  [data-icon='IconGraphExpenseStatistics'],
+  [data-icon='IconGraphCardExpenseStatistics'] {
+    animation: scale 0.8s;
 
     @keyframes scale {
       0% {
         opacity: 0;
-        transform: scale(0.5);
+        transform: scale(0.8);
         transform-origin: center;
       }
       100% {
@@ -71,22 +75,10 @@ $r: '.graph';
         transform-origin: center;
       }
     }
+  }
 
-    &:hover {
-      path {
-        opacity: 0.5;
-
-        &[data-title] {
-          opacity: 1;
-        }
-      }
-    }
-
-    path {
-      &:hover {
-        opacity: 1;
-      }
-    }
+  [data-icon='IconGraphInvestmentMapping'] {
+    padding: 1rem;
   }
 
   // modifier

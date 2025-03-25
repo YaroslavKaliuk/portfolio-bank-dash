@@ -1,6 +1,9 @@
 const IconGraphCardExpenseStatistics = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 310" style={{ fill: 'none' }}>
-    <rect width="350" height="310" fill="#fff" rx="25" />
+  <svg
+    data-icon="IconGraphCardExpenseStatistics"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 350 310"
+  >
     <path
       fill="url(#a)"
       fillOpacity=".5"
@@ -51,7 +54,7 @@ const IconGraphCardExpenseStatistics = () => (
       opacity=".83"
     />
     <path
-      fill="#fff"
+      fill="var(--base-white)"
       d="M197.336 106.169c-6.213-6.329-14.834-10.291-24.407-10.386-9.573-.095-18.268 3.708-24.597 9.91-6.329 6.213-10.291 14.835-10.386 24.408-.096 9.572 3.708 18.268 9.91 24.597 6.213 6.329 14.835 10.291 24.407 10.386 9.573.095 18.269-3.709 24.598-9.911 6.329-6.212 10.291-14.834 10.386-24.407.095-9.572-3.698-18.268-9.911-24.597Z"
     />
     <circle cx="57.5" cy="240.5" r="7.5" fill="#4C78FF" />
