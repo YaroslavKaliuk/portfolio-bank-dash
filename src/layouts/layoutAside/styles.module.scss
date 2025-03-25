@@ -7,7 +7,7 @@ $r: '.layoutAside';
 #{$r} {
   display: grid;
   position: relative;
-  border-right: 0.0625rem solid var(--color-4);
+  border-right: 0.0625rem solid var(--base-pale-blue);
 
   @media (width < 63.9375rem) {
     inset: 0;
@@ -34,7 +34,7 @@ $r: '.layoutAside';
     inset: 0;
     position: absolute;
     overflow: hidden auto;
-    background-color: var(--color-1);
+    background-color: var(--base-white);
 
     @media (width < 63.9375rem) {
       gap: 1rem;

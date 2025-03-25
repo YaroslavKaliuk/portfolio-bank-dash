@@ -32,12 +32,12 @@ $r: '.avatar';
     place-items: center;
     top: 0;
     right: 0;
-    color: var(--color-1);
+    color: var(--base-white);
     line-height: 1;
     font-weight: 500;
     position: absolute;
     border-radius: 100%;
-    background-color: var(--color-9);
+    background-color: var(--accent-red);
 
     @media (width < 63.9375rem) {
       width: 1.125rem;
@@ -70,14 +70,14 @@ $r: '.avatar';
       bottom: 0;
       width: 3rem;
       height: 3rem;
-      color: var(--color-1);
+      color: var(--base-white);
       position: absolute;
       border-radius: 50%;
-      background-color: var(--color-8);
+      background-color: var(--primary);
       transition: background-color 0.3s;
 
       &:hover {
-        background-color: var(--color-5);
+        background-color: var(--primary-dark);
       }
     }
   }

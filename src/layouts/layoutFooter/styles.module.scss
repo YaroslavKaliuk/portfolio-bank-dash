@@ -5,8 +5,8 @@ $r: '.layoutFooter';
 // block
 //-----------------------------------------------------------
 #{$r} {
-  background-color: var(--color-1);
-  border-top: 0.0625rem solid var(--color-4);
+  background-color: var(--base-white);
+  border-top: 0.0625rem solid var(--base-pale-blue);
 
   @media (width < 63.9375rem) {
     padding: 1rem;

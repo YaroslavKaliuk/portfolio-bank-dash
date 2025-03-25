@@ -13,7 +13,7 @@ $r: '.languageSwitcher';
   padding: 0.125rem;
   position: relative;
   border-radius: 100%;
-  background-color: var(--color-3);
+  background-color: var(--base-light-gray);
   transition: background-color 0.3s;
 
   // element
@@ -47,7 +47,7 @@ $r: '.languageSwitcher';
 
   &:hover,
   &:focus-within {
-    background-color: var(--color-4);
+    background-color: var(--base-pale-blue);
 
     #{$r}__list {
       opacity: 1;

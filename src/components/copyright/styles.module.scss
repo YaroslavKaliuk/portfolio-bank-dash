@@ -22,7 +22,7 @@ $r: '.copyright';
   //---------------------------------------------------------
   &__year,
   &__link {
-    color: var(--color-6);
+    color: var(--primary-light);
     font-size: 0.88rem;
   }
 
@@ -31,7 +31,7 @@ $r: '.copyright';
     transition: color 0.3s;
 
     &:hover {
-      color: var(--color-5);
+      color: var(--primary-dark);
     }
   }
 

@@ -10,14 +10,14 @@ $r: '.themeSwitcher';
   place-items: center;
   width: 2.5rem;
   height: 2.5rem;
-  color: var(--color-6);
+  color: var(--primary-light);
   font-size: 1.25rem;
   border-radius: 100%;
-  background-color: var(--color-3);
+  background-color: var(--base-light-gray);
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: var(--color-4);
+    background-color: var(--base-pale-blue);
   }
 
   // element

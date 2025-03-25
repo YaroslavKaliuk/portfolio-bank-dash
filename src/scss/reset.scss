@@ -102,6 +102,11 @@ svg {
   fill: currentColor;
   pointer-events: none;
   display: inline-flex;
+
+  path,
+  rect {
+    pointer-events: visibleFill;
+  }
 }
 
 a {

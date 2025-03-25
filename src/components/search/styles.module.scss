@@ -10,7 +10,7 @@ $r: '.search';
   height: 40px;
   position: relative;
   border-radius: 100vw;
-  background-color: var(--color-3);
+  background-color: var(--base-light-gray);
 
   @media (width >= 64rem) {
     max-width: 16rem;
@@ -26,7 +26,7 @@ $r: '.search';
     padding-inline: 2.8rem 1rem;
 
     &::placeholder {
-      color: var(--color-6);
+      color: var(--primary-light);
     }
   }
 
@@ -36,7 +36,7 @@ $r: '.search';
     justify-content: center;
     inset: 0;
     right: auto;
-    color: var(--color-6);
+    color: var(--primary-light);
     aspect-ratio: 1 / 1;
     position: absolute;
     border-radius: 100%;
@@ -46,8 +46,8 @@ $r: '.search';
 
     &:hover,
     &:focus {
-      color: var(--color-1);
-      background-color: var(--color-6);
+      color: var(--base-white);
+      background-color: var(--primary-light);
     }
   }
 

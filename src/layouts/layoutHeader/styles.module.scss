@@ -9,8 +9,8 @@ $r: '.layoutHeader';
   z-index: 2;
   position: sticky;
   padding-block: 1rem;
-  background-color: var(--color-1);
-  border-bottom: 0.0625rem solid var(--color-4);
+  background-color: var(--base-white);
+  border-bottom: 0.0625rem solid var(--base-pale-blue);
 
   @media (width < 63.9375rem) {
     height: 4.5rem;

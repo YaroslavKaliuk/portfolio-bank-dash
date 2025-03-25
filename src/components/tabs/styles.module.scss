@@ -17,11 +17,11 @@ $r: '.tabs';
   &__nav {
     display: flex;
     overflow: auto hidden;
-    border-bottom: 0.0625rem solid var(--color-4);
+    border-bottom: 0.0625rem solid var(--base-pale-blue);
 
     &Item {
       flex-grow: 1;
-      color: var(--color-6);
+      color: var(--primary-light);
       font-weight: 500;
       padding: 1rem;
       cursor: pointer;
@@ -42,12 +42,12 @@ $r: '.tabs';
       }
 
       &:hover {
-        color: var(--color-8);
+        color: var(--primary);
       }
 
       &:focus-visible {
         outline: none;
-        background-color: var(--color-4);
+        background-color: var(--base-pale-blue);
       }
     }
   }
@@ -69,10 +69,10 @@ $r: '.tabs';
   @for $i from 1 to 10 + 1 {
     & > :nth-of-type(#{$i}):is(:checked) {
       ~ #{$r}__nav :nth-of-type(#{$i}) {
-        color: var(--color-8);
+        color: var(--primary);
 
         &::before {
-          background-color: var(--color-8);
+          background-color: var(--primary);
         }
       }
 
@@ -82,7 +82,7 @@ $r: '.tabs';
     }
 
     & > :nth-of-type(#{$i}):is(:focus-visible) ~ #{$r}__nav :nth-of-type(#{$i}) {
-      background-color: var(--color-4);
+      background-color: var(--base-pale-blue);
     }
 
     & > :nth-of-type(#{$i}):is(:disabled) ~ * :nth-of-type(#{$i}) {

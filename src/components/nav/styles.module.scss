@@ -19,7 +19,7 @@ $r: '.nav';
     gap: 1rem;
     display: flex;
     align-items: center;
-    color: var(--color-7);
+    color: var(--text-secondary);
     position: relative;
     padding-block: 1.25rem;
     transition: color 0.3s;
@@ -56,17 +56,17 @@ $r: '.nav';
     &Active,
     &:focus-visible {
       outline: none;
-      color: var(--color-8);
+      color: var(--primary);
 
       &::before {
         transform: scaleY(1);
-        background-color: var(--color-8);
+        background-color: var(--primary);
       }
 
       #{$r}__title {
         &::before {
           transform: translateY(0);
-          color: var(--color-8);
+          color: var(--primary);
         }
 
         &::after {
@@ -76,7 +76,7 @@ $r: '.nav';
     }
 
     &:hover {
-      color: var(--color-8);
+      color: var(--primary);
 
       #{$r}__title {
         &::after {
@@ -85,7 +85,7 @@ $r: '.nav';
 
         &::before {
           transform: translateY(0);
-          color: var(--color-8);
+          color: var(--primary);
         }
       }
     }
@@ -103,7 +103,7 @@ $r: '.nav';
     &::before {
       content: attr(data-title);
       inset: 0;
-      color: var(--color-7);
+      color: var(--text-secondary);
       position: absolute;
       transition: 0.3s;
     }

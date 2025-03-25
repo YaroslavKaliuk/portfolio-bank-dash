@@ -11,14 +11,14 @@ $r: '.button';
   justify-content: center;
   height: 3rem;
   line-height: 1;
-  color: var(--color-1);
+  color: var(--base-white);
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   padding-inline: 4rem;
   white-space: nowrap;
   border-radius: 100vw;
-  background-color: var(--color-8);
+  background-color: var(--primary);
   transition: background-color 0.3s;
 
   &:disabled {
@@ -29,7 +29,7 @@ $r: '.button';
   @media (pointer: fine) {
     &:not(:disabled):hover,
     &:not(:disabled):focus-visible {
-      background-color: var(--color-5);
+      background-color: var(--primary-dark);
     }
   }
 
@@ -47,10 +47,10 @@ $r: '.button';
   //---------------------------------------------------------
   &__isOutline {
     height: 2.5rem;
-    color: var(--color-6);
+    color: var(--primary-light);
     font-size: 0.938rem;
     padding-inline: 1.5rem;
-    border: 0.0625rem solid var(--color-6);
+    border: 0.0625rem solid var(--primary-light);
     background-color: transparent;
     transition:
       color 0.3s,
@@ -59,8 +59,8 @@ $r: '.button';
     @media (pointer: fine) {
       &:not(:disabled):hover,
       &:not(:disabled):focus-visible {
-        color: var(--color-8);
-        border-color: var(--color-8);
+        color: var(--primary);
+        border-color: var(--primary);
         background-color: transparent;
       }
     }

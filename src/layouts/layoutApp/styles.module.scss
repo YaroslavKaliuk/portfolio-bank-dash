@@ -8,10 +8,10 @@ $r: '.layoutApp';
   display: grid;
   grid-template-rows: max-content 1fr max-content;
   min-height: 100dvh;
-  color: var(--color-2);
+  color: var(--text-primary);
   font-size: 1rem;
   font-family: 'Inter';
-  background-color: var(--color-3);
+  background-color: var(--base-light-gray);
 
   @media (width >= 64rem) {
     grid-template-columns: 16rem 1fr;
@@ -20,13 +20,13 @@ $r: '.layoutApp';
   // element
   //---------------------------------------------------------
   :focus-visible {
-    outline: 0.125rem solid var(--color-6);
+    outline: 0.125rem solid var(--primary-light);
   }
 
   @media (pointer: fine) {
     @supports (-moz-appearance: none) {
       * {
-        scrollbar-color: var(--color-10) var(--color-3);
+        scrollbar-color: var(--base-light-blue) var(--base-light-gray);
         scrollbar-width: thin;
       }
     }
@@ -45,7 +45,7 @@ $r: '.layoutApp';
 
     ::-webkit-scrollbar-thumb {
       border-radius: 100vw;
-      background-color: var(--color-10);
+      background-color: var(--base-light-blue);
     }
 
     ::-webkit-scrollbar-track {

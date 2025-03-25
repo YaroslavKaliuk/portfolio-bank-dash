@@ -5,7 +5,9 @@ $r: '.graph';
 // block
 //-----------------------------------------------------------
 #{$r} {
+  flex-grow: 1;
   display: flex;
+  position: relative;
 
   @media (width < 63.9375rem) {
     margin: -1rem;
@@ -18,26 +20,73 @@ $r: '.graph';
   // element
   //---------------------------------------------------------
   svg {
+    inset: 0;
     width: 100%;
     height: 100%;
+    position: absolute;
 
-    // &[data-icon='IconGraphWeeklyActivity'] {
-    //   overflow: hidden;
-    //   rect {
-    //     animation: move 1s ease-in-out;
+    [data-title] {
+      pointer-events: none;
+    }
 
-    //     @keyframes move {
-    //       0% {
-    //         transform: scaleY(50%);
-    //         transform-origin: bottom;
-    //       }
-    //       100% {
-    //         transform: scaleY(100%);
-    //         transform-origin: bottom;
-    //       }
-    //     }
-    //   }
-    // }
+    path,
+    rect {
+      transition: 0.3s;
+    }
+  }
+
+  [data-icon='IconGraphWeeklyActivity'] {
+    rect {
+      animation: scaleY 1s;
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      @keyframes scaleY {
+        0% {
+          transform: scaleY(50%);
+          transform-origin: bottom;
+        }
+        100% {
+          transform: scaleY(100%);
+          transform-origin: bottom;
+        }
+      }
+    }
+  }
+
+  [data-icon='IconGraphExpenseStatistics'] {
+    animation: scale 1s;
+
+    @keyframes scale {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+        transform-origin: center;
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+        transform-origin: center;
+      }
+    }
+
+    &:hover {
+      path {
+        opacity: 0.5;
+
+        &[data-title] {
+          opacity: 1;
+        }
+      }
+    }
+
+    path {
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 
   // modifier

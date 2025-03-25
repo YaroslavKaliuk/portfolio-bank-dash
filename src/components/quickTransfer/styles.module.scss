@@ -5,7 +5,7 @@ $r: '.quickTransfer';
 // block
 //-----------------------------------------------------------
 #{$r} {
-  --swiper-theme-color: var(--color-8);
+  --swiper-theme-color: var(--primary);
   --swiper-navigation-size: 1.125rem;
 
   // element
@@ -26,7 +26,7 @@ $r: '.quickTransfer';
 
     &Active {
       #{$r}__image {
-        box-shadow: 0 0 0 4px var(--color-8);
+        box-shadow: 0 0 0 4px var(--primary);
       }
     }
   }
@@ -60,7 +60,7 @@ $r: '.quickTransfer';
   }
 
   &__text {
-    color: var(--color-6);
+    color: var(--primary-light);
     font-size: 0.875rem;
   }
 
@@ -69,7 +69,7 @@ $r: '.quickTransfer';
     display: grid;
     align-items: center;
     margin-top: 1rem;
-    background-color: var(--color-3);
+    background-color: var(--base-light-gray);
     padding: 1rem;
     border-radius: 1rem;
 
@@ -104,7 +104,7 @@ $r: '.quickTransfer';
   border-radius: 100%;
   width: 2.5rem;
   height: 2.5rem;
-  background-color: var(--color-1);
+  background-color: var(--base-white);
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
 
   &:active {
