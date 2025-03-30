@@ -135,32 +135,32 @@ export default function DashboardClient() {
             transactions={[
               {
                 icon: <Icons.IconLogoApple />,
-                title: 'Apple Music',
-                date: '1h ago',
+                title: t('transactions.list.appleMusic'),
+                date: `${t('transactions.list.time.hours.one')} ${t('transactions.list.time.ago')}`,
                 amount: '$1450',
               },
               {
                 icon: <Icons.IconUser />,
-                title: 'Michael',
-                date: '2h ago',
+                title: t('transactions.list.michael'),
+                date: `${t('transactions.list.time.hours.two')} ${t('transactions.list.time.ago')}`,
                 amount: '$700',
               },
               {
                 icon: <Icons.IconLogoAmazon />,
-                title: 'Amazon Shopping',
-                date: '3h ago',
+                title: t('transactions.list.amazonShopping'),
+                date: `${t('transactions.list.time.hours.three')} ${t('transactions.list.time.ago')}`,
                 amount: '$895',
               },
               {
                 icon: <Icons.IconLogoApple />,
-                title: 'Apple Music',
-                date: '1h ago',
+                title: t('transactions.list.appleMusic'),
+                date: `${t('transactions.list.time.hours.one')} ${t('transactions.list.time.ago')}`,
                 amount: '$1450',
               },
               {
                 icon: <Icons.IconUser />,
-                title: 'Michael',
-                date: '2h ago',
+                title: t('transactions.list.michael'),
+                date: `${t('transactions.list.time.hours.two')} ${t('transactions.list.time.ago')}`,
                 amount: '$700',
               },
             ]}

@@ -185,5 +185,153 @@
     "installment": "Cuota",
     "repay": "Pagar",
     "total": "Total:"
+  },
+  "services": {
+    "checkingAccounts": {
+      "title": "Cuentas Corrientes",
+      "value": "Transacciones Fáciles",
+      "noFees": "Sin Cargos Ocultos",
+      "noFeesValue": "Banca Transparente",
+      "access": "Acceso 24/7",
+      "accessValue": "Banca en Cualquier Momento",
+      "security": "Pagos Seguros",
+      "securityValue": "Seguro y Confiable",
+      "button": "Ver Detalles"
+    },
+    "savingsAccounts": {
+      "title": "Cuentas de Ahorro",
+      "value": "Haz Crecer tu Riqueza",
+      "interest": "Alto Interés",
+      "interestValue": "Maximiza los Retornos",
+      "withdrawals": "Retiros Fáciles",
+      "withdrawalsValue": "Acceso Flexible",
+      "fees": "Sin Cargos Mensuales",
+      "feesValue": "Económico",
+      "button": "Ver Detalles"
+    },
+    "businessLoans": {
+      "title": "Préstamos Empresariales",
+      "value": "Expande tu Negocio",
+      "rates": "Tasas de Interés Bajas",
+      "ratesValue": "Planes Asequibles",
+      "approval": "Aprobación Rápida",
+      "approvalValue": "Procesamiento Rápido",
+      "solutions": "Soluciones Personalizadas",
+      "solutionsValue": "Ofertas Adaptadas",
+      "button": "Ver Detalles"
+    },
+    "debitCreditCards": {
+      "title": "Tarjetas de Débito y Crédito",
+      "value": "Compra con Facilidad",
+      "cashback": "Ofertas de Devolución",
+      "cashbackValue": "Gana Mientras Gastas",
+      "global": "Aceptación Global",
+      "globalValue": "Usa en Cualquier Lugar",
+      "protection": "Protección contra Fraude",
+      "protectionValue": "Compra de Forma Segura",
+      "button": "Ver Detalles"
+    },
+    "lifeInsurance": {
+      "title": "Seguro de Vida",
+      "value": "Asegura tu Futuro",
+      "plans": "Planes Integrales",
+      "plansValue": "Cobertura para Todos",
+      "premiums": "Primas Asequibles",
+      "premiumsValue": "Amigable con el Presupuesto",
+      "protection": "Protección Familiar",
+      "protectionValue": "Tranquilidad",
+      "button": "Ver Detalles"
+    }
+  },
+  "creditCards": {
+    "list": {
+      "cardType": "Tipo de Tarjeta",
+      "bank": "Banco",
+      "cardNumber": "Número de Tarjeta",
+      "holderName": "Nombre del Titular",
+      "button": "Ver Detalles",
+      "types": {
+        "primary": "Principal",
+        "secondary": "Secundaria"
+      }
+    },
+    "actions": {
+      "blockCard": {
+        "title": "Bloquear Tarjeta",
+        "value": "Bloquea tu tarjeta instantáneamente"
+      },
+      "orderNewCard": {
+        "title": "Ordenar Nueva Tarjeta",
+        "value": "Solicita una tarjeta de reemplazo"
+      },
+      "changePin": {
+        "title": "Cambiar PIN",
+        "value": "Establece un nuevo PIN para tu tarjeta"
+      },
+      "reportLostCard": {
+        "title": "Reportar Tarjeta Perdida",
+        "value": "Reporta tu tarjeta como perdida"
+      }
+    }
+  },
+  "investments": {
+    "list": {
+      "investmentValue": "Valor de la Inversión",
+      "investmentPeriod": "Período de Inversión",
+      "riskLevel": "Nivel de Riesgo",
+      "industry": "Industria",
+      "returnValue": "Valor de Retorno",
+      "types": {
+        "ecommerce": "Comercio Electrónico, Mercado",
+        "automotive": "Automotriz, Energía",
+        "entertainment": "Entretenimiento, Streaming",
+        "media": "Medios",
+        "tech": "Tecnología, Publicidad",
+        "software": "Tecnología, Software",
+        "socialMedia": "Tecnología, Redes Sociales"
+      },
+      "riskLevels": {
+        "low": "Bajo",
+        "medium": "Medio",
+        "high": "Alto"
+      }
+    }
+  },
+  "transactions": {
+    "list": {
+      "mobileService": "Servicio Móvil",
+      "spotifySubscription": "Suscripción Spotify",
+      "emilyWilson": "Emily Wilson",
+      "appleMusic": "Apple Music",
+      "michael": "Michael",
+      "amazonShopping": "Compras Amazon",
+      "googlePlay": "Google Play",
+      "categories": {
+        "service": "Servicio",
+        "shopping": "Compras",
+        "transfer": "Transferencia"
+      },
+      "status": {
+        "completed": "Completado",
+        "pending": "Pendiente"
+      },
+      "time": {
+        "ago": "hace",
+        "hours": {
+          "one": "1h",
+          "two": "2h",
+          "three": "3h",
+          "five": "5h"
+        }
+      },
+      "button": {
+        "download": "Descargar"
+      }
+    }
+  },
+  "loans": {
+    "button": {
+      "repay": "Pagar"
+    }
   }
 }

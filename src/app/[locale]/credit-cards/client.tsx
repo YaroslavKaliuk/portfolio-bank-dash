@@ -51,27 +51,33 @@ export default function CreditCardsClient() {
           rows={[
             [
               { icon: <Icons.IconExpense /> },
-              { title: 'Card Type', value: 'Secondary' },
-              { title: 'Bank', value: 'DBL Bank' },
-              { title: 'Card Number', value: '**** 5600' },
-              { title: 'Holder Name', value: 'William' },
-              { button: <Button title="View Details" isOutline /> },
+              {
+                title: t('creditCards.list.cardType'),
+                value: t('creditCards.list.types.secondary'),
+              },
+              { title: t('creditCards.list.bank'), value: 'DBL Bank' },
+              { title: t('creditCards.list.cardNumber'), value: '**** 5600' },
+              { title: t('creditCards.list.holderName'), value: 'William' },
+              { button: <Button title={t('creditCards.list.button')} isOutline /> },
             ],
             [
               { icon: <Icons.IconExpense /> },
-              { title: 'Card Type', value: 'Primary' },
-              { title: 'Bank', value: 'Global Bank' },
-              { title: 'Card Number', value: '**** 1234' },
-              { title: 'Holder Name', value: 'Emma' },
-              { button: <Button title="View Details" isOutline /> },
+              { title: t('creditCards.list.cardType'), value: t('creditCards.list.types.primary') },
+              { title: t('creditCards.list.bank'), value: 'Global Bank' },
+              { title: t('creditCards.list.cardNumber'), value: '**** 1234' },
+              { title: t('creditCards.list.holderName'), value: 'Emma' },
+              { button: <Button title={t('creditCards.list.button')} isOutline /> },
             ],
             [
               { icon: <Icons.IconExpense /> },
-              { title: 'Card Type', value: 'Secondary' },
-              { title: 'Bank', value: 'City Bank' },
-              { title: 'Card Number', value: '**** 9876' },
-              { title: 'Holder Name', value: 'James' },
-              { button: <Button title="View Details" isOutline /> },
+              {
+                title: t('creditCards.list.cardType'),
+                value: t('creditCards.list.types.secondary'),
+              },
+              { title: t('creditCards.list.bank'), value: 'City Bank' },
+              { title: t('creditCards.list.cardNumber'), value: '**** 9876' },
+              { title: t('creditCards.list.holderName'), value: 'James' },
+              { button: <Button title={t('creditCards.list.button')} isOutline /> },
             ],
           ]}
         />
@@ -96,19 +102,31 @@ export default function CreditCardsClient() {
           rows={[
             [
               { icon: <Icons.IconExpense /> },
-              { title: 'Block Card', value: 'Instantly block your card' },
+              {
+                title: t('creditCards.actions.blockCard.title'),
+                value: t('creditCards.actions.blockCard.value'),
+              },
             ],
             [
               { icon: <Icons.IconExpense /> },
-              { title: 'Order New Card', value: 'Request a replacement card' },
+              {
+                title: t('creditCards.actions.orderNewCard.title'),
+                value: t('creditCards.actions.orderNewCard.value'),
+              },
             ],
             [
               { icon: <Icons.IconExpense /> },
-              { title: 'Change PIN', value: 'Set a new PIN for your card' },
+              {
+                title: t('creditCards.actions.changePin.title'),
+                value: t('creditCards.actions.changePin.value'),
+              },
             ],
             [
               { icon: <Icons.IconExpense /> },
-              { title: 'Report Lost Card', value: 'Report your card as lost' },
+              {
+                title: t('creditCards.actions.reportLostCard.title'),
+                value: t('creditCards.actions.reportLostCard.value'),
+              },
             ],
           ]}
         />

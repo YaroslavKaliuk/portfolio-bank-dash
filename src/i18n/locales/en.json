@@ -185,5 +185,153 @@
     "installment": "Installment",
     "repay": "Repay",
     "total": "Total:"
+  },
+  "services": {
+    "checkingAccounts": {
+      "title": "Checking Accounts",
+      "value": "Easy Transactions",
+      "noFees": "No Hidden Fees",
+      "noFeesValue": "Transparent Banking",
+      "access": "24/7 Access",
+      "accessValue": "Bank Anytime",
+      "security": "Secure Payments",
+      "securityValue": "Safe & Reliable",
+      "button": "View Details"
+    },
+    "savingsAccounts": {
+      "title": "Savings Accounts",
+      "value": "Grow Your Wealth",
+      "interest": "High Interest",
+      "interestValue": "Maximize Returns",
+      "withdrawals": "Easy Withdrawals",
+      "withdrawalsValue": "Flexible Access",
+      "fees": "No Monthly Fees",
+      "feesValue": "Cost-Effective",
+      "button": "View Details"
+    },
+    "businessLoans": {
+      "title": "Business Loans",
+      "value": "Expand Your Business",
+      "rates": "Low Interest Rates",
+      "ratesValue": "Affordable Plans",
+      "approval": "Fast Approval",
+      "approvalValue": "Quick Processing",
+      "solutions": "Custom Solutions",
+      "solutionsValue": "Tailored Offers",
+      "button": "View Details"
+    },
+    "debitCreditCards": {
+      "title": "Debit and Credit Cards",
+      "value": "Shop with Ease",
+      "cashback": "Cashback Offers",
+      "cashbackValue": "Earn While You Spend",
+      "global": "Global Acceptance",
+      "globalValue": "Use Anywhere",
+      "protection": "Fraud Protection",
+      "protectionValue": "Shop Securely",
+      "button": "View Details"
+    },
+    "lifeInsurance": {
+      "title": "Life Insurance",
+      "value": "Secure Your Future",
+      "plans": "Comprehensive Plans",
+      "plansValue": "Coverage for All",
+      "premiums": "Affordable Premiums",
+      "premiumsValue": "Budget-Friendly",
+      "protection": "Family Protection",
+      "protectionValue": "Peace of Mind",
+      "button": "View Details"
+    }
+  },
+  "creditCards": {
+    "list": {
+      "cardType": "Card Type",
+      "bank": "Bank",
+      "cardNumber": "Card Number",
+      "holderName": "Holder Name",
+      "button": "View Details",
+      "types": {
+        "primary": "Primary",
+        "secondary": "Secondary"
+      }
+    },
+    "actions": {
+      "blockCard": {
+        "title": "Block Card",
+        "value": "Instantly block your card"
+      },
+      "orderNewCard": {
+        "title": "Order New Card",
+        "value": "Request a replacement card"
+      },
+      "changePin": {
+        "title": "Change PIN",
+        "value": "Set a new PIN for your card"
+      },
+      "reportLostCard": {
+        "title": "Report Lost Card",
+        "value": "Report your card as lost"
+      }
+    }
+  },
+  "investments": {
+    "list": {
+      "investmentValue": "Investment Value",
+      "investmentPeriod": "Investment Period",
+      "riskLevel": "Risk Level",
+      "industry": "Industry",
+      "returnValue": "Return Value",
+      "types": {
+        "ecommerce": "E-commerce, Marketplace",
+        "automotive": "Automotive, Energy",
+        "entertainment": "Entertainment, Streaming",
+        "media": "Media",
+        "tech": "Tech, Advertising",
+        "software": "Tech, Software",
+        "socialMedia": "Tech, Social Media"
+      },
+      "riskLevels": {
+        "low": "Low",
+        "medium": "Medium",
+        "high": "High"
+      }
+    }
+  },
+  "transactions": {
+    "list": {
+      "mobileService": "Mobile Service",
+      "spotifySubscription": "Spotify Subscription",
+      "emilyWilson": "Emily Wilson",
+      "appleMusic": "Apple Music",
+      "michael": "Michael",
+      "amazonShopping": "Amazon Shopping",
+      "googlePlay": "Google Play",
+      "categories": {
+        "service": "Service",
+        "shopping": "Shopping",
+        "transfer": "Transfer"
+      },
+      "status": {
+        "completed": "Completed",
+        "pending": "Pending"
+      },
+      "time": {
+        "ago": "ago",
+        "hours": {
+          "one": "1h",
+          "two": "2h",
+          "three": "3h",
+          "five": "5h"
+        }
+      },
+      "button": {
+        "download": "Download"
+      }
+    }
+  },
+  "loans": {
+    "button": {
+      "repay": "Repay"
+    }
   }
 }

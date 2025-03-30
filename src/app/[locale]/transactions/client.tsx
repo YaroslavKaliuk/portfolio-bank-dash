@@ -68,7 +68,7 @@ export default function TransactionsClient() {
                 { td: '**** 1234' },
                 { td: '28 Jan, 12.30 AM' },
                 { td: '-$2,500' },
-                { button: <Button title="Download" isOutline /> },
+                { button: <Button title={t('transactions.list.button.download')} isOutline /> },
               ],
               [
                 { td: 'Netflix Subscription' },
@@ -77,7 +77,7 @@ export default function TransactionsClient() {
                 { td: '**** 5678' },
                 { td: '29 Jan, 10.15 AM' },
                 { td: '-$1,200' },
-                { button: <Button title="Download" isOutline /> },
+                { button: <Button title={t('transactions.list.button.download')} isOutline /> },
               ],
               [
                 { td: 'Amazon Purchase' },
@@ -86,7 +86,7 @@ export default function TransactionsClient() {
                 { td: '**** 9101' },
                 { td: '30 Jan, 03.45 PM' },
                 { td: '+$5,000' },
-                { button: <Button title="Download" isOutline /> },
+                { button: <Button title={t('transactions.list.button.download')} isOutline /> },
               ],
               [
                 { td: 'Google Cloud Services' },
@@ -95,7 +95,7 @@ export default function TransactionsClient() {
                 { td: '**** 1121' },
                 { td: '31 Jan, 09.00 AM' },
                 { td: '+$3,000' },
-                { button: <Button title="Download" isOutline /> },
+                { button: <Button title={t('transactions.list.button.download')} isOutline /> },
               ],
               [
                 { td: 'Uber Ride' },
@@ -104,7 +104,7 @@ export default function TransactionsClient() {
                 { td: '**** 3141' },
                 { td: '1 Feb, 07.20 PM' },
                 { td: '+$1,500' },
-                { button: <Button title="Download" isOutline /> },
+                { button: <Button title={t('transactions.list.button.download')} isOutline /> },
               ],
               [
                 { td: 'Apple Music Subscription' },
@@ -113,7 +113,7 @@ export default function TransactionsClient() {
                 { td: '**** 5161' },
                 { td: '2 Feb, 11.10 AM' },
                 { td: '-$1,000' },
-                { button: <Button title="Download" isOutline /> },
+                { button: <Button title={t('transactions.list.button.download')} isOutline /> },
               ],
               [
                 { td: 'Airbnb Booking' },
@@ -122,7 +122,7 @@ export default function TransactionsClient() {
                 { td: '**** 7181' },
                 { td: '3 Feb, 02.30 PM' },
                 { td: '-$7,000' },
-                { button: <Button title="Download" isOutline /> },
+                { button: <Button title={t('transactions.list.button.download')} isOutline /> },
               ],
               [
                 { td: 'Starbucks Purchase' },
@@ -131,7 +131,7 @@ export default function TransactionsClient() {
                 { td: '**** 9202' },
                 { td: '4 Feb, 08.45 AM' },
                 { td: '-$500' },
-                { button: <Button title="Download" isOutline /> },
+                { button: <Button title={t('transactions.list.button.download')} isOutline /> },
               ],
               [
                 { td: 'Microsoft Office Subscription' },
@@ -140,7 +140,7 @@ export default function TransactionsClient() {
                 { td: '**** 1222' },
                 { td: '5 Feb, 01.00 PM' },
                 { td: '-$4,000' },
-                { button: <Button title="Download" isOutline /> },
+                { button: <Button title={t('transactions.list.button.download')} isOutline /> },
               ],
               [
                 { td: 'YouTube Premium Subscription' },
@@ -149,7 +149,7 @@ export default function TransactionsClient() {
                 { td: '**** 3242' },
                 { td: '6 Feb, 06.15 PM' },
                 { td: '+$1,500' },
-                { button: <Button title="Download" isOutline /> },
+                { button: <Button title={t('transactions.list.button.download')} isOutline /> },
               ],
               [
                 { td: 'Grocery Store Purchase' },
@@ -158,7 +158,7 @@ export default function TransactionsClient() {
                 { td: '**** 5262' },
                 { td: '7 Feb, 09.30 AM' },
                 { td: '-$3,500' },
-                { button: <Button title="Download" isOutline /> },
+                { button: <Button title={t('transactions.list.button.download')} isOutline /> },
               ],
               [
                 { td: 'Train Ticket Booking' },
@@ -167,7 +167,7 @@ export default function TransactionsClient() {
                 { td: '**** 7282' },
                 { td: '8 Feb, 04.20 PM' },
                 { td: '-$2,000' },
-                { button: <Button title="Download" isOutline /> },
+                { button: <Button title={t('transactions.list.button.download')} isOutline /> },
               ],
               [
                 { td: 'Online Course Purchase' },
@@ -176,7 +176,7 @@ export default function TransactionsClient() {
                 { td: '**** 9303' },
                 { td: '9 Feb, 12.00 PM' },
                 { td: '+$6,000' },
-                { button: <Button title="Download" isOutline /> },
+                { button: <Button title={t('transactions.list.button.download')} isOutline /> },
               ],
               [
                 { td: 'Hotel Booking' },
@@ -185,7 +185,7 @@ export default function TransactionsClient() {
                 { td: '**** 1323' },
                 { td: '10 Feb, 10.10 AM' },
                 { td: '-$8,000' },
-                { button: <Button title="Download" isOutline /> },
+                { button: <Button title={t('transactions.list.button.download')} isOutline /> },
               ],
               [
                 { td: 'Restaurant Bill' },
@@ -194,7 +194,7 @@ export default function TransactionsClient() {
                 { td: '**** 3344' },
                 { td: '11 Feb, 07.45 PM' },
                 { td: '-$1,200' },
-                { button: <Button title="Download" isOutline /> },
+                { button: <Button title={t('transactions.list.button.download')} isOutline /> },
               ],
               [
                 { td: 'Flight Ticket Booking' },
@@ -203,7 +203,7 @@ export default function TransactionsClient() {
                 { td: '**** 5365' },
                 { td: '12 Feb, 03.15 PM' },
                 { td: '+$10,000' },
-                { button: <Button title="Download" isOutline /> },
+                { button: <Button title={t('transactions.list.button.download')} isOutline /> },
               ],
               [
                 { td: 'Online Shopping' },
@@ -212,7 +212,7 @@ export default function TransactionsClient() {
                 { td: '**** 7386' },
                 { td: '13 Feb, 11.00 AM' },
                 { td: '-$4,500' },
-                { button: <Button title="Download" isOutline /> },
+                { button: <Button title={t('transactions.list.button.download')} isOutline /> },
               ],
               [
                 { td: 'Gym Membership' },
@@ -221,7 +221,7 @@ export default function TransactionsClient() {
                 { td: '**** 9407' },
                 { td: '14 Feb, 08.30 AM' },
                 { td: '-$3,000' },
-                { button: <Button title="Download" isOutline /> },
+                { button: <Button title={t('transactions.list.button.download')} isOutline /> },
               ],
               [
                 { td: 'Car Rental' },
@@ -230,7 +230,7 @@ export default function TransactionsClient() {
                 { td: '**** 1428' },
                 { td: '15 Feb, 05.00 PM' },
                 { td: '+$6,500' },
-                { button: <Button title="Download" isOutline /> },
+                { button: <Button title={t('transactions.list.button.download')} isOutline /> },
               ],
               [
                 { td: 'Online Game Purchase' },
@@ -239,7 +239,7 @@ export default function TransactionsClient() {
                 { td: '**** 3449' },
                 { td: '16 Feb, 02.10 PM' },
                 { td: '-$1,800' },
-                { button: <Button title="Download" isOutline /> },
+                { button: <Button title={t('transactions.list.button.download')} isOutline /> },
               ],
             ]}
           />

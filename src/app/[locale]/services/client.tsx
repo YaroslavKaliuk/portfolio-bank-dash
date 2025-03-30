@@ -39,43 +39,103 @@ export default function ServicesClient() {
           rows={[
             [
               { icon: <Icons.IconExpense /> },
-              { title: 'Checking Accounts', value: 'Easy Transactions' },
-              { title: 'No Hidden Fees', value: 'Transparent Banking' },
-              { title: '24/7 Access', value: 'Bank Anytime' },
-              { title: 'Secure Payments', value: 'Safe & Reliable' },
-              { button: <Button title="View Details" isOutline /> },
+              {
+                title: t('services.checkingAccounts.title'),
+                value: t('services.checkingAccounts.value'),
+              },
+              {
+                title: t('services.checkingAccounts.noFees'),
+                value: t('services.checkingAccounts.noFeesValue'),
+              },
+              {
+                title: t('services.checkingAccounts.access'),
+                value: t('services.checkingAccounts.accessValue'),
+              },
+              {
+                title: t('services.checkingAccounts.security'),
+                value: t('services.checkingAccounts.securityValue'),
+              },
+              { button: <Button title={t('services.checkingAccounts.button')} isOutline /> },
             ],
             [
               { icon: <Icons.IconSaving /> },
-              { title: 'Savings Accounts', value: 'Grow Your Wealth' },
-              { title: 'High Interest', value: 'Maximize Returns' },
-              { title: 'Easy Withdrawals', value: 'Flexible Access' },
-              { title: 'No Monthly Fees', value: 'Cost-Effective' },
-              { button: <Button title="View Details" isOutline /> },
+              {
+                title: t('services.savingsAccounts.title'),
+                value: t('services.savingsAccounts.value'),
+              },
+              {
+                title: t('services.savingsAccounts.interest'),
+                value: t('services.savingsAccounts.interestValue'),
+              },
+              {
+                title: t('services.savingsAccounts.withdrawals'),
+                value: t('services.savingsAccounts.withdrawalsValue'),
+              },
+              {
+                title: t('services.savingsAccounts.fees'),
+                value: t('services.savingsAccounts.feesValue'),
+              },
+              { button: <Button title={t('services.savingsAccounts.button')} isOutline /> },
             ],
             [
               { icon: <Icons.IconLoan /> },
-              { title: 'Business Loans', value: 'Expand Your Business' },
-              { title: 'Low Interest Rates', value: 'Affordable Plans' },
-              { title: 'Fast Approval', value: 'Quick Processing' },
-              { title: 'Custom Solutions', value: 'Tailored Offers' },
-              { button: <Button title="View Details" isOutline /> },
+              {
+                title: t('services.businessLoans.title'),
+                value: t('services.businessLoans.value'),
+              },
+              {
+                title: t('services.businessLoans.rates'),
+                value: t('services.businessLoans.ratesValue'),
+              },
+              {
+                title: t('services.businessLoans.approval'),
+                value: t('services.businessLoans.approvalValue'),
+              },
+              {
+                title: t('services.businessLoans.solutions'),
+                value: t('services.businessLoans.solutionsValue'),
+              },
+              { button: <Button title={t('services.businessLoans.button')} isOutline /> },
             ],
             [
               { icon: <Icons.IconCreditCard /> },
-              { title: 'Debit and Credit Cards', value: 'Shop with Ease' },
-              { title: 'Cashback Offers', value: 'Earn While You Spend' },
-              { title: 'Global Acceptance', value: 'Use Anywhere' },
-              { title: 'Fraud Protection', value: 'Shop Securely' },
-              { button: <Button title="View Details" isOutline /> },
+              {
+                title: t('services.debitCreditCards.title'),
+                value: t('services.debitCreditCards.value'),
+              },
+              {
+                title: t('services.debitCreditCards.cashback'),
+                value: t('services.debitCreditCards.cashbackValue'),
+              },
+              {
+                title: t('services.debitCreditCards.global'),
+                value: t('services.debitCreditCards.globalValue'),
+              },
+              {
+                title: t('services.debitCreditCards.protection'),
+                value: t('services.debitCreditCards.protectionValue'),
+              },
+              { button: <Button title={t('services.debitCreditCards.button')} isOutline /> },
             ],
             [
               { icon: <Icons.IconSafety /> },
-              { title: 'Life Insurance', value: 'Secure Your Future' },
-              { title: 'Comprehensive Plans', value: 'Coverage for All' },
-              { title: 'Affordable Premiums', value: 'Budget-Friendly' },
-              { title: 'Family Protection', value: 'Peace of Mind' },
-              { button: <Button title="View Details" isOutline /> },
+              {
+                title: t('services.lifeInsurance.title'),
+                value: t('services.lifeInsurance.value'),
+              },
+              {
+                title: t('services.lifeInsurance.plans'),
+                value: t('services.lifeInsurance.plansValue'),
+              },
+              {
+                title: t('services.lifeInsurance.premiums'),
+                value: t('services.lifeInsurance.premiumsValue'),
+              },
+              {
+                title: t('services.lifeInsurance.protection'),
+                value: t('services.lifeInsurance.protectionValue'),
+              },
+              { button: <Button title={t('services.lifeInsurance.button')} isOutline /> },
             ],
           ]}
         />
