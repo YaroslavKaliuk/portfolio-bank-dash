@@ -141,5 +141,29 @@
       "validThruDate": "10/29",
       "holderName": "Charlene Reed"
     }
+  },
+  "titles": {
+    "instantTransfers": "Instant transfers to people you know",
+    "bankServicesList": "Bank Services List",
+    "investmentMapping": "Investment mapping by country",
+    "trendingStock": "Trending Stock",
+    "myInvestment": "My Investment",
+    "lastTransactions": "Last Transactions",
+    "myCard": "My Card",
+    "debitCreditOverview": "Debit & Credit Overview",
+    "invoicesSent": "Invoices Sent",
+    "myCards": "My Cards",
+    "promo": "Promo",
+    "quickTransfer": "Quick Transfer",
+    "expenseStatistics": "Expense Statistics",
+    "weeklyActivity": "Weekly Activity",
+    "recentTransaction": "Recent Transaction",
+    "cardList": "Card List",
+    "cardExpenseStatistics": "Card Expense Statistics",
+    "addNewCard": "Add New Card",
+    "cardSetting": "Card Setting",
+    "activeLoansOverview": "Active Loans Overview",
+    "myExpense": "My Expense",
+    "recentTransactions": "Recent Transactions"
   }
 }

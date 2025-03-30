@@ -35,7 +35,7 @@ export default function AccountsClient() {
       </LayoutRow>
 
       <LayoutRow>
-        <Title title="Last Transactions" />
+        <Title title="lastTransactions" />
         <LayoutBlock>
           <TransactionsList
             transactions={[
@@ -71,7 +71,7 @@ export default function AccountsClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
-        <Title title="My Card" />
+        <Title title="myCard" />
         <CreditCard
           cards={[
             {
@@ -87,7 +87,7 @@ export default function AccountsClient() {
         />
       </LayoutRow>
       <LayoutRow>
-        <Title title="Debit & Credit Overview" />
+        <Title title="debitCreditOverview" />
         <LayoutBlock>
           <Graph>
             <Icons.IconGraphDebitCreditOverview />
@@ -95,7 +95,7 @@ export default function AccountsClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
-        <Title title="Invoices Sent" />
+        <Title title="invoicesSent" />
         <LayoutBlock>
           <TransactionsList
             transactions={[

@@ -2,6 +2,7 @@
 
 import cn from 'classnames';
 import { FC } from 'react';
+import { useTranslations } from 'next-intl';
 import styles from './styles.module.scss';
 
 export interface TitleProps {
@@ -9,5 +10,6 @@ export interface TitleProps {
 }
 
 export const Title: FC<TitleProps> = ({ title }) => {
-  return <h3 className={cn(styles.title)}>{title}</h3>;
+  const t = useTranslations('titles');
+  return <h3 className={cn(styles.title)}>{t(title)}</h3>;
 };

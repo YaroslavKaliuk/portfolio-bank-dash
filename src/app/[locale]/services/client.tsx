@@ -34,7 +34,7 @@ export default function ServicesClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
-        <Title title="Bank Services List" />
+        <Title title="bankServicesList" />
         <ServicesList
           rows={[
             [

@@ -11,7 +11,7 @@ export default function TransactionsClient() {
   return (
     <>
       <LayoutRow>
-        <Title title="My Cards" />
+        <Title title="myCards" />
         <CreditCard
           cards={[
             {
@@ -37,7 +37,7 @@ export default function TransactionsClient() {
         />
       </LayoutRow>
       <LayoutRow>
-        <Title title="My Expense" />
+        <Title title="myExpense" />
         <LayoutBlock>
           <Graph>
             <Icons.IconGraphMyExpense />
@@ -45,7 +45,7 @@ export default function TransactionsClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow isGridColumnFull>
-        <Title title="Recent Transactions" />
+        <Title title="recentTransactions" />
         <LayoutBlock>
           <Table
             thead={[

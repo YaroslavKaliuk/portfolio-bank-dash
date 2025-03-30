@@ -34,7 +34,7 @@ export default function InvestmentsClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
-        <Title title="Investment mapping by country" />
+        <Title title="investmentMapping" />
         <LayoutBlock>
           <Graph>
             <Icons.IconGraphInvestmentMapping />
@@ -42,7 +42,7 @@ export default function InvestmentsClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
-        <Title title="Trending Stock" />
+        <Title title="trendingStock" />
         <LayoutBlock>
           <Table
             thead={[[{ th: '#' }, { th: 'Name' }, { th: 'Price' }, { th: 'Return' }]]}
@@ -58,7 +58,7 @@ export default function InvestmentsClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow isGridColumnFull>
-        <Title title="My Investment" />
+        <Title title="myInvestment" />
         <ServicesList
           rows={[
             [

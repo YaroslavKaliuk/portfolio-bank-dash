@@ -46,7 +46,7 @@ export default function CreditCardsClient() {
         />
       </LayoutRow>
       <LayoutRow>
-        <Title title="Card List" />
+        <Title title="cardList" />
         <ServicesList
           rows={[
             [
@@ -77,7 +77,7 @@ export default function CreditCardsClient() {
         />
       </LayoutRow>
       <LayoutRow>
-        <Title title="Card Expense Statistics" />
+        <Title title="cardExpenseStatistics" />
         <LayoutBlock>
           <Graph>
             <Icons.IconGraphCardExpenseStatistics />
@@ -85,13 +85,13 @@ export default function CreditCardsClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
-        <Title title="Add New Card" />
+        <Title title="addNewCard" />
         <LayoutBlock>
           <FormAddNewCard />
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
-        <Title title="Card Setting" />
+        <Title title="cardSetting" />
         <ServicesList
           rows={[
             [

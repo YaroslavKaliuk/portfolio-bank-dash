@@ -79,7 +79,7 @@ export const QuickTransfer: FC<QuickTransferProps> = ({ items }) => {
         ))}
       </Swiper>
       <form className={styles.quickTransfer__form}>
-        <Title title="Instant transfers to people you know" />
+        <Title title="instantTransfers" />
         <Input type="number" placeholder="$100" min={1} required />
         <Input type="text" placeholder="Sent to" value={sentTo} readOnly />
         <Input type="text" placeholder="Write a message..." />

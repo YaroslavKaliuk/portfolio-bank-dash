@@ -19,7 +19,7 @@ export default function DashboardClient() {
   return (
     <>
       <LayoutRow>
-        <Title title="My Cards" />
+        <Title title="myCards" />
         <CreditCard
           cards={[
             {
@@ -46,7 +46,7 @@ export default function DashboardClient() {
         />
       </LayoutRow>
       <LayoutRow>
-        <Title title="Promo" />
+        <Title title="promo" />
         <SwiperSlider
           items={[
             <Image src="/banner_2.jpg" alt="Promo" width={860} height={486} loading="lazy" />,
@@ -55,7 +55,7 @@ export default function DashboardClient() {
         />
       </LayoutRow>
       <LayoutRow>
-        <Title title="Quick Transfer" />
+        <Title title="quickTransfer" />
         <LayoutBlock>
           <QuickTransfer
             items={[
@@ -113,7 +113,7 @@ export default function DashboardClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
-        <Title title="Expense Statistics" />
+        <Title title="expenseStatistics" />
         <LayoutBlock>
           <Graph>
             <Icons.IconGraphExpenseStatistics />
@@ -121,7 +121,7 @@ export default function DashboardClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
-        <Title title="Weekly Activity" />
+        <Title title="weeklyActivity" />
         <LayoutBlock>
           <Graph>
             <Icons.IconGraphWeeklyActivity />
@@ -129,7 +129,7 @@ export default function DashboardClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
-        <Title title="Recent Transaction" />
+        <Title title="recentTransaction" />
         <LayoutBlock>
           <TransactionsList
             transactions={[
