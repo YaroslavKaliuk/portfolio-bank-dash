@@ -1,34 +1,45 @@
 'use client';
 
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import { LayoutBlock, LayoutRow } from '@/layouts';
 import { ServicesList, Button, CreditCard, Graph, Title, FormAddNewCard } from '@/components';
 import * as Icons from '@/icons';
 
 export default function CreditCardsClient() {
+  const t = useTranslations();
   return (
     <>
       <LayoutRow isGridColumnFull>
         <CreditCard
           cards={[
             {
-              balanceValue: '$15,084',
-              number: '3778 **** **** 8912',
-              validThruDate: '04/30',
-              holderName: 'Charlene Reed',
+              balanceTitle: t('creditCard.balanceTitle'),
+              balanceValue: t('creditCard.firstCard.balanceValue'),
+              validThruTitle: t('creditCard.validThruTitle'),
+              validThruDate: t('creditCard.firstCard.validThruDate'),
+              holderTitle: t('creditCard.holderTitle'),
+              holderName: t('creditCard.firstCard.holderName'),
+              number: t('creditCard.firstCard.number'),
+            },
+            {
+              balanceTitle: t('creditCard.balanceTitle'),
+              balanceValue: t('creditCard.secondCard.balanceValue'),
+              validThruTitle: t('creditCard.validThruTitle'),
+              validThruDate: t('creditCard.secondCard.validThruDate'),
+              holderTitle: t('creditCard.holderTitle'),
+              holderName: t('creditCard.secondCard.holderName'),
+              number: t('creditCard.secondCard.number'),
               isLight: true,
             },
             {
-              balanceValue: '$5,756',
-              number: '3778 **** **** 1234',
-              validThruDate: '12/29',
-              holderName: 'Charlene Reed',
-            },
-            {
-              balanceValue: '$8,432',
-              number: '3778 **** **** 4567',
-              validThruDate: '10/29',
-              holderName: 'Charlene Reed',
+              balanceTitle: t('creditCard.balanceTitle'),
+              balanceValue: t('creditCard.thirdCard.balanceValue'),
+              validThruTitle: t('creditCard.validThruTitle'),
+              validThruDate: t('creditCard.thirdCard.validThruDate'),
+              holderTitle: t('creditCard.holderTitle'),
+              holderName: t('creditCard.thirdCard.holderName'),
+              number: t('creditCard.thirdCard.number'),
               isDark: true,
             },
           ]}

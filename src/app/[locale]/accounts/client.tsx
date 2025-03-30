@@ -75,10 +75,13 @@ export default function AccountsClient() {
         <CreditCard
           cards={[
             {
-              balanceValue: '$5,756',
-              number: '3778 **** **** 1234',
-              validThruDate: '12/29',
-              holderName: 'Charlene Reed',
+              balanceTitle: t('creditCard.balanceTitle'),
+              balanceValue: t('creditCard.firstCard.balanceValue'),
+              validThruTitle: t('creditCard.validThruTitle'),
+              validThruDate: t('creditCard.firstCard.validThruDate'),
+              holderTitle: t('creditCard.holderTitle'),
+              holderName: t('creditCard.firstCard.holderName'),
+              number: t('creditCard.firstCard.number'),
             },
           ]}
         />

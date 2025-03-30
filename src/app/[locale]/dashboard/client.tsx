@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { useTranslations } from 'next-intl';
 import { LayoutBlock, LayoutRow } from '@/layouts';
 import {
   CreditCard,
@@ -14,6 +15,7 @@ import * as Icons from '@/icons';
 import Image from 'next/image';
 
 export default function DashboardClient() {
+  const t = useTranslations();
   return (
     <>
       <LayoutRow>
@@ -21,17 +23,23 @@ export default function DashboardClient() {
         <CreditCard
           cards={[
             {
-              balanceValue: '$8,432',
-              number: '3778 **** **** 4567',
-              validThruDate: '10/29',
-              holderName: 'Charlene Reed',
+              balanceTitle: t('creditCard.balanceTitle'),
+              balanceValue: t('creditCard.thirdCard.balanceValue'),
+              validThruTitle: t('creditCard.validThruTitle'),
+              validThruDate: t('creditCard.thirdCard.validThruDate'),
+              holderTitle: t('creditCard.holderTitle'),
+              holderName: t('creditCard.thirdCard.holderName'),
+              number: t('creditCard.thirdCard.number'),
               isDark: true,
             },
             {
-              balanceValue: '$15,084',
-              number: '3778 **** **** 8912',
-              validThruDate: '04/30',
-              holderName: 'Charlene Reed',
+              balanceTitle: t('creditCard.balanceTitle'),
+              balanceValue: t('creditCard.secondCard.balanceValue'),
+              validThruTitle: t('creditCard.validThruTitle'),
+              validThruDate: t('creditCard.secondCard.validThruDate'),
+              holderTitle: t('creditCard.holderTitle'),
+              holderName: t('creditCard.secondCard.holderName'),
+              number: t('creditCard.secondCard.number'),
               isLight: true,
             },
           ]}

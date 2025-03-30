@@ -23,7 +23,32 @@ $r: '.avatar';
     transition: transform 0.3s;
 
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.1);
+    }
+  }
+
+  &__count {
+    display: grid;
+    place-items: center;
+    top: 0;
+    right: 0;
+    color: var(--base-white);
+    line-height: 1;
+    font-weight: 500;
+    position: absolute;
+    border-radius: 100%;
+    background-color: var(--accent-red);
+
+    @media (width < 63.9375rem) {
+      width: 1.125rem;
+      height: 1.125rem;
+      font-size: 0.5625rem;
+    }
+
+    @media (width >= 64rem) {
+      width: 1.25rem;
+      height: 1.25rem;
+      font-size: 0.688rem;
     }
   }
 

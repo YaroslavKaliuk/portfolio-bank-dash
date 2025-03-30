@@ -7,8 +7,11 @@ import * as Icons from '@/icons';
 
 export interface CardsItem {
   number: string;
+  balanceTitle: string;
   balanceValue: string;
+  validThruTitle: string;
   validThruDate: string;
+  holderTitle: string;
   holderName: string;
   isDark?: boolean;
   isLight?: boolean;
@@ -31,7 +34,7 @@ export const CreditCard: FC<CreditCardProps> = ({ cards }) => {
           )}
         >
           <div className={styles.creditCard__balance}>
-            <div className={styles.creditCard__balanceTitle}>Balance</div>
+            <div className={styles.creditCard__balanceTitle}>{card.balanceTitle}</div>
             <div className={styles.creditCard__balanceValue}>{card.balanceValue}</div>
           </div>
           <div className={styles.creditCard__chip}>
@@ -39,11 +42,11 @@ export const CreditCard: FC<CreditCardProps> = ({ cards }) => {
           </div>
           <div className={styles.creditCard__info}>
             <div className={styles.creditCard__holder}>
-              <div className={styles.creditCard__holderTitle}>Card Holder</div>
+              <div className={styles.creditCard__holderTitle}>{card.holderTitle}</div>
               <div className={styles.creditCard__holderName}>{card.holderName}</div>
             </div>
             <div className={styles.creditCard__validThru}>
-              <div className={styles.creditCard__validThruTitle}>Valid Thru</div>
+              <div className={styles.creditCard__validThruTitle}>{card.validThruTitle}</div>
               <div className={styles.creditCard__validThruDate}>{card.validThruDate}</div>
             </div>
           </div>

@@ -3,8 +3,9 @@
 import cn from 'classnames';
 import { FC, useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/autoplay';
 import 'swiper/css/navigation';
 import styles from './styles.module.scss';
 import { Input } from '../input';
@@ -22,8 +23,8 @@ export interface QuickTransferProps {
 }
 
 export const QuickTransfer: FC<QuickTransferProps> = ({ items }) => {
-  const [activeIndex, setActiveIndex] = useState<number>(1);
-  const [sentTo, setSentTo] = useState(items[1]?.title || '');
+  const [activeIndex, setActiveIndex] = useState<number>(4);
+  const [sentTo, setSentTo] = useState(items[4]?.title || '');
 
   const handleItemClick = (index: number, title?: string) => {
     setActiveIndex(index);
@@ -33,9 +34,14 @@ export const QuickTransfer: FC<QuickTransferProps> = ({ items }) => {
   return (
     <div className={cn(styles.quickTransfer)}>
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
         loop
         navigation
+        autoplay={{
+          delay: 3000,
+          pauseOnMouseEnter: true,
+          disableOnInteraction: true,
+        }}
         slidesPerView={2}
         spaceBetween={16}
         breakpoints={{

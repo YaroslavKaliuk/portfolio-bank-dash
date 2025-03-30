@@ -4,8 +4,10 @@ import React from 'react';
 import { LayoutBlock, LayoutRow } from '@/layouts';
 import { CreditCard, Title, Button, Table, Graph } from '@/components';
 import * as Icons from '@/icons';
+import { useTranslations } from 'next-intl';
 
 export default function TransactionsClient() {
+  const t = useTranslations();
   return (
     <>
       <LayoutRow>
@@ -13,16 +15,22 @@ export default function TransactionsClient() {
         <CreditCard
           cards={[
             {
-              balanceValue: '$5,756',
-              number: '3778 **** **** 1234',
-              validThruDate: '12/29',
-              holderName: 'Charlene Reed',
+              balanceTitle: t('creditCard.balanceTitle'),
+              balanceValue: t('creditCard.firstCard.balanceValue'),
+              validThruTitle: t('creditCard.validThruTitle'),
+              validThruDate: t('creditCard.firstCard.validThruDate'),
+              holderTitle: t('creditCard.holderTitle'),
+              holderName: t('creditCard.firstCard.holderName'),
+              number: t('creditCard.firstCard.number'),
             },
             {
-              balanceValue: '$8,432',
-              number: '3778 **** **** 4567',
-              validThruDate: '10/29',
-              holderName: 'Charlene Reed',
+              balanceTitle: t('creditCard.balanceTitle'),
+              balanceValue: t('creditCard.thirdCard.balanceValue'),
+              validThruTitle: t('creditCard.validThruTitle'),
+              validThruDate: t('creditCard.thirdCard.validThruDate'),
+              holderTitle: t('creditCard.holderTitle'),
+              holderName: t('creditCard.thirdCard.holderName'),
+              number: t('creditCard.thirdCard.number'),
               isDark: true,
             },
           ]}
