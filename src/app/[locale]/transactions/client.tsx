@@ -50,14 +50,14 @@ export default function TransactionsClient() {
           <Table
             thead={[
               [
-                { th: '#' },
-                { th: 'Description' },
-                { th: 'Transaction ID' },
-                { th: 'Type' },
-                { th: 'Card' },
-                { th: 'Date' },
-                { th: 'Amount' },
-                { th: 'Download' },
+                { th: t('table.number') },
+                { th: t('table.description') },
+                { th: t('table.transactionId') },
+                { th: t('table.type') },
+                { th: t('table.card') },
+                { th: t('table.date') },
+                { th: t('table.amount') },
+                { th: t('table.download') },
               ],
             ]}
             tbody={[

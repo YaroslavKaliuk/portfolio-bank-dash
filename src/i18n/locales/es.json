@@ -165,5 +165,25 @@
     "activeLoansOverview": "Resumen de Préstamos Activos",
     "myExpense": "Mis Gastos",
     "recentTransactions": "Transacciones Recientes"
+  },
+  "table": {
+    "number": "#",
+    "name": "Nombre",
+    "price": "Precio",
+    "return": "Retorno",
+    "description": "Descripción",
+    "transactionId": "ID de Transacción",
+    "type": "Tipo",
+    "card": "Tarjeta",
+    "date": "Fecha",
+    "amount": "Monto",
+    "download": "Descargar",
+    "loanMoney": "Dinero del Préstamo",
+    "leftToRepay": "Restante a pagar",
+    "duration": "Duración",
+    "interestRate": "Tasa de interés",
+    "installment": "Cuota",
+    "repay": "Pagar",
+    "total": "Total:"
   }
 }

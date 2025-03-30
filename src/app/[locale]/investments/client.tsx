@@ -45,7 +45,14 @@ export default function InvestmentsClient() {
         <Title title="trendingStock" />
         <LayoutBlock>
           <Table
-            thead={[[{ th: '#' }, { th: 'Name' }, { th: 'Price' }, { th: 'Return' }]]}
+            thead={[
+              [
+                { th: t('table.number') },
+                { th: t('table.name') },
+                { th: t('table.price') },
+                { th: t('table.return') },
+              ],
+            ]}
             tbody={[
               [{ td: 'Canon' }, { td: '$520' }, { td: '+5%' }],
               [{ td: 'Tesla' }, { td: '$750' }, { td: '-8%' }],

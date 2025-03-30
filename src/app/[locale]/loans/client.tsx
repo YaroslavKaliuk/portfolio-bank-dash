@@ -40,12 +40,12 @@ export default function LoansClient() {
             thead={[
               [
                 { th: '#' },
-                { th: 'Loan Money' },
-                { th: 'Left to repay' },
-                { th: 'Duration' },
-                { th: 'Interest rate' },
-                { th: 'Installment' },
-                { th: 'Repay' },
+                { th: t('table.loanMoney') },
+                { th: t('table.leftToRepay') },
+                { th: t('table.duration') },
+                { th: t('table.interestRate') },
+                { th: t('table.installment') },
+                { th: t('table.repay') },
               ],
             ]}
             tbody={[
@@ -220,7 +220,7 @@ export default function LoansClient() {
             ]}
             tfoot={[
               [
-                { td: 'Total:' },
+                { td: t('table.total') },
                 { td: '$2,750,000' },
                 { td: '$1,500,000' },
                 { td: '' },

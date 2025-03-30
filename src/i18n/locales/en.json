@@ -165,5 +165,25 @@
     "activeLoansOverview": "Active Loans Overview",
     "myExpense": "My Expense",
     "recentTransactions": "Recent Transactions"
+  },
+  "table": {
+    "number": "#",
+    "name": "Name",
+    "price": "Price",
+    "return": "Return",
+    "description": "Description",
+    "transactionId": "Transaction ID",
+    "type": "Type",
+    "card": "Card",
+    "date": "Date",
+    "amount": "Amount",
+    "download": "Download",
+    "loanMoney": "Loan Money",
+    "leftToRepay": "Left to repay",
+    "duration": "Duration",
+    "interestRate": "Interest rate",
+    "installment": "Installment",
+    "repay": "Repay",
+    "total": "Total:"
   }
 }
