@@ -69,7 +69,7 @@ export default function InvestmentsClient() {
         <ServicesList
           rows={[
             [
-              { icon: <Icons.IconExpense /> },
+              { icon: <Icons.IconLogoApple /> },
               { title: 'Apple Store', value: t('investments.list.types.ecommerce') },
               { title: '$54,000', value: t('investments.list.investmentValue') },
               { title: '12 Months', value: t('investments.list.investmentPeriod') },
@@ -81,7 +81,7 @@ export default function InvestmentsClient() {
               { title: '+16%', value: t('investments.list.returnValue') },
             ],
             [
-              { icon: <Icons.IconExpense /> },
+              { icon: <Icons.IconLogoAmazon /> },
               { title: 'Amazon', value: t('investments.list.types.ecommerce') },
               { title: '$72,000', value: t('investments.list.investmentValue') },
               { title: '24 Months', value: t('investments.list.investmentPeriod') },
@@ -93,8 +93,8 @@ export default function InvestmentsClient() {
               { title: '-22%', value: t('investments.list.returnValue') },
             ],
             [
-              { icon: <Icons.IconExpense /> },
-              { title: 'Tesla', value: t('investments.list.types.automotive') },
+              { icon: <Icons.IconLogoDigg /> },
+              { title: 'Digg', value: t('investments.list.types.automotive') },
               { title: '$120,000', value: t('investments.list.investmentValue') },
               { title: '36 Months', value: t('investments.list.investmentPeriod') },
               {
@@ -105,8 +105,8 @@ export default function InvestmentsClient() {
               { title: '+35%', value: t('investments.list.returnValue') },
             ],
             [
-              { icon: <Icons.IconExpense /> },
-              { title: 'Netflix', value: t('investments.list.types.entertainment') },
+              { icon: <Icons.IconLogoSlack /> },
+              { title: 'Slack', value: t('investments.list.types.entertainment') },
               { title: '$45,000', value: t('investments.list.investmentValue') },
               { title: '18 Months', value: t('investments.list.investmentPeriod') },
               {
@@ -117,7 +117,7 @@ export default function InvestmentsClient() {
               { title: '-12%', value: t('investments.list.returnValue') },
             ],
             [
-              { icon: <Icons.IconExpense /> },
+              { icon: <Icons.IconLogoGoogle /> },
               { title: 'Google', value: t('investments.list.types.tech') },
               { title: '$90,000', value: t('investments.list.investmentValue') },
               { title: '24 Months', value: t('investments.list.investmentPeriod') },
@@ -129,8 +129,8 @@ export default function InvestmentsClient() {
               { title: '-18%', value: t('investments.list.returnValue') },
             ],
             [
-              { icon: <Icons.IconExpense /> },
-              { title: 'Microsoft', value: t('investments.list.types.software') },
+              { icon: <Icons.IconLogoYahoo /> },
+              { title: 'Yahoo', value: t('investments.list.types.software') },
               { title: '$85,000', value: t('investments.list.investmentValue') },
               { title: '24 Months', value: t('investments.list.investmentPeriod') },
               {
@@ -141,8 +141,8 @@ export default function InvestmentsClient() {
               { title: '+20%', value: t('investments.list.returnValue') },
             ],
             [
-              { icon: <Icons.IconExpense /> },
-              { title: 'Meta', value: t('investments.list.types.socialMedia') },
+              { icon: <Icons.IconLogoSpotify /> },
+              { title: 'Spotify', value: t('investments.list.types.socialMedia') },
               { title: '$60,000', value: t('investments.list.investmentValue') },
               { title: '12 Months', value: t('investments.list.investmentPeriod') },
               {

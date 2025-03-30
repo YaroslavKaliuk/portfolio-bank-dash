@@ -50,7 +50,7 @@ export default function CreditCardsClient() {
         <ServicesList
           rows={[
             [
-              { icon: <Icons.IconExpense /> },
+              { icon: <Icons.IconCreditCard /> },
               {
                 title: t('creditCards.list.cardType'),
                 value: t('creditCards.list.types.secondary'),
@@ -61,7 +61,7 @@ export default function CreditCardsClient() {
               { button: <Button title={t('creditCards.list.button')} isOutline /> },
             ],
             [
-              { icon: <Icons.IconExpense /> },
+              { icon: <Icons.IconCreditCard /> },
               { title: t('creditCards.list.cardType'), value: t('creditCards.list.types.primary') },
               { title: t('creditCards.list.bank'), value: 'Global Bank' },
               { title: t('creditCards.list.cardNumber'), value: '**** 1234' },
@@ -69,7 +69,7 @@ export default function CreditCardsClient() {
               { button: <Button title={t('creditCards.list.button')} isOutline /> },
             ],
             [
-              { icon: <Icons.IconExpense /> },
+              { icon: <Icons.IconCreditCard /> },
               {
                 title: t('creditCards.list.cardType'),
                 value: t('creditCards.list.types.secondary'),
@@ -101,21 +101,21 @@ export default function CreditCardsClient() {
         <ServicesList
           rows={[
             [
-              { icon: <Icons.IconExpense /> },
+              { icon: <Icons.IconMoney /> },
               {
                 title: t('creditCards.actions.blockCard.title'),
                 value: t('creditCards.actions.blockCard.value'),
               },
             ],
             [
-              { icon: <Icons.IconExpense /> },
+              { icon: <Icons.IconLoan /> },
               {
                 title: t('creditCards.actions.orderNewCard.title'),
                 value: t('creditCards.actions.orderNewCard.value'),
               },
             ],
             [
-              { icon: <Icons.IconExpense /> },
+              { icon: <Icons.IconSafety /> },
               {
                 title: t('creditCards.actions.changePin.title'),
                 value: t('creditCards.actions.changePin.value'),

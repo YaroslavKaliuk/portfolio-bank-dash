@@ -39,3 +39,6 @@ export { default as IconGraphMyExpense } from './iconGraphMyExpense';
 export { default as IconGraphDebitCreditOverview } from './iconGraphDebitCreditOverview';
 export { default as IconGraphInvestmentMapping } from './iconGraphInvestmentMapping';
 export { default as IconGraphCardExpenseStatistics } from './iconGraphCardExpenseStatistics';
+export { default as IconLogoYahoo } from './iconLogoYahoo';
+export { default as IconLogoSlack } from './iconLogoSlack';
+export { default as IconLogoDigg } from './iconLogoDigg';

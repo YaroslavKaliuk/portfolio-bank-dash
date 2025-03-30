@@ -44,23 +44,51 @@ $r: '.servicesList';
       font-size: 3.5rem;
       border-radius: 1rem;
 
+      &[data-icon='IconLogoDigg'],
+      &[data-icon='IconLogoSlack'],
+      &[data-icon='IconLogoYahoo'],
+      &[data-icon='IconLogoApple'],
+      &[data-icon='IconLogoAmazon'],
+      &[data-icon='IconLogoSpotify'],
+      &[data-icon='IconLogoGoogle'] {
+        path {
+          transform: scale(0.5);
+          transform-origin: center;
+        }
+      }
+
+      &[data-icon='IconLogoApple'],
+      &[data-icon='IconLogoSpotify'],
       &[data-icon='IconLoan'] {
         color: var(--accent-teal);
         box-shadow: inset 0 0 0 100vw color-mix(in srgb, var(--accent-teal), var(--base-white) 80%);
       }
 
+      &[data-icon='IconLogoDigg'],
+      &[data-icon='IconService'],
       &[data-icon='IconExpense'],
       &[data-icon='IconCreditCard'] {
         color: var(--primary);
         box-shadow: inset 0 0 0 100vw color-mix(in srgb, var(--primary), var(--base-white) 80%);
       }
 
+      &[data-icon='IconUser'],
+      &[data-icon='IconLogoGoogle'],
       &[data-icon='IconSafety'] {
         color: var(--accent-pink);
         box-shadow: inset 0 0 0 100vw color-mix(in srgb, var(--accent-pink), var(--base-white) 80%);
       }
 
+      &[data-icon='IconLogoSlack'],
       &[data-icon='IconSaving'] {
+        color: var(--accent-yellow);
+        box-shadow: inset 0 0 0 100vw
+          color-mix(in srgb, var(--accent-yellow), var(--base-white) 80%);
+      }
+
+      &[data-icon='IconMoney'],
+      &[data-icon='IconLogoYahoo'],
+      &[data-icon='IconLogoAmazon'] {
         color: var(--accent-yellow);
         box-shadow: inset 0 0 0 100vw
           color-mix(in srgb, var(--accent-yellow), var(--base-white) 80%);
@@ -70,13 +98,11 @@ $r: '.servicesList';
 
   &__title {
     font-weight: 500;
-    white-space: nowrap;
   }
 
   &__value {
     color: var(--primary-light);
     font-size: 0.88rem;
-    white-space: nowrap;
   }
 
   &__button {
