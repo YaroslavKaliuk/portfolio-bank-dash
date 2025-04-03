@@ -170,6 +170,12 @@ textarea {
   transform: scale(100);
 }
 
+:-webkit-autofill {
+  transition:
+    color 0s 600000s,
+    background-color 0s 600000s;
+}
+
 /* storybook reset
 -------------------------------------------------------------*/
 #storybook-docs {

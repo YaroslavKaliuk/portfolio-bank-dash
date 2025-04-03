@@ -6,12 +6,13 @@ $r: '.financialOverview';
 //-----------------------------------------------------------
 #{$r} {
   gap: 0.25rem 1rem;
+  flex-grow: 1;
   display: grid;
   align-items: center;
   grid-template-columns: max-content 1fr;
   margin-inline: auto;
 
-  @media (width < 63.9375rem) {
+  @media (width < 79.938rem) {
     white-space: nowrap;
   }
 

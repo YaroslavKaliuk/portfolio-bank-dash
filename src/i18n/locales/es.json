@@ -121,8 +121,8 @@
   },
   "creditCard": {
     "balanceTitle": "Saldo",
-    "validThruTitle": "Válido hasta",
-    "holderTitle": "Nombre del titular",
+    "validThruTitle": "Válido",
+    "holderTitle": "Nombre",
     "firstCard": {
       "balanceValue": "$15,084",
       "number": "3778 **** **** 8912",

@@ -23,8 +23,9 @@ $r: '.layoutRow';
   // modifier
   //---------------------------------------------------------
   &__isFinancialOverview {
+    overflow: auto hidden;
+
     @media (width < 63.9375rem) {
-      overflow-x: auto;
       flex-direction: row;
     }
 

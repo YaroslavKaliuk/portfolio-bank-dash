@@ -26,6 +26,9 @@ $r: '.layoutBlock';
 
   // modifier
   //---------------------------------------------------------
+  &__isInlineSize {
+    container-type: inline-size;
+  }
 }
 
 // influence

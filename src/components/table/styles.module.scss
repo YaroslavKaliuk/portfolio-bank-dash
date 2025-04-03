@@ -5,8 +5,14 @@ $r: '.table';
 // block
 //-----------------------------------------------------------
 #{$r} {
-  @media (width < 63.9375rem) {
-    overflow: auto hidden;
+  @media (width < 79.9380rem) {
+    max-height: 50dvh;
+    white-space: nowrap;
+    overflow: auto visible;
+  }
+
+  @container (max-width: 39.9375rem) {
+    overflow: auto visible;
   }
 
   // element
@@ -14,7 +20,6 @@ $r: '.table';
   tr {
     th,
     td {
-      white-space: nowrap;
       border-bottom: 1px solid var(--base-pale-blue);
 
       @media (width < 63.9375rem) {

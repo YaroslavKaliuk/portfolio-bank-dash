@@ -6,8 +6,9 @@ import styles from './styles.module.scss';
 
 export interface LayoutBlockProps {
   children?: ReactNode;
+  isInlineSize?: boolean;
 }
 
-export const LayoutBlock: FC<LayoutBlockProps> = ({ children }) => {
-  return <div className={cn(styles.layoutBlock)}>{children}</div>;
+export const LayoutBlock: FC<LayoutBlockProps> = ({ children, isInlineSize }) => {
+  return <div className={cn(styles.layoutBlock, isInlineSize && styles.layoutBlock__isInlineSize)}>{children}</div>;
 };

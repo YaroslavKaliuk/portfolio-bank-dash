@@ -43,7 +43,7 @@ export default function InvestmentsClient() {
       </LayoutRow>
       <LayoutRow>
         <Title title="trendingStock" />
-        <LayoutBlock>
+        <LayoutBlock isInlineSize>
           <Table
             thead={[
               [
