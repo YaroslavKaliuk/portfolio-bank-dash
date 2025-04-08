@@ -31,8 +31,8 @@ export const ChartPie = ({
   width = 320,
   height = 320,
   colors = [
-    'var(--accent-teal)',
     'var(--primary)',
+    'var(--accent-teal)',
     'var(--accent-yellow)',
     'var(--accent-red)',
     'var(--accent-purple)',

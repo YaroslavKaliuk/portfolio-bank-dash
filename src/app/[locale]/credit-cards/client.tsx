@@ -87,10 +87,10 @@ export default function CreditCardsClient() {
         <LayoutBlock>
           <ChartPie
             data={[
-              { name: 'Chase Bank', value: 100 },
-              { name: 'Citibank', value: 200 },
-              { name: 'PNC Bank', value: 300 },
-              { name: 'TD Bank', value: 400 },
+              { name: 'Chase Bank', value: 1000 },
+              { name: 'Citibank', value: 1000 },
+              { name: 'PNC Bank', value: 1000 },
+              { name: 'TD Bank', value: 1000 },
             ]}
           />
         </LayoutBlock>
