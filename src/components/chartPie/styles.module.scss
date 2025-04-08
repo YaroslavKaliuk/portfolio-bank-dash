@@ -83,6 +83,19 @@ $r: '.chartPie';
     }
   }
 
+  &__render {
+    fill: var(--base-white);
+
+    &Name {
+      font-size: 0.875rem;
+    }
+
+    &Value {
+      font-size: 1.125rem;
+      font-weight: 600;
+    }
+  }
+
   // modifier
   //---------------------------------------------------------
 }

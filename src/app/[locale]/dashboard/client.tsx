@@ -117,16 +117,17 @@ export default function DashboardClient() {
         <Title title="expenseStatistics" />
         <LayoutBlock>
           <ChartPie
+            valuePrefix="$"
             data={[
               { name: 'Employee Salaries', value: 21000 },
               { name: 'Office Rent', value: 12000 },
               { name: 'Digital Marketing', value: 8500 },
               { name: 'Software Subscriptions', value: 3200 },
               { name: 'Business Travel', value: 6200 },
-              { name: 'Equipment & Hardware', value: 5400 },
-              { name: 'Legal Services', value: 3400 },
-              { name: 'Employee Training', value: 3100 },
-              { name: 'Miscellaneous', value: 1500 },
+              // { name: 'Equipment & Hardware', value: 5400 },
+              // { name: 'Legal Services', value: 3400 },
+              // { name: 'Employee Training', value: 3100 },
+              // { name: 'Miscellaneous', value: 1500 },
             ]}
           />
         </LayoutBlock>

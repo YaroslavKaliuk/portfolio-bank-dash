@@ -1,16 +1,11 @@
 'use client';
 
 import { PieChart, Pie, Cell, ResponsiveContainer, Sector } from 'recharts';
-import styles from './styles.module.scss';
 import { useState } from 'react';
-
+import styles from './styles.module.scss';
+import cn from 'classnames';
 interface ChartPieProps {
-  data: Array<{
-    name: string;
-    value?: number;
-    stroke?: string;
-    strokeWidth?: number;
-  }>;
+  data: { name: string; value?: number; stroke?: string; strokeWidth?: number }[];
   strokeWidth?: number;
   innerRadius?: number;
   outerRadius?: number;
@@ -19,15 +14,16 @@ interface ChartPieProps {
   colors?: string[];
   showLegend?: boolean;
   showValue?: boolean;
+  showLabels?: boolean;
   valuePrefix?: string;
-  formatType?: 'k' | 'percent' | 'currency';
+  formatType?: 'percent' | 'currency';
   outerSectorGap?: number;
   outerSectorWidth?: number;
 }
 
 export const ChartPie = ({
   data,
-  strokeWidth = 1,
+  strokeWidth = 4,
   innerRadius = 96,
   outerRadius = 144,
   width = 320,
@@ -35,34 +31,58 @@ export const ChartPie = ({
   colors = [
     'var(--primary)',
     'var(--accent-teal)',
-    'var(--accent-yellow)',
-    'var(--accent-red)',
-    'var(--accent-purple)',
-    'var(--accent-green)',
-    'var(--primary-light)',
-    'var(--accent-blue)',
     'var(--accent-pink)',
+    'var(--accent-blue)',
+    'var(--accent-red)',
+    'var(--primary-light)',
+    'var(--accent-green)',
+    'var(--accent-purple)',
+    'var(--accent-yellow)',
   ],
   showLegend = true,
   showValue = true,
-  valuePrefix = '$',
-  formatType = 'k',
+  showLabels = false,
+  valuePrefix = '',
+  formatType = 'currency',
   outerSectorGap = 8,
-  outerSectorWidth = 12,
+  outerSectorWidth = 16,
 }: ChartPieProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const formatValue = (value: number) => {
-    switch (formatType) {
-      case 'k':
-        return value / 1000 + 'K';
-      case 'percent':
-        return value.toFixed(1) + '%';
-      case 'currency':
-        return value.toLocaleString();
-      default:
-        return value.toString();
-    }
+  const formatValue = (value: number) =>
+    formatType === 'percent'
+      ? value.toFixed(1) + '%'
+      : formatType === 'currency'
+        ? value.toLocaleString()
+        : value.toString();
+
+  const RADIAN = Math.PI / 180;
+  const renderLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, value, name }: any) => {
+    const r = innerRadius + (outerRadius - innerRadius) * 0.5;
+    const x = cx + r * Math.cos(-midAngle * RADIAN);
+    const y = cy + r * Math.sin(-midAngle * RADIAN);
+    return (
+      <>
+        <text
+          className={cn(styles.chartPie__render, styles.chartPie__renderName)}
+          x={x}
+          y={y - 12}
+          textAnchor="middle"
+          dominantBaseline="central"
+        >
+          {name}
+        </text>
+        <text
+          className={cn(styles.chartPie__render, styles.chartPie__renderValue)}
+          x={x}
+          y={y + 12}
+          textAnchor="middle"
+          dominantBaseline="central"
+        >
+          {valuePrefix + formatValue(value)}
+        </text>
+      </>
+    );
   };
 
   const renderActiveShape = (props: any) => {
@@ -79,42 +99,39 @@ export const ChartPie = ({
           fill={fill}
           stroke={stroke}
           strokeWidth={strokeWidth}
+          cornerRadius={8}
         />
-
         <Sector
           cx={cx}
           cy={cy}
-          startAngle={startAngle}
-          endAngle={endAngle}
           innerRadius={outerRadius + outerSectorGap}
           outerRadius={outerRadius + outerSectorWidth}
+          startAngle={startAngle}
+          endAngle={endAngle}
           fill={fill}
           stroke={stroke}
           strokeWidth={strokeWidth}
+          cornerRadius={8}
         />
       </g>
     );
   };
 
-  const renderValue = () => {
-    if (!showValue || activeIndex === null) return null;
-    const currentData = data[activeIndex];
-    return (
+  const renderCenter = () =>
+    showValue ? (
       <div className={styles.chartPie__circleInfo}>
         <div className={styles.chartPie__circleValue}>
-          {valuePrefix}
-          {formatValue(currentData.value || 0)}
+          {valuePrefix + formatValue(data[activeIndex]?.value || 0)}
         </div>
-        <div className={styles.chartPie__circleName}>{currentData.name}</div>
+        <div className={styles.chartPie__circleName}>{data[activeIndex]?.name}</div>
       </div>
-    );
-  };
+    ) : null;
 
   return (
     <ResponsiveContainer>
       <div className={styles.chartPie}>
         <div className={styles.chartPie__circle}>
-          {showValue && renderValue()}
+          {renderCenter()}
           <PieChart width={width} height={height}>
             <Pie
               activeIndex={activeIndex}
@@ -125,16 +142,19 @@ export const ChartPie = ({
               outerRadius={outerRadius}
               dataKey="value"
               nameKey="name"
-              activeShape={renderActiveShape}
-              onMouseEnter={(_, index) => setActiveIndex(index)}
-              onMouseLeave={() => setActiveIndex(0)}
               stroke="var(--base-white)"
               strokeWidth={strokeWidth}
+              onMouseEnter={(_, i) => setActiveIndex(i)}
+              onMouseLeave={() => setActiveIndex(0)}
+              labelLine={false}
+              {...(showLabels && { label: renderLabel })}
+              activeShape={renderActiveShape}
+              cornerRadius={8}
             >
-              {data.map((entry, index) => (
+              {data.map((entry, i) => (
                 <Cell
-                  key={`cell-${index}`}
-                  fill={colors[index % colors.length]}
+                  key={i}
+                  fill={colors[i % colors.length]}
                   stroke={entry.stroke || 'var(--base-white)'}
                   strokeWidth={strokeWidth}
                 />
@@ -145,25 +165,22 @@ export const ChartPie = ({
         {showLegend && (
           <table className={styles.chartPie__table}>
             <tbody>
-              {data.map((entry, index) => (
+              {data.map((entry, i) => (
                 <tr
-                  key={index}
-                  onMouseEnter={() => setActiveIndex(index)}
+                  key={i}
+                  onMouseEnter={() => setActiveIndex(i)}
                   onMouseLeave={() => setActiveIndex(0)}
                 >
                   <td>
                     <div
                       className={styles.chartPie__tableDot}
-                      style={{ backgroundColor: colors[index % colors.length] }}
+                      style={{ backgroundColor: colors[i % colors.length] }}
                     />
                   </td>
-                  {entry.name && <td className={styles.chartPie__tableName}>{entry.name}</td>}
-                  {entry.value && (
-                    <td className={styles.chartPie__tableValue}>
-                      {valuePrefix}
-                      {formatValue(entry.value || 0)}
-                    </td>
-                  )}
+                  <td className={styles.chartPie__tableName}>{entry.name}</td>
+                  <td className={styles.chartPie__tableValue}>
+                    {valuePrefix + formatValue(entry.value || 0)}
+                  </td>
                 </tr>
               ))}
             </tbody>

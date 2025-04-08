@@ -103,7 +103,7 @@ svg {
   pointer-events: none;
   display: inline-flex;
 
-  * {
+  path {
     pointer-events: visibleFill;
   }
 }

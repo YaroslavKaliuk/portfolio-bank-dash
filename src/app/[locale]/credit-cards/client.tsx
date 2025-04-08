@@ -92,11 +92,12 @@ export default function CreditCardsClient() {
             outerSectorGap={0}
             outerSectorWidth={12}
             showValue={false}
+            valuePrefix="$"
+            showLabels={true}
             data={[
-              { name: 'Chase Bank', value: 1000 },
-              { name: 'Citibank', value: 1000 },
-              { name: 'PNC Bank', value: 1000 },
-              { name: 'TD Bank', value: 1000 },
+              { name: '**** 8912', value: 1500 },
+              { name: '**** 1234', value: 800 },
+              { name: '**** 4567', value: 950 },
             ]}
           />
         </LayoutBlock>
