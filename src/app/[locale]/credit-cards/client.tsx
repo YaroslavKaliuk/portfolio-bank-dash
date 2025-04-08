@@ -86,12 +86,17 @@ export default function CreditCardsClient() {
         <Title title="cardExpenseStatistics" />
         <LayoutBlock>
           <ChartPie
-            showOuterSector={false}
+            strokeWidth={8}
+            innerRadius={16}
+            showLegend={false}
+            outerSectorGap={0}
+            outerSectorWidth={12}
+            showValue={false}
             data={[
-              { name: 'Chase Bank', value: 1000, scale: 1.1 },
-              { name: 'Citibank', value: 1000, scale: 1.05 },
-              { name: 'PNC Bank', value: 1000, scale: 1.0 },
-              { name: 'TD Bank', value: 1000, scale: 0.95 },
+              { name: 'Chase Bank', value: 1000 },
+              { name: 'Citibank', value: 1000 },
+              { name: 'PNC Bank', value: 1000 },
+              { name: 'TD Bank', value: 1000 },
             ]}
           />
         </LayoutBlock>

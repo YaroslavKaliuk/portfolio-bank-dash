@@ -9,11 +9,9 @@ interface ChartPieProps {
     name: string;
     value?: number;
     stroke?: string;
+    strokeWidth?: number;
   }>;
-  summary?: Array<{
-    name: string;
-    value: string;
-  }>;
+  strokeWidth?: number;
   innerRadius?: number;
   outerRadius?: number;
   width?: number;
@@ -23,11 +21,13 @@ interface ChartPieProps {
   showValue?: boolean;
   valuePrefix?: string;
   formatType?: 'k' | 'percent' | 'currency';
-  showOuterSector?: boolean;
+  outerSectorGap?: number;
+  outerSectorWidth?: number;
 }
 
 export const ChartPie = ({
   data,
+  strokeWidth = 1,
   innerRadius = 96,
   outerRadius = 144,
   width = 320,
@@ -47,7 +47,8 @@ export const ChartPie = ({
   showValue = true,
   valuePrefix = '$',
   formatType = 'k',
-  showOuterSector = true,
+  outerSectorGap = 8,
+  outerSectorWidth = 12,
 }: ChartPieProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -77,21 +78,20 @@ export const ChartPie = ({
           endAngle={endAngle}
           fill={fill}
           stroke={stroke}
-          strokeWidth={1}
+          strokeWidth={strokeWidth}
         />
-        {showOuterSector && (
-          <Sector
-            cx={cx}
-            cy={cy}
-            startAngle={startAngle}
-            endAngle={endAngle}
-            innerRadius={outerRadius + 8}
-            outerRadius={outerRadius + 12}
-            fill={fill}
-            stroke={stroke}
-            strokeWidth={1}
-          />
-        )}
+
+        <Sector
+          cx={cx}
+          cy={cy}
+          startAngle={startAngle}
+          endAngle={endAngle}
+          innerRadius={outerRadius + outerSectorGap}
+          outerRadius={outerRadius + outerSectorWidth}
+          fill={fill}
+          stroke={stroke}
+          strokeWidth={strokeWidth}
+        />
       </g>
     );
   };
@@ -114,7 +114,7 @@ export const ChartPie = ({
     <ResponsiveContainer>
       <div className={styles.chartPie}>
         <div className={styles.chartPie__circle}>
-          {renderValue()}
+          {showValue && renderValue()}
           <PieChart width={width} height={height}>
             <Pie
               activeIndex={activeIndex}
@@ -129,12 +129,14 @@ export const ChartPie = ({
               onMouseEnter={(_, index) => setActiveIndex(index)}
               onMouseLeave={() => setActiveIndex(0)}
               stroke="var(--base-white)"
+              strokeWidth={strokeWidth}
             >
               {data.map((entry, index) => (
                 <Cell
                   key={`cell-${index}`}
                   fill={colors[index % colors.length]}
                   stroke={entry.stroke || 'var(--base-white)'}
+                  strokeWidth={strokeWidth}
                 />
               ))}
             </Pie>
@@ -153,7 +155,7 @@ export const ChartPie = ({
                     <div
                       className={styles.chartPie__tableDot}
                       style={{ backgroundColor: colors[index % colors.length] }}
-                    ></div>
+                    />
                   </td>
                   {entry.name && <td className={styles.chartPie__tableName}>{entry.name}</td>}
                   {entry.value && (
