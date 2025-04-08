@@ -13,11 +13,12 @@
   },
   "dependencies": {
     "classnames": "^2.5.1",
-    "framer-motion": "^12.5.0",
+    "framer-motion": "^12.6.3",
     "next": "15.1.6",
     "next-intl": "^3.26.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "recharts": "^2.15.2",
     "sass": "^1.85.1",
     "swiper": "^11.2.6"
   },

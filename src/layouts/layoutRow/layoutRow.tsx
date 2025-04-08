@@ -8,12 +8,14 @@ export interface LayoutRowProps {
   children?: ReactNode;
   isGridColumnFull?: boolean;
   isFinancialOverview?: boolean;
+  isChartExpenseStatistics?: boolean;
 }
 
 export const LayoutRow: FC<LayoutRowProps> = ({
   children,
   isFinancialOverview,
   isGridColumnFull,
+  isChartExpenseStatistics,
 }) => {
   return (
     <div
@@ -21,6 +23,7 @@ export const LayoutRow: FC<LayoutRowProps> = ({
         styles.layoutRow,
         isGridColumnFull && styles.layoutRow__isGridColumnFull,
         isFinancialOverview && styles.layoutRow__isFinancialOverview,
+        isChartExpenseStatistics && styles.layoutRow__isChartExpenseStatistics,
       )}
     >
       {children}

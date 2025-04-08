@@ -10,6 +10,8 @@ export * from './avatar';
 export * from './search';
 export * from './caption';
 export * from './switcher';
+export * from './chartPie';
+export * from './chartBar';
 export * from './copyright';
 export * from './navToggle';
 export * from './creditCard';

@@ -3,7 +3,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { LayoutBlock, LayoutRow } from '@/layouts';
-import { ServicesList, Button, CreditCard, Graph, Title, FormAddNewCard } from '@/components';
+import { ServicesList, Button, CreditCard, Title, FormAddNewCard, ChartPie } from '@/components';
 import * as Icons from '@/icons';
 
 export default function CreditCardsClient() {
@@ -85,9 +85,14 @@ export default function CreditCardsClient() {
       <LayoutRow>
         <Title title="cardExpenseStatistics" />
         <LayoutBlock>
-          <Graph>
-            <Icons.IconGraphCardExpenseStatistics />
-          </Graph>
+          <ChartPie
+            data={[
+              { name: 'Chase Bank', value: 100 },
+              { name: 'Citibank', value: 200 },
+              { name: 'PNC Bank', value: 300 },
+              { name: 'TD Bank', value: 400 },
+            ]}
+          />
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>

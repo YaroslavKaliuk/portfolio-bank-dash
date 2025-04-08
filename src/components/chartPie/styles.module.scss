@@ -1,0 +1,91 @@
+/* .chartPie
+-------------------------------------------------------------*/
+$r: '.chartPie';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  gap: 1rem;
+  display: grid;
+
+  // element
+  //---------------------------------------------------------
+  &__circle {
+    display: grid;
+    place-items: center;
+    position: relative;
+
+    &Info {
+      display: grid;
+      place-items: center;
+      margin: auto;
+      position: absolute;
+      animation: fadeIn 2s;
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    }
+
+    &Name {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    &Value {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+
+  &__table {
+    tr {
+      cursor: default;
+      border-radius: 0.5rem;
+
+      td {
+        padding: 0.5rem;
+        transition: background-color 0.3s;
+
+        &:first-child {
+          border-radius: 0.5rem 0 0 0.5rem;
+        }
+
+        &:last-child {
+          border-radius: 0 0.5rem 0.5rem 0;
+        }
+      }
+
+      &:hover {
+        td {
+          background-color: var(--base-light-gray);
+        }
+      }
+    }
+
+    &Dot {
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 100%;
+    }
+
+    &Label {
+      width: 100%;
+    }
+
+    &Value {
+      font-weight: 500;
+    }
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}
+
+// influence
+//-----------------------------------------------------------

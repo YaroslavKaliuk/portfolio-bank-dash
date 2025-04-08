@@ -1,0 +1,33 @@
+/* .chartBar
+-------------------------------------------------------------*/
+$r: '.chartBar';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  gap: 1rem;
+  display: grid;
+
+  // element
+  //---------------------------------------------------------
+  &__summary {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &Item {
+      gap: 0.25rem;
+      display: flex;
+      align-items: center;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}
+
+// influence
+//-----------------------------------------------------------

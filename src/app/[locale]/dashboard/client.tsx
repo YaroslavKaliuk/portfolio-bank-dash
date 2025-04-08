@@ -6,10 +6,11 @@ import { LayoutBlock, LayoutRow } from '@/layouts';
 import {
   CreditCard,
   Title,
-  Graph,
   SwiperSlider,
   QuickTransfer,
   TransactionsList,
+  ChartPie,
+  ChartBar,
 } from '@/components';
 import * as Icons from '@/icons';
 import Image from 'next/image';
@@ -112,23 +113,45 @@ export default function DashboardClient() {
           />
         </LayoutBlock>
       </LayoutRow>
-      <LayoutRow>
+      <LayoutRow isChartExpenseStatistics>
         <Title title="expenseStatistics" />
         <LayoutBlock>
-          <Graph>
-            <Icons.IconGraphExpenseStatistics />
-          </Graph>
+          <ChartPie
+            data={[
+              { name: 'Office Rent', value: 12000 },
+              { name: 'Employee Salaries', value: 45000 },
+              { name: 'Digital Marketing', value: 8500 },
+              { name: 'Software Subscriptions', value: 3200 },
+              { name: 'Business Travel', value: 6200 },
+              { name: 'Equipment & Hardware', value: 5400 },
+              { name: 'Legal Services', value: 2500 },
+              { name: 'Employee Training', value: 3100 },
+              { name: 'Miscellaneous', value: 1500 },
+            ]}
+          />
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
         <Title title="weeklyActivity" />
         <LayoutBlock>
-          <Graph>
-            <Icons.IconGraphWeeklyActivity />
-          </Graph>
+          <ChartBar
+            data={[
+              { name: 'Mon', value: 4000 },
+              { name: 'Tue', value: 3000 },
+              { name: 'Wed', value: 2000 },
+              { name: 'Thu', value: 2780 },
+              { name: 'Fri', value: 1890 },
+              { name: 'Sat', value: 2390 },
+              { name: 'Sun', value: 3490 },
+            ]}
+            summary={[
+              { name: 'Total:', value: '$21,550' },
+              { name: 'Average Daily:', value: '$3,078' },
+            ]}
+          />
         </LayoutBlock>
       </LayoutRow>
-      <LayoutRow>
+      {/* <LayoutRow>
         <Title title="recentTransaction" />
         <LayoutBlock>
           <TransactionsList
@@ -166,7 +189,7 @@ export default function DashboardClient() {
             ]}
           />
         </LayoutBlock>
-      </LayoutRow>
+      </LayoutRow> */}
     </>
   );
 }
