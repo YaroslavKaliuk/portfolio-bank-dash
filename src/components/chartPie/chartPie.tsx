@@ -3,6 +3,7 @@
 import { PieChart, Pie, Cell, ResponsiveContainer, Sector } from 'recharts';
 import styles from './styles.module.scss';
 import { useState } from 'react';
+
 interface ChartPieProps {
   data: Array<{
     name: string;
@@ -22,6 +23,7 @@ interface ChartPieProps {
   showValue?: boolean;
   valuePrefix?: string;
   formatType?: 'k' | 'percent' | 'currency';
+  showOuterSector?: boolean;
 }
 
 export const ChartPie = ({
@@ -45,6 +47,7 @@ export const ChartPie = ({
   showValue = true,
   valuePrefix = '$',
   formatType = 'k',
+  showOuterSector = true,
 }: ChartPieProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -76,17 +79,19 @@ export const ChartPie = ({
           stroke={stroke}
           strokeWidth={1}
         />
-        <Sector
-          cx={cx}
-          cy={cy}
-          startAngle={startAngle}
-          endAngle={endAngle}
-          innerRadius={outerRadius + 8}
-          outerRadius={outerRadius + 12}
-          fill={fill}
-          stroke={stroke}
-          strokeWidth={1}
-        />
+        {showOuterSector && (
+          <Sector
+            cx={cx}
+            cy={cy}
+            startAngle={startAngle}
+            endAngle={endAngle}
+            innerRadius={outerRadius + 8}
+            outerRadius={outerRadius + 12}
+            fill={fill}
+            stroke={stroke}
+            strokeWidth={1}
+          />
+        )}
       </g>
     );
   };
