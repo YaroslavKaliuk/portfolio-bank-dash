@@ -10,39 +10,9 @@ export default function TransactionsClient() {
   const t = useTranslations();
   return (
     <>
-      <LayoutRow>
-        <Title title="myCards" />
-        <CreditCard
-          cards={[
-            {
-              balanceTitle: t('creditCard.balanceTitle'),
-              balanceValue: t('creditCard.firstCard.balanceValue'),
-              validThruTitle: t('creditCard.validThruTitle'),
-              validThruDate: t('creditCard.firstCard.validThruDate'),
-              holderTitle: t('creditCard.holderTitle'),
-              holderName: t('creditCard.firstCard.holderName'),
-              number: t('creditCard.firstCard.number'),
-            },
-            {
-              balanceTitle: t('creditCard.balanceTitle'),
-              balanceValue: t('creditCard.thirdCard.balanceValue'),
-              validThruTitle: t('creditCard.validThruTitle'),
-              validThruDate: t('creditCard.thirdCard.validThruDate'),
-              holderTitle: t('creditCard.holderTitle'),
-              holderName: t('creditCard.thirdCard.holderName'),
-              number: t('creditCard.thirdCard.number'),
-              isDark: true,
-            },
-          ]}
-        />
-      </LayoutRow>
-      <LayoutRow>
+      <LayoutRow isGridColumnFull>
         <Title title="myExpense" />
-        <LayoutBlock>
-          <Graph>
-            <Icons.IconGraphMyExpense />
-          </Graph>
-        </LayoutBlock>
+        <LayoutBlock>График расходов по месяцам</LayoutBlock>
       </LayoutRow>
       <LayoutRow isGridColumnFull>
         <Title title="recentTransactions" />

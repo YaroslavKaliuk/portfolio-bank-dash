@@ -3,7 +3,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { LayoutRow, LayoutBlock } from '@/layouts';
-import { CreditCard, FinancialOverview, Title, TransactionsList } from '@/components';
+import { ChartPie, CreditCard, FinancialOverview, Title, TransactionsList } from '@/components';
 import * as Icons from '@/icons';
 
 export default function AccountsClient() {
@@ -33,7 +33,6 @@ export default function AccountsClient() {
           />
         </LayoutBlock>
       </LayoutRow>
-
       <LayoutRow>
         <Title title="lastTransactions" />
         <LayoutBlock>
@@ -71,30 +70,26 @@ export default function AccountsClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
-        <Title title="myCard" />
-        <CreditCard
-          cards={[
-            {
-              balanceTitle: t('creditCard.balanceTitle'),
-              balanceValue: t('creditCard.firstCard.balanceValue'),
-              validThruTitle: t('creditCard.validThruTitle'),
-              validThruDate: t('creditCard.firstCard.validThruDate'),
-              holderTitle: t('creditCard.holderTitle'),
-              holderName: t('creditCard.firstCard.holderName'),
-              number: t('creditCard.firstCard.number'),
-            },
-          ]}
-        />
+        <Title title="weeklyActivity" />
+        <LayoutBlock>
+          <ChartPie
+            valuePrefix="$"
+            width={320}
+            height={320}
+            data={[
+              { name: t('charts.mon'), value: 21000 },
+              { name: t('charts.tue'), value: 12000 },
+              { name: t('charts.wed'), value: 8500 },
+              { name: t('charts.thu'), value: 3200 },
+              { name: t('charts.fri'), value: 6200 },
+              { name: t('charts.sat'), value: 5400 },
+              { name: t('charts.sun'), value: 3400 },
+            ]}
+          />
+        </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
         <Title title="debitCreditOverview" />
-        <LayoutBlock></LayoutBlock>
-      </LayoutRow>
-      <LayoutRow>
-        <Title title="weeklyActivity" />
-        <LayoutBlock></LayoutBlock>
-      </LayoutRow>
-      <LayoutRow>
         <LayoutBlock></LayoutBlock>
       </LayoutRow>
       <LayoutRow>

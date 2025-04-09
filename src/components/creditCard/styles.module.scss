@@ -28,7 +28,7 @@ $r: '.creditCard';
     max-width: 25.5rem;
     color: var(--base-white);
     padding: 1.5rem;
-    font-family: 'Lato';
+    font-family: var(--font-family-secondary);
     aspect-ratio: 16 / 10;
     border-radius: 1.5rem;
     background-size:

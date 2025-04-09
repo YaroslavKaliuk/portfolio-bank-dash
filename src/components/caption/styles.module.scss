@@ -7,8 +7,9 @@ $r: '.caption';
 #{$r} {
   flex-grow: 1;
   line-height: 1;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--primary-dark);
+  font-family: var(--font-family-secondary);
   font-size: clamp(1.25rem, 5dvw, 1.625rem);
 
   @media (width < 63.9375rem) {

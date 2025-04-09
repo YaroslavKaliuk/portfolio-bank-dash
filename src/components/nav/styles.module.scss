@@ -92,8 +92,9 @@ $r: '.nav';
   }
 
   &__title {
+    font-family: var(--font-family-secondary);
+    font-weight: 700;
     line-height: 1.2;
-    font-weight: 500;
     color: transparent;
     position: relative;
     overflow-y: clip;

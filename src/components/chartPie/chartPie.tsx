@@ -1,5 +1,4 @@
 'use client';
-
 import { PieChart, Pie, Cell, ResponsiveContainer, Sector } from 'recharts';
 import { useState } from 'react';
 import styles from './styles.module.scss';
@@ -19,8 +18,12 @@ interface ChartPieProps {
   formatType?: 'percent' | 'currency';
   outerSectorGap?: number;
   outerSectorWidth?: number;
+  cx?: string | number;
+  cy?: string | number;
+  startAngle?: number;
+  endAngle?: number;
+  isSemiCircle?: boolean;
 }
-
 export const ChartPie = ({
   data,
   strokeWidth = 4,
@@ -46,16 +49,19 @@ export const ChartPie = ({
   formatType = 'currency',
   outerSectorGap = 8,
   outerSectorWidth = 16,
+  cx = '50%',
+  cy = '50%',
+  startAngle = 360,
+  endAngle = 0,
+  isSemiCircle = false,
 }: ChartPieProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
-
-  const formatValue = (value: number) =>
+  const formatValue = (v: number) =>
     formatType === 'percent'
-      ? value.toFixed(1) + '%'
+      ? v.toFixed(1) + '%'
       : formatType === 'currency'
-        ? value.toLocaleString()
-        : value.toString();
-
+        ? v.toLocaleString()
+        : v.toString();
   const RADIAN = Math.PI / 180;
   const renderLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, value, name }: any) => {
     const r = innerRadius + (outerRadius - innerRadius) * 0.5;
@@ -84,39 +90,43 @@ export const ChartPie = ({
       </>
     );
   };
-
-  const renderActiveShape = (props: any) => {
-    const { cx, cy, innerRadius, outerRadius, startAngle, endAngle, fill, stroke } = props;
-    return (
-      <g>
-        <Sector
-          cx={cx}
-          cy={cy}
-          innerRadius={innerRadius}
-          outerRadius={outerRadius}
-          startAngle={startAngle}
-          endAngle={endAngle}
-          fill={fill}
-          stroke={stroke}
-          strokeWidth={strokeWidth}
-          cornerRadius={8}
-        />
-        <Sector
-          cx={cx}
-          cy={cy}
-          innerRadius={outerRadius + outerSectorGap}
-          outerRadius={outerRadius + outerSectorWidth}
-          startAngle={startAngle}
-          endAngle={endAngle}
-          fill={fill}
-          stroke={stroke}
-          strokeWidth={strokeWidth}
-          cornerRadius={8}
-        />
-      </g>
-    );
-  };
-
+  const renderActiveShape = ({
+    cx,
+    cy,
+    innerRadius,
+    outerRadius,
+    startAngle,
+    endAngle,
+    fill,
+    stroke,
+  }: any) => (
+    <g>
+      <Sector
+        cx={cx}
+        cy={cy}
+        innerRadius={innerRadius}
+        outerRadius={outerRadius}
+        startAngle={startAngle}
+        endAngle={endAngle}
+        fill={fill}
+        stroke={stroke}
+        strokeWidth={strokeWidth}
+        cornerRadius={8}
+      />
+      <Sector
+        cx={cx}
+        cy={cy}
+        innerRadius={outerRadius + outerSectorGap}
+        outerRadius={outerRadius + outerSectorWidth}
+        startAngle={startAngle}
+        endAngle={endAngle}
+        fill={fill}
+        stroke={stroke}
+        strokeWidth={strokeWidth}
+        cornerRadius={8}
+      />
+    </g>
+  );
   const renderCenter = () =>
     showValue ? (
       <div className={styles.chartPie__circleInfo}>
@@ -126,18 +136,17 @@ export const ChartPie = ({
         <div className={styles.chartPie__circleName}>{data[activeIndex]?.name}</div>
       </div>
     ) : null;
-
   return (
     <ResponsiveContainer>
-      <div className={styles.chartPie}>
+      <div className={cn(styles.chartPie, isSemiCircle && styles.chartPie__isSemiCircle)}>
         <div className={styles.chartPie__circle}>
           {renderCenter()}
           <PieChart width={width} height={height}>
             <Pie
               activeIndex={activeIndex}
               data={data}
-              cx="50%"
-              cy="50%"
+              cx={cx}
+              cy={cy}
               innerRadius={innerRadius}
               outerRadius={outerRadius}
               dataKey="value"
@@ -149,6 +158,8 @@ export const ChartPie = ({
               labelLine={false}
               {...(showLabels && { label: renderLabel })}
               activeShape={renderActiveShape}
+              startAngle={startAngle}
+              endAngle={endAngle}
               cornerRadius={8}
             >
               {data.map((entry, i) => (
@@ -177,9 +188,13 @@ export const ChartPie = ({
                       style={{ backgroundColor: colors[i % colors.length] }}
                     />
                   </td>
-                  <td className={styles.chartPie__tableName}>{entry.name}</td>
-                  <td className={styles.chartPie__tableValue}>
-                    {valuePrefix + formatValue(entry.value || 0)}
+                  <td>
+                    <div className={styles.chartPie__tableName}>{entry.name}</div>
+                  </td>
+                  <td>
+                    <div className={styles.chartPie__tableValue}>
+                      {valuePrefix + formatValue(entry.value || 0)}
+                    </div>
                   </td>
                 </tr>
               ))}

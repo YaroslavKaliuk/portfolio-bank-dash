@@ -12,6 +12,7 @@ import { Input } from '../input';
 import { Title } from '../title';
 import { Button } from '../button';
 import * as Icons from '@/icons';
+import { useTranslations } from 'next-intl';
 
 export interface QuickTransferProps {
   items: {
@@ -25,7 +26,7 @@ export interface QuickTransferProps {
 export const QuickTransfer: FC<QuickTransferProps> = ({ items }) => {
   const [activeIndex, setActiveIndex] = useState<number>(4);
   const [sentTo, setSentTo] = useState(items[4]?.title || '');
-
+  const t = useTranslations();
   const handleItemClick = (index: number, title?: string) => {
     setActiveIndex(index);
     setSentTo(title || '');
@@ -81,9 +82,9 @@ export const QuickTransfer: FC<QuickTransferProps> = ({ items }) => {
       <form className={styles.quickTransfer__form}>
         <Title title="instantTransfers" />
         <Input type="number" placeholder="$100" min={1} required />
-        <Input type="text" placeholder="Sent to" value={sentTo} readOnly />
-        <Input type="text" placeholder="Write a message..." />
-        <Button title="Send" iconRight={<Icons.IconPaperPlane />} />
+        <Input type="text" placeholder={t('quickTransfer.sentTo')} value={sentTo} readOnly />
+        <Input type="text" placeholder={t('quickTransfer.writeMessage')} />
+        <Button title={t('quickTransfer.button')} iconRight={<Icons.IconPaperPlane />} />
       </form>
     </div>
   );

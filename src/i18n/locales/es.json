@@ -25,7 +25,7 @@
     "cards": "Tarjetas",
     "investments": "Inversiones",
     "loans": "Préstamos",
-    "services": "Servicios",
+    "promo": "Promo",
     "settings": "Configuración",
     "dashboard": "Tablero",
     "transactions": "Transacciones",
@@ -155,7 +155,7 @@
     "myCards": "Mis Tarjetas",
     "promo": "Promociones",
     "quickTransfer": "Transferencia Rápida",
-    "expenseStatistics": "Estadísticas de Gastos",
+    "topExpenses": "Gastos Top",
     "weeklyActivity": "Actividad Semanal",
     "recentTransaction": "Transacción Reciente",
     "cardList": "Lista de Tarjetas",
@@ -333,5 +333,30 @@
     "button": {
       "repay": "Pagar"
     }
+  },
+  "charts": {
+    "employeeSalaries": "Salarios de Empleados",
+    "officeRent": "Alquiler de Oficinas",
+    "digitalMarketing": "Marketing Digital",
+    "softwareSubscriptions": "Suscripciones de Software",
+    "businessTravel": "Viajes de Negocios",
+    "equipmentHardware": "Equipo y Hardware",
+    "legalServices": "Servicios Legales",
+    "employeeTraining": "Entrenamiento de Empleados",
+    "miscellaneous": "Varios",
+    "total": "Total",
+    "averageDaily": "Promedio Diario",
+    "mon": "Lun",
+    "tue": "Mar",
+    "wed": "Mie",
+    "thu": "Jue",
+    "fri": "Vie",
+    "sat": "Sab",
+    "sun": "Dom"
+  },
+  "quickTransfer": {
+    "sentTo": "Enviado a",
+    "writeMessage": "Escribe un mensaje...",
+    "button": "Enviar"
   }
 }

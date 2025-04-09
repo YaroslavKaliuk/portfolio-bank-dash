@@ -53,10 +53,12 @@ $r: '.chartPie';
         transition: background-color 0.3s;
 
         &:first-child {
+          width: 0;
           border-radius: 0.5rem 0 0 0.5rem;
         }
 
         &:last-child {
+          width: 0;
           border-radius: 0 0.5rem 0.5rem 0;
         }
       }
@@ -74,12 +76,8 @@ $r: '.chartPie';
       border-radius: 100%;
     }
 
-    &Label {
-      width: 100%;
-    }
-
-    &Value {
-      font-weight: 500;
+    &Name {
+      color: var(--primary-light);
     }
   }
 
@@ -98,6 +96,12 @@ $r: '.chartPie';
 
   // modifier
   //---------------------------------------------------------
+  &__isSemiCircle {
+    #{$r}__circleInfo {
+      align-self: end;
+      padding-bottom: 1rem;
+    }
+  }
 }
 
 // influence

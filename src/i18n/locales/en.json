@@ -25,7 +25,7 @@
     "cards": "Cards",
     "investments": "Investments",
     "loans": "Loans",
-    "services": "Services",
+    "promo": "Promo",
     "settings": "Settings",
     "dashboard": "Dashboard",
     "accounts": "Accounts",
@@ -155,7 +155,7 @@
     "myCards": "My Cards",
     "promo": "Promo",
     "quickTransfer": "Quick Transfer",
-    "expenseStatistics": "Expense Statistics",
+    "topExpenses": "Top Expenses",
     "weeklyActivity": "Weekly Activity",
     "recentTransaction": "Recent Transaction",
     "cardList": "Card List",
@@ -333,5 +333,30 @@
     "button": {
       "repay": "Repay"
     }
+  },
+  "charts": {
+    "employeeSalaries": "Employee Salaries",
+    "officeRent": "Office Rent",
+    "digitalMarketing": "Digital Marketing",
+    "softwareSubscriptions": "Software Subscriptions",
+    "businessTravel": "Business Travel",
+    "equipmentHardware": "Equipment & Hardware",
+    "legalServices": "Legal Services",
+    "employeeTraining": "Employee Training",
+    "miscellaneous": "Miscellaneous",
+    "total": "Total",
+    "averageDaily": "Average Daily",
+    "mon": "Mon",
+    "tue": "Tue",
+    "wed": "Wed",
+    "thu": "Thu",
+    "fri": "Fri",
+    "sat": "Sat",
+    "sun": "Sun"
+  },
+  "quickTransfer": {
+    "sentTo": "Sent to",
+    "writeMessage": "Write a message...",
+    "button": "Send"
   }
 }

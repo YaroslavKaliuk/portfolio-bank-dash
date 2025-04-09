@@ -56,6 +56,44 @@ export default function DashboardClient() {
         />
       </LayoutRow>
       <LayoutRow>
+        <Title title="weeklyActivity" />
+        <LayoutBlock>
+          <ChartBar
+            data={[
+              { name: t('charts.mon'), value: 4000 },
+              { name: t('charts.tue'), value: 3000 },
+              { name: t('charts.wed'), value: 2000 },
+              { name: t('charts.thu'), value: 2780 },
+              { name: t('charts.fri'), value: 1890 },
+              { name: t('charts.sat'), value: 2390 },
+              { name: t('charts.sun'), value: 3490 },
+            ]}
+            summary={[
+              { name: t('charts.total'), value: '$21,550' },
+              { name: t('charts.averageDaily'), value: '$3,078' },
+            ]}
+          />
+        </LayoutBlock>
+      </LayoutRow>
+      <LayoutRow>
+        <Title title="topExpenses" />
+        <LayoutBlock>
+          <ChartPie
+            isSemiCircle
+            valuePrefix="$"
+            startAngle={180}
+            endAngle={0}
+            cy="100%"
+            height={168}
+            data={[
+              { name: t('charts.employeeSalaries'), value: 21000 },
+              { name: t('charts.officeRent'), value: 12000 },
+              { name: t('charts.digitalMarketing'), value: 8500 },
+            ]}
+          />
+        </LayoutBlock>
+      </LayoutRow>
+      <LayoutRow>
         <Title title="quickTransfer" />
         <LayoutBlock>
           <QuickTransfer
@@ -113,46 +151,7 @@ export default function DashboardClient() {
           />
         </LayoutBlock>
       </LayoutRow>
-      <LayoutRow isChartExpenseStatistics>
-        <Title title="expenseStatistics" />
-        <LayoutBlock>
-          <ChartPie
-            valuePrefix="$"
-            data={[
-              { name: 'Employee Salaries', value: 21000 },
-              { name: 'Office Rent', value: 12000 },
-              { name: 'Digital Marketing', value: 8500 },
-              { name: 'Software Subscriptions', value: 3200 },
-              { name: 'Business Travel', value: 6200 },
-              // { name: 'Equipment & Hardware', value: 5400 },
-              // { name: 'Legal Services', value: 3400 },
-              // { name: 'Employee Training', value: 3100 },
-              // { name: 'Miscellaneous', value: 1500 },
-            ]}
-          />
-        </LayoutBlock>
-      </LayoutRow>
       <LayoutRow>
-        <Title title="weeklyActivity" />
-        <LayoutBlock>
-          <ChartBar
-            data={[
-              { name: 'Mon', value: 4000 },
-              { name: 'Tue', value: 3000 },
-              { name: 'Wed', value: 2000 },
-              { name: 'Thu', value: 2780 },
-              { name: 'Fri', value: 1890 },
-              { name: 'Sat', value: 2390 },
-              { name: 'Sun', value: 3490 },
-            ]}
-            summary={[
-              { name: 'Total:', value: '$21,550' },
-              { name: 'Average Daily:', value: '$3,078' },
-            ]}
-          />
-        </LayoutBlock>
-      </LayoutRow>
-      {/* <LayoutRow>
         <Title title="recentTransaction" />
         <LayoutBlock>
           <TransactionsList
@@ -161,36 +160,36 @@ export default function DashboardClient() {
                 icon: <Icons.IconLogoApple />,
                 title: t('transactions.list.appleMusic'),
                 date: `${t('transactions.list.time.hours.one')} ${t('transactions.list.time.ago')}`,
-                amount: '$1450',
+                amount: '$1,450',
               },
               {
                 icon: <Icons.IconUser />,
                 title: t('transactions.list.michael'),
                 date: `${t('transactions.list.time.hours.two')} ${t('transactions.list.time.ago')}`,
-                amount: '$700',
+                amount: '$2,700',
               },
               {
                 icon: <Icons.IconLogoAmazon />,
                 title: t('transactions.list.amazonShopping'),
                 date: `${t('transactions.list.time.hours.three')} ${t('transactions.list.time.ago')}`,
-                amount: '$895',
+                amount: '$3,895',
               },
               {
-                icon: <Icons.IconLogoApple />,
-                title: t('transactions.list.appleMusic'),
+                icon: <Icons.IconService />,
+                title: t('transactions.list.mobileService'),
                 date: `${t('transactions.list.time.hours.one')} ${t('transactions.list.time.ago')}`,
-                amount: '$1450',
+                amount: '$1,450',
               },
               {
-                icon: <Icons.IconUser />,
-                title: t('transactions.list.michael'),
+                icon: <Icons.IconLogoGoogle />,
+                title: t('transactions.list.googlePlay'),
                 date: `${t('transactions.list.time.hours.two')} ${t('transactions.list.time.ago')}`,
-                amount: '$700',
+                amount: '$5,700',
               },
             ]}
           />
         </LayoutBlock>
-      </LayoutRow> */}
+      </LayoutRow>
     </>
   );
 }

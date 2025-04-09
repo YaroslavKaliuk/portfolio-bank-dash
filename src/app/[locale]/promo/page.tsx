@@ -11,10 +11,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { locale } = await params;
   const messages = await getMessages({ locale });
   const meta = messages.meta as { title: string; description: string };
-  const nav = messages.nav as { services: string };
+  const nav = messages.nav as { promo: string };
 
   return {
-    title: `${nav.services} - ${meta.title}`,
+    title: `${nav.promo} - ${meta.title}`,
     description: meta.description,
   };
 }

@@ -15,7 +15,7 @@ const navItems = [
   { key: 'nav.investments', href: '/investments', icon: <Icons.IconGraph /> },
   { key: 'nav.creditCards', href: '/credit-cards', icon: <Icons.IconCreditCard /> },
   { key: 'nav.loans', href: '/loans', icon: <Icons.IconLoan /> },
-  { key: 'nav.services', href: '/services', icon: <Icons.IconService /> },
+  { key: 'nav.promo', href: '/promo', icon: <Icons.IconGift /> },
   { key: 'nav.settings', href: '/settings', icon: <Icons.IconCog /> },
 ];
 
