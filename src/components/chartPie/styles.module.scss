@@ -7,9 +7,23 @@ $r: '.chartPie';
 #{$r} {
   gap: 1rem;
   display: grid;
+  align-items: start;
+
+  @media (40rem <= width < 79.938rem) {
+    grid-template-columns: 1fr max-content;
+  }
 
   // element
   //---------------------------------------------------------
+  :global(.recharts-wrapper) {
+    width: 100% !important;
+    aspect-ratio: 1;
+
+    @media (width < 23.380rem) {
+      height: 100% !important;
+    }
+  }
+
   &__circle {
     display: grid;
     place-items: center;
@@ -38,7 +52,7 @@ $r: '.chartPie';
     }
 
     &Value {
-      font-size: 1.5rem;
+      font-size: clamp(1.25rem, 1vw, 1.5rem);
       font-weight: 600;
     }
   }
@@ -99,7 +113,11 @@ $r: '.chartPie';
   &__isSemiCircle {
     #{$r}__circleInfo {
       align-self: end;
-      padding-bottom: 1rem;
+      padding-bottom: 0.5rem;
+    }
+
+    :global(.recharts-wrapper) {
+      aspect-ratio: 2 / 1;
     }
   }
 }

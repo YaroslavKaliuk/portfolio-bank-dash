@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { LayoutBlock, LayoutRow } from '@/layouts';
-import { CreditCard, Title, Button, Table, Graph } from '@/components';
+import { CreditCard, Title, Button, Table, ChartBar } from '@/components';
 import * as Icons from '@/icons';
 import { useTranslations } from 'next-intl';
 
@@ -12,7 +12,29 @@ export default function TransactionsClient() {
     <>
       <LayoutRow isGridColumnFull>
         <Title title="myExpense" />
-        <LayoutBlock>График расходов по месяцам</LayoutBlock>
+        <LayoutBlock>
+          <ChartBar
+            showLegend
+            data={[
+              { name: t('charts.jan'), income: 12000, expenses: 8000 },
+              { name: t('charts.feb'), income: 10000, expenses: 7000 },
+              { name: t('charts.mar'), income: 14000, expenses: 9000 },
+              { name: t('charts.apr'), income: 9000, expenses: 6000 },
+              { name: t('charts.may'), income: 15000, expenses: 9500 },
+              { name: t('charts.jun'), income: 11000, expenses: 5000 },
+              { name: t('charts.jul'), income: 17000, expenses: 10500 },
+              { name: t('charts.aug'), income: 13000, expenses: 8000 },
+              { name: t('charts.sep'), income: 12000, expenses: 6500 },
+              { name: t('charts.oct'), income: 12500, expenses: 7000 },
+              { name: t('charts.nov'), income: 14000, expenses: 7500 },
+              { name: t('charts.dec'), income: 16000, expenses: 9000 },
+            ]}
+            summary={[
+              { name: t('charts.total'), value: '$170,800' },
+              { name: t('charts.averageMonthly'), value: '$14,233' },
+            ]}
+          />
+        </LayoutBlock>
       </LayoutRow>
       <LayoutRow isGridColumnFull>
         <Title title="recentTransactions" />

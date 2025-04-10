@@ -74,16 +74,14 @@ export default function AccountsClient() {
         <LayoutBlock>
           <ChartPie
             valuePrefix="$"
-            width={320}
-            height={320}
             data={[
-              { name: t('charts.mon'), value: 21000 },
-              { name: t('charts.tue'), value: 12000 },
-              { name: t('charts.wed'), value: 8500 },
-              { name: t('charts.thu'), value: 3200 },
-              { name: t('charts.fri'), value: 6200 },
-              { name: t('charts.sat'), value: 5400 },
-              { name: t('charts.sun'), value: 3400 },
+              { name: t('charts.monday'), value: 21000 },
+              { name: t('charts.tuesday'), value: 12000 },
+              { name: t('charts.wednesday'), value: 8500 },
+              { name: t('charts.thursday'), value: 3200 },
+              { name: t('charts.friday'), value: 6200 },
+              { name: t('charts.saturday'), value: 5400 },
+              { name: t('charts.sunday'), value: 3400 },
             ]}
           />
         </LayoutBlock>

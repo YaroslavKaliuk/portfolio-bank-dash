@@ -83,7 +83,7 @@ export default function CreditCardsClient() {
         />
       </LayoutRow>
       <LayoutRow>
-        <Title title="cardExpenseStatistics" />
+        <Title title="cardBalance" />
         <LayoutBlock>
           <ChartPie
             strokeWidth={8}
