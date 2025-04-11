@@ -3,7 +3,15 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { LayoutBlock, LayoutRow } from '@/layouts';
-import { ServicesList, Button, CreditCard, Title, FormAddNewCard, ChartPie } from '@/components';
+import {
+  ServicesList,
+  Button,
+  CreditCard,
+  Title,
+  FormAddNewCard,
+  ChartPie,
+  ChartBar,
+} from '@/components';
 import * as Icons from '@/icons';
 
 export default function CreditCardsClient() {
@@ -47,7 +55,29 @@ export default function CreditCardsClient() {
       </LayoutRow>
       <LayoutRow>
         <Title title={t('titles.cardList')} />
-        <ServicesList
+        <LayoutBlock>
+          <ChartBar
+            type="simple"
+            height={320}
+            legendText={t('charts.spent')}
+            showLegend={false}
+            data={[
+              { name: t('charts.mon'), value1: 4000, value2: 3000 },
+              { name: t('charts.tue'), value1: 3000, value2: 2000 },
+              { name: t('charts.wed'), value1: 2000, value2: 2780 },
+              { name: t('charts.thu'), value1: 2780, value2: 1890 },
+              { name: t('charts.fri'), value1: 1890, value2: 2390 },
+              { name: t('charts.sat'), value1: 2390, value2: 3490 },
+              { name: t('charts.sun'), value1: 3490, value2: 3490 },
+            ]}
+            summary={[
+              { name: t('charts.total'), value: '$21,550' },
+              { name: t('charts.averageDaily'), value: '$3,078' },
+            ]}
+          />
+        </LayoutBlock>
+
+        {/* <ServicesList
           rows={[
             [
               { icon: <Icons.IconCreditCard /> },
@@ -80,7 +110,7 @@ export default function CreditCardsClient() {
               { button: <Button title={t('creditCards.list.button')} isOutline /> },
             ],
           ]}
-        />
+        /> */}
       </LayoutRow>
       <LayoutRow>
         <Title title={t('titles.cardBalance')} />

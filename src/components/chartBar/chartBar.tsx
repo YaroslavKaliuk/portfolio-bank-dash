@@ -15,6 +15,8 @@ import styles from './styles.module.scss';
 export interface ChartData {
   name: string;
   value?: number;
+  value1?: number;
+  value2?: number;
   income?: number;
   expenses?: number;
 }
@@ -25,6 +27,7 @@ export interface ChartSummary {
 }
 
 export interface ChartBarProps {
+  type: 'tiny' | 'simple' | 'triangle';
   data: ChartData[];
   summary?: ChartSummary[];
   height?: number;
@@ -34,7 +37,6 @@ export interface ChartBarProps {
   currencySymbol?: string;
   legendIncomeText?: string;
   legendExpensesText?: string;
-  type?: 'default' | 'triangle';
   colors?: string[];
   margin?: {
     top?: number;
@@ -77,6 +79,7 @@ const TriangleBar = (props: any) => {
 
 export const ChartBar = ({
   data,
+  type,
   margin,
   summary,
   height = 264,
@@ -86,7 +89,6 @@ export const ChartBar = ({
   currencySymbol = '$',
   legendIncomeText = 'Income',
   legendExpensesText = 'Expenses',
-  type = 'default',
   colors = [
     'var(--accent-purple)',
     'var(--accent-blue)',
@@ -99,6 +101,8 @@ export const ChartBar = ({
   const hasIncome = data.some((d) => d.income !== undefined);
   const hasExpenses = data.some((d) => d.expenses !== undefined);
   const hasValue = data.some((d) => d.value !== undefined);
+  const hasValue1 = data.some((d) => d.value1 !== undefined);
+  const hasValue2 = data.some((d) => d.value2 !== undefined);
 
   const formatValue = (value: number) => {
     return `${currencySymbol}${value.toLocaleString()}`;
@@ -139,6 +143,45 @@ export const ChartBar = ({
           />
           {showLegend && <Legend iconType="circle" />}
 
+          {type === 'tiny' && hasValue && (
+            <Bar dataKey="value" fill="url(#barGradient)" name={legendText} radius={[8, 8, 0, 0]} />
+          )}
+
+          {/* {type === 'simple' && hasValue1 && hasValue2 && (
+            <>
+              <Bar
+                dataKey="value1"
+                // fill="url(#barGradient)"
+                name={legendText}
+                radius={[8, 8, 0, 0]}
+              />
+              <Bar
+                dataKey="value2"
+                // fill="url(#barGradient)"
+                name={legendText}
+                radius={[8, 8, 0, 0]}
+              />
+            </>
+          )} */}
+
+          {hasValue1 && (
+            <Bar
+              dataKey="value1"
+              fill="url(#barGradient)"
+              name={legendText}
+              radius={[8, 8, 0, 0]}
+            />
+          )}
+
+          {hasValue2 && (
+            <Bar
+              dataKey="value2"
+              fill="url(#barGradient)"
+              name={legendText}
+              radius={[8, 8, 0, 0]}
+            />
+          )}
+
           {type === 'triangle' && hasValue && (
             <Bar
               dataKey="value"
@@ -151,12 +194,6 @@ export const ChartBar = ({
               ))}
             </Bar>
           )}
-
-          {type === 'default' && hasValue && (
-            <Bar dataKey="value" fill="url(#barGradient)" name={legendText} radius={[8, 8, 0, 0]} />
-          )}
-
-
 
           {hasExpenses && (
             <Bar
@@ -177,10 +214,6 @@ export const ChartBar = ({
               radius={[8, 8, 0, 0]}
             />
           )}
-
-
-
-
         </BarChart>
       </ResponsiveContainer>
     </div>
