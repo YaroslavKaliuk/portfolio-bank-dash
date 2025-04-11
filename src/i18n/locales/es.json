@@ -145,7 +145,7 @@
   "titles": {
     "instantTransfers": "Transferencias instantáneas a personas que conoces",
     "bankServicesList": "Lista de Servicios Bancarios",
-    "investmentMapping": "Mapeo de inversiones por país",
+    "investmentByCountry": "Inversión por país",
     "trendingStock": "Acciones en Tendencia",
     "myInvestment": "Mi Inversión",
     "lastTransactions": "Últimas Transacciones",
@@ -376,7 +376,15 @@
     "dec": "Dic",
     "income": "Ingresos",
     "expenses": "Gastos",
-    "savings": "Ahorros"
+    "savings": "Ahorros",
+    "invested": "Invertido",
+    "china": "China",
+    "india": "India",
+    "france": "Francia",
+    "brazil": "Brasil",
+    "spain": "España",
+    "italy": "Italia",
+    "portugal": "Portugal"
   },
   "quickTransfer": {
     "sentTo": "Enviado a",

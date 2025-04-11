@@ -8,6 +8,7 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
+  Cell,
 } from 'recharts';
 import styles from './styles.module.scss';
 
@@ -33,6 +34,14 @@ export interface ChartBarProps {
   currencySymbol?: string;
   legendIncomeText?: string;
   legendExpensesText?: string;
+  type?: 'default' | 'triangle';
+  colors?: string[];
+  margin?: {
+    top?: number;
+    right?: number;
+    bottom?: number;
+    left?: number;
+  };
 }
 
 const GradientBar = () => (
@@ -54,8 +63,21 @@ const GradientBar = () => (
   </svg>
 );
 
+const getTrianglePath = (x: number, y: number, width: number, height: number) => {
+  return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3}
+  ${x + width / 2}, ${y}
+  C${x + width / 2},${y + height / 3} ${x + (2 * width) / 3},${y + height} ${x + width}, ${y + height}
+  Z`;
+};
+
+const TriangleBar = (props: any) => {
+  const { fill, x, y, width, height } = props;
+  return <path d={getTrianglePath(x, y, width, height)} stroke="none" fill={fill} />;
+};
+
 export const ChartBar = ({
   data,
+  margin,
   summary,
   height = 264,
   showLegend = true,
@@ -64,6 +86,15 @@ export const ChartBar = ({
   currencySymbol = '$',
   legendIncomeText = 'Income',
   legendExpensesText = 'Expenses',
+  type = 'default',
+  colors = [
+    'var(--accent-purple)',
+    'var(--accent-blue)',
+    'var(--accent-green)',
+    'var(--accent-teal)',
+    'var(--accent-red)',
+    'var(--accent-pink)',
+  ],
 }: ChartBarProps) => {
   const hasIncome = data.some((d) => d.income !== undefined);
   const hasExpenses = data.some((d) => d.expenses !== undefined);
@@ -87,7 +118,7 @@ export const ChartBar = ({
         </div>
       )}
       <ResponsiveContainer width="100%" height={height}>
-        <BarChart data={data}>
+        <BarChart data={data} margin={margin}>
           <CartesianGrid strokeDasharray="3 3" stroke={gridColor} />
           <XAxis
             dataKey="name"
@@ -108,9 +139,24 @@ export const ChartBar = ({
           />
           {showLegend && <Legend iconType="circle" />}
 
-          {hasValue && (
+          {type === 'triangle' && hasValue && (
+            <Bar
+              dataKey="value"
+              name={legendText}
+              shape={<TriangleBar />}
+              label={{ position: 'top', formatter: (value: number) => formatValue(value) }}
+            >
+              {data.map((entry, index) => (
+                <Cell key={`cell-${entry.name}`} fill={colors[index % colors.length]} />
+              ))}
+            </Bar>
+          )}
+
+          {type === 'default' && hasValue && (
             <Bar dataKey="value" fill="url(#barGradient)" name={legendText} radius={[8, 8, 0, 0]} />
           )}
+
+
 
           {hasExpenses && (
             <Bar
@@ -131,6 +177,10 @@ export const ChartBar = ({
               radius={[8, 8, 0, 0]}
             />
           )}
+
+
+
+
         </BarChart>
       </ResponsiveContainer>
     </div>

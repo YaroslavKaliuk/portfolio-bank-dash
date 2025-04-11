@@ -3,7 +3,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { LayoutBlock, LayoutRow } from '@/layouts';
-import { Table, ServicesList, FinancialOverview, Graph, Title } from '@/components';
+import { Table, ServicesList, FinancialOverview, Graph, Title, ChartBar } from '@/components';
 import * as Icons from '@/icons';
 
 export default function InvestmentsClient() {
@@ -34,11 +34,23 @@ export default function InvestmentsClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
-        <Title title={t('titles.investmentMapping')} />
+        <Title title={t('titles.investmentByCountry')} />
         <LayoutBlock>
-          <Graph>
-            <Icons.IconGraphInvestmentMapping />
-          </Graph>
+          <ChartBar
+            type="triangle"
+            height={386}
+            showLegend={false}
+            legendText={t('charts.invested')}
+            data={[
+              { name: t('charts.china'), value: 24000 },
+              { name: t('charts.india'), value: 34000 },
+              { name: t('charts.france'), value: 22000 },
+              { name: t('charts.brazil'), value: 22780 },
+              { name: t('charts.spain'), value: 25890 },
+              { name: t('charts.italy'), value: 16390 },
+              { name: t('charts.portugal'), value: 34490 },
+            ]}
+          />
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
