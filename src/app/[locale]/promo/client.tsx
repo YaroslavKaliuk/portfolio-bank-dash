@@ -3,7 +3,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { LayoutBlock, LayoutRow } from '@/layouts';
-import { FinancialOverview, ServicesList, Button, Title } from '@/components';
+import { FinancialOverview, ServicesList, Button, Title, TransactionsList } from '@/components';
 import * as Icons from '@/icons';
 
 export default function ServicesClient() {
@@ -34,7 +34,7 @@ export default function ServicesClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
-        <Title title="bankServicesList" />
+        <Title title={t('titles.bankServicesList')} />
         <ServicesList
           rows={[
             [
@@ -139,6 +139,76 @@ export default function ServicesClient() {
             ],
           ]}
         />
+      </LayoutRow>
+
+      <LayoutRow>
+        <Title title={t('titles.lastTransactions')} />
+        <LayoutBlock>
+          <TransactionsList
+            transactions={[
+              {
+                icon: <Icons.IconService />,
+                title: t('transactions.list.mobileService'),
+                date: '25 Jan 2025',
+                category: t('transactions.list.categories.service'),
+                card: '**** 1234',
+                status: t('transactions.list.status.completed'),
+                amount: '-$150',
+              },
+              {
+                icon: <Icons.IconLogoSpotify />,
+                title: t('transactions.list.spotifySubscription'),
+                date: '25 Jan 2025',
+                category: t('transactions.list.categories.shopping'),
+                card: '**** 1234',
+                status: t('transactions.list.status.pending'),
+                amount: '-$150',
+              },
+              {
+                icon: <Icons.IconUser />,
+                title: t('transactions.list.emilyWilson'),
+                date: '25 Jan 2025',
+                category: t('transactions.list.categories.transfer'),
+                card: '**** 1234',
+                status: t('transactions.list.status.completed'),
+                amount: '+$780',
+              },
+            ]}
+          />
+        </LayoutBlock>
+      </LayoutRow>
+      <LayoutRow>
+        <Title title={t('titles.invoicesSent')} />
+        <LayoutBlock>
+          <TransactionsList
+            transactions={[
+              {
+                icon: <Icons.IconLogoApple />,
+                title: t('transactions.list.appleMusic'),
+                date: `${t('transactions.list.time.hours.one')} ${t('transactions.list.time.ago')}`,
+                amount: '$1450',
+              },
+              {
+                icon: <Icons.IconUser />,
+                title: t('transactions.list.michael'),
+                date: `${t('transactions.list.time.hours.two')} ${t('transactions.list.time.ago')}`,
+                amount: '$700',
+              },
+              {
+                icon: <Icons.IconLogoAmazon />,
+                title: t('transactions.list.amazonShopping'),
+                date: `${t('transactions.list.time.hours.three')} ${t('transactions.list.time.ago')}`,
+                amount: '$895',
+              },
+              {
+                icon: <Icons.IconLogoGoogle />,
+                title: t('transactions.list.googlePlay'),
+                date: `${t('transactions.list.time.hours.five')} ${t('transactions.list.time.ago')}`,
+                amount: '$3610',
+              },
+            ]}
+          />
+        </LayoutBlock>
       </LayoutRow>
     </>
   );

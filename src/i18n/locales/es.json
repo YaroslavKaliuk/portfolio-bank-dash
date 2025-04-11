@@ -150,7 +150,7 @@
     "myInvestment": "Mi Inversión",
     "lastTransactions": "Últimas Transacciones",
     "myCard": "Mi Tarjeta",
-    "debitCreditOverview": "Resumen de Débito y Crédito",
+    "savingsStatistics": "Estadísticas de Ahorro",
     "invoicesSent": "Facturas Enviadas",
     "myCards": "Mis Tarjetas",
     "promo": "Promociones",
@@ -373,7 +373,10 @@
     "sep": "Sep",
     "oct": "Oct",
     "nov": "Nov",
-    "dec": "Dic"
+    "dec": "Dic",
+    "income": "Ingresos",
+    "expenses": "Gastos",
+    "savings": "Ahorros"
   },
   "quickTransfer": {
     "sentTo": "Enviado a",

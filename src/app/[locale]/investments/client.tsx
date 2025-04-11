@@ -34,7 +34,7 @@ export default function InvestmentsClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
-        <Title title="investmentMapping" />
+        <Title title={t('titles.investmentMapping')} />
         <LayoutBlock>
           <Graph>
             <Icons.IconGraphInvestmentMapping />
@@ -42,7 +42,7 @@ export default function InvestmentsClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
-        <Title title="trendingStock" />
+        <Title title={t('titles.trendingStock')} />
         <LayoutBlock isInlineSize>
           <Table
             thead={[
@@ -65,7 +65,7 @@ export default function InvestmentsClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow isGridColumnFull>
-        <Title title="myInvestment" />
+        <Title title={t('titles.myInvestment')} />
         <ServicesList
           rows={[
             [

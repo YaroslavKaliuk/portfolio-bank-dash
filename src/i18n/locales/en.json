@@ -150,7 +150,7 @@
     "myInvestment": "My Investment",
     "lastTransactions": "Last Transactions",
     "myCard": "My Card",
-    "debitCreditOverview": "Debit & Credit Overview",
+    "savingsStatistics": "Savings Statistics",
     "invoicesSent": "Invoices Sent",
     "myCards": "My Cards",
     "promo": "Promo",
@@ -163,7 +163,7 @@
     "addNewCard": "Add New Card",
     "cardSetting": "Card Setting",
     "activeLoansOverview": "Active Loans Overview",
-    "myExpense": "My Expense",
+    "myExpense": "My Expenses",
     "recentTransactions": "Recent Transactions"
   },
   "table": {
@@ -373,7 +373,10 @@
     "sep": "Sep",
     "oct": "Oct",
     "nov": "Nov",
-    "dec": "Dec"
+    "dec": "Dec",
+    "income": "Income",
+    "expenses": "Expenses",
+    "savings": "Savings"
   },
   "quickTransfer": {
     "sentTo": "Sent to",

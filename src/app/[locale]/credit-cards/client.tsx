@@ -46,7 +46,7 @@ export default function CreditCardsClient() {
         />
       </LayoutRow>
       <LayoutRow>
-        <Title title="cardList" />
+        <Title title={t('titles.cardList')} />
         <ServicesList
           rows={[
             [
@@ -83,7 +83,7 @@ export default function CreditCardsClient() {
         />
       </LayoutRow>
       <LayoutRow>
-        <Title title="cardBalance" />
+        <Title title={t('titles.cardBalance')} />
         <LayoutBlock>
           <ChartPie
             strokeWidth={8}
@@ -92,7 +92,6 @@ export default function CreditCardsClient() {
             outerSectorGap={0}
             outerSectorWidth={12}
             showValue={false}
-            valuePrefix="$"
             showLabels={true}
             data={[
               { name: '**** 8912', value: 1500 },
@@ -103,13 +102,13 @@ export default function CreditCardsClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
-        <Title title="addNewCard" />
+        <Title title={t('titles.addNewCard')} />
         <LayoutBlock>
           <FormAddNewCard />
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
-        <Title title="cardSetting" />
+        <Title title={t('titles.cardSetting')} />
         <ServicesList
           rows={[
             [

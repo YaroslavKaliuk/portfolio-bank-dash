@@ -26,3 +26,4 @@ export * from './formPreferences';
 export * from './languageSwitcher';
 export * from './transactionsList';
 export * from './financialOverview';
+export * from './chartVerticalComposed';

@@ -2,8 +2,7 @@
 
 import React from 'react';
 import { LayoutBlock, LayoutRow } from '@/layouts';
-import { CreditCard, Title, Button, Table, ChartBar } from '@/components';
-import * as Icons from '@/icons';
+import { Title, Button, Table, ChartBar } from '@/components';
 import { useTranslations } from 'next-intl';
 
 export default function TransactionsClient() {
@@ -11,10 +10,12 @@ export default function TransactionsClient() {
   return (
     <>
       <LayoutRow isGridColumnFull>
-        <Title title="myExpense" />
+        <Title title={t('titles.myExpense')} />
         <LayoutBlock>
           <ChartBar
             showLegend
+            legendIncomeText={t('charts.income')}
+            legendExpensesText={t('charts.expenses')}
             data={[
               { name: t('charts.jan'), income: 12000, expenses: 8000 },
               { name: t('charts.feb'), income: 10000, expenses: 7000 },
@@ -37,7 +38,7 @@ export default function TransactionsClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow isGridColumnFull>
-        <Title title="recentTransactions" />
+        <Title title={t('titles.recentTransactions')} />
         <LayoutBlock>
           <Table
             thead={[

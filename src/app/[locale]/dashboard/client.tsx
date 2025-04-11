@@ -20,7 +20,7 @@ export default function DashboardClient() {
   return (
     <>
       <LayoutRow>
-        <Title title="myCards" />
+        <Title title={t('titles.myCards')} />
         <CreditCard
           cards={[
             {
@@ -47,7 +47,7 @@ export default function DashboardClient() {
         />
       </LayoutRow>
       <LayoutRow>
-        <Title title="promo" />
+        <Title title={t('titles.promo')} />
         <SwiperSlider
           items={[
             <Image src="/banner_2.jpg" alt="Promo" width={860} height={486} loading="lazy" />,
@@ -56,7 +56,7 @@ export default function DashboardClient() {
         />
       </LayoutRow>
       <LayoutRow>
-        <Title title="weeklyActivity" />
+        <Title title={t('titles.weeklyActivity')} />
         <LayoutBlock>
           <ChartBar
             legendText={t('charts.spent')}
@@ -78,11 +78,10 @@ export default function DashboardClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
-        <Title title="topExpenses" />
+        <Title title={t('titles.topExpenses')} />
         <LayoutBlock>
           <ChartPie
             isSemiCircle
-            valuePrefix="$"
             startAngle={180}
             endAngle={0}
             cy="100%"
@@ -96,7 +95,7 @@ export default function DashboardClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
-        <Title title="quickTransfer" />
+        <Title title={t('titles.quickTransfer')} />
         <LayoutBlock>
           <QuickTransfer
             items={[
@@ -154,7 +153,7 @@ export default function DashboardClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
-        <Title title="recentTransaction" />
+        <Title title={t('titles.recentTransactions')} />
         <LayoutBlock>
           <TransactionsList
             transactions={[

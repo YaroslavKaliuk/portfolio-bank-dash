@@ -30,6 +30,9 @@ export interface ChartBarProps {
   showLegend?: boolean;
   gridColor?: string;
   legendText?: string;
+  currencySymbol?: string;
+  legendIncomeText?: string;
+  legendExpensesText?: string;
 }
 
 const GradientBar = () => (
@@ -58,10 +61,17 @@ export const ChartBar = ({
   showLegend = true,
   gridColor = 'var(--base-light-blue)',
   legendText = 'Value',
+  currencySymbol = '$',
+  legendIncomeText = 'Income',
+  legendExpensesText = 'Expenses',
 }: ChartBarProps) => {
   const hasIncome = data.some((d) => d.income !== undefined);
   const hasExpenses = data.some((d) => d.expenses !== undefined);
   const hasValue = data.some((d) => d.value !== undefined);
+
+  const formatValue = (value: number) => {
+    return `${currencySymbol}${value.toLocaleString()}`;
+  };
 
   return (
     <div className={styles.chartBar}>
@@ -70,7 +80,7 @@ export const ChartBar = ({
         <div className={styles.chartBar__summary}>
           {summary.map((item, i) => (
             <div key={i} className={styles.chartBar__summaryItem}>
-              <span className={styles.chartBar__summaryName}>{item.name}</span>
+              <span className={styles.chartBar__summaryName}>{item.name}:</span>
               <span className={styles.chartBar__summaryValue}>{item.value}</span>
             </div>
           ))}
@@ -92,10 +102,11 @@ export const ChartBar = ({
               borderRadius: '0.5rem',
               border: 'none',
             }}
-            labelStyle={{ color: 'var(--text-primary)' }}
+            labelStyle={{ color: 'var(--text-secondary)' }}
             itemStyle={{ color: 'var(--text-primary)' }}
+            formatter={(value: number) => formatValue(value)}
           />
-          {showLegend && <Legend />}
+          {showLegend && <Legend iconType="circle" />}
 
           {hasValue && (
             <Bar dataKey="value" fill="url(#barGradient)" name={legendText} radius={[8, 8, 0, 0]} />
@@ -106,7 +117,7 @@ export const ChartBar = ({
               dataKey="expenses"
               stackId="a"
               fill="url(#expensesGradient)"
-              name="Expenses"
+              name={legendExpensesText}
               radius={[0, 0, 0, 0]}
             />
           )}
@@ -116,7 +127,7 @@ export const ChartBar = ({
               dataKey="income"
               stackId="a"
               fill="url(#incomeGradient)"
-              name="Income"
+              name={legendIncomeText}
               radius={[8, 8, 0, 0]}
             />
           )}

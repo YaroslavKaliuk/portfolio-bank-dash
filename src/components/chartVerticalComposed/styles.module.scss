@@ -1,12 +1,13 @@
-/* .chartBar
+/* .chartVerticalComposed
 -------------------------------------------------------------*/
-$r: '.chartBar';
+$r: '.chartVerticalComposed';
 
 // block
 //-----------------------------------------------------------
 #{$r} {
   gap: 1rem;
   display: grid;
+  position: relative;
 
   // element
   //---------------------------------------------------------
@@ -14,30 +15,6 @@ $r: '.chartBar';
     opacity: 0;
     pointer-events: none;
     position: absolute;
-  }
-
-  &__summary {
-    gap: 0.5rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-
-    &Item {
-      gap: 0.25rem;
-      display: flex;
-      align-items: center;
-      font-size: 0.875rem;
-    }
-
-    &Name {
-      color: var(--primary-light);
-    }
-
-    &Value {
-      font-weight: 500;
-      color: var(--text-primary);
-    }
   }
 
   // modifier

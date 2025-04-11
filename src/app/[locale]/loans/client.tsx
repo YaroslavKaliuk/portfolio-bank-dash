@@ -34,7 +34,7 @@ export default function LoansClient() {
         </LayoutBlock>
       </LayoutRow>
       <LayoutRow>
-        <Title title="activeLoansOverview" />
+        <Title title={t('titles.activeLoansOverview')} />
         <LayoutBlock>
           <Table
             thead={[
