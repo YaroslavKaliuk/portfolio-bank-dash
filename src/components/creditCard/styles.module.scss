@@ -7,6 +7,8 @@ $r: '.creditCard';
 #{$r} {
   display: flex;
   min-width: 0;
+  padding: 1.5rem;
+  margin: -1.5rem;
   overflow: auto hidden;
 
   @media (width < 63.9375rem) {
@@ -21,15 +23,32 @@ $r: '.creditCard';
   //---------------------------------------------------------
   &__item {
     display: grid;
+    width: 100%;
+    min-width: 21.25rem;
+    max-width: 25.5rem;
+    position: relative;
+    perspective: 62.5rem;
+    aspect-ratio: 16 / 10;
+
+    @media (width < 95.9375rem) {
+      min-height: 14rem;
+    }
+
+    &:hover {
+      #{$r}__inner {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+
+  &__inner {
+    display: grid;
     align-items: center;
     grid-template-columns: 1fr max-content;
     grid-template-rows: max-content 1fr max-content;
-    width: 100%;
-    max-width: 25.5rem;
     color: var(--base-white);
-    padding: 1.5rem;
     font-family: var(--font-family-secondary);
-    aspect-ratio: 16 / 10;
+    position: relative;
     border-radius: var(--border-radius-large);
     background-size:
       auto,
@@ -38,87 +57,133 @@ $r: '.creditCard';
     background-blend-mode: overlay;
     background-position: center, bottom;
     background-image:
-      linear-gradient(107deg, #2d60ff 2.61%, #539bff 101.2%),
+      linear-gradient(107deg, var(--primary) 2.61%, var(--accent-pink) 101.2%),
       linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
-
-    @media (width < 95.9375rem) {
-      min-height: 14rem;
-    }
+    transition: transform 0.4s ease-in-out;
+    transform-style: preserve-3d;
+    container-type: inline-size;
   }
 
-  &__balance {
+  &__back,
+  &__front {
     display: grid;
-
-    &Title {
-      font-size: 0.8rem;
-    }
-
-    &Value {
-      font-size: 1.25rem;
-      font-weight: 600;
-    }
-  }
-
-  &__chip {
-    display: grid;
-    justify-content: center;
-    font-size: 2.25rem;
-  }
-
-  &__info {
-    grid-column: 1 / -1;
-    gap: 4rem;
-    display: flex;
     align-items: center;
-    padding-bottom: 1.5rem;
+    inset: 0;
+    padding: 1.5rem;
+    overflow: hidden;
+    position: absolute;
+    backface-visibility: hidden;
   }
 
-  &__holder {
-    white-space: nowrap;
-
-    &Title {
-      opacity: 0.7;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-    }
-
-    &Name {
-      max-width: 10rem;
-      font-size: 1rem;
-      font-weight: 600;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-    }
-  }
-
-  &__validThru {
-    &Title {
-      opacity: 0.7;
-      font-size: 0.8rem;
-      white-space: nowrap;
-      text-transform: uppercase;
-    }
-
-    &Date {
-      font-size: 1rem;
-      font-weight: 600;
-    }
-  }
-
-  &__number {
-    line-height: 2rem;
-    font-weight: 600;
-    font-size: 1.38rem;
-    white-space: nowrap;
-  }
-
-  &__logo {
+  &__back {
+    gap: 1rem;
     display: grid;
-    font-size: 2rem;
+    align-content: end;
+    grid-template-columns: 1fr 3.5rem;
+    transform: rotateY(180deg);
 
-    svg {
-      width: calc(44em / 33);
+    &Code,
+    &Signature {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      height: 2.5rem;
+      line-height: 1;
+      color: var(--text-primary);
+      border-radius: var(--border-radius-small);
+      background-color: var(--base-light-gray);
+    }
+
+    &Signature {
+      font-size: clamp(2rem, 16cqw, 3rem);
+      line-height: 0;
+      font-family: Dafoe;
+      white-space: nowrap;
+    }
+
+    &Code {
+      font-weight: 600;
+    }
+  }
+
+  &__front {
+    grid-template-columns: 1fr max-content;
+    grid-template-rows: max-content 1fr max-content;
+
+    &Balance {
+      display: grid;
+
+      &Title {
+        font-size: 0.8rem;
+      }
+
+      &Value {
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+    }
+
+    &Chip {
+      display: grid;
+      justify-content: center;
+      font-size: 2.25rem;
+    }
+
+    &Info {
+      grid-column: 1 / -1;
+      gap: 4rem;
+      display: flex;
+      align-items: center;
+      padding-bottom: 1.5rem;
+    }
+
+    &Holder {
+      white-space: nowrap;
+
+      &Title {
+        opacity: 0.7;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+      }
+
+      &Name {
+        max-width: 10rem;
+        font-size: 1rem;
+        font-weight: 600;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+
+    &ValidThru {
+      &Title {
+        opacity: 0.7;
+        font-size: 0.8rem;
+        white-space: nowrap;
+        text-transform: uppercase;
+      }
+
+      &Date {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+    }
+
+    &Number {
+      line-height: 2rem;
+      font-weight: 600;
+      font-size: 1.38rem;
+      white-space: nowrap;
+    }
+
+    &Logo {
+      display: grid;
+      font-size: 2rem;
+
+      svg {
+        width: calc(44em / 33);
+      }
     }
   }
 
@@ -126,7 +191,7 @@ $r: '.creditCard';
   //---------------------------------------------------------
   &__isDark {
     background-image:
-      linear-gradient(107deg, var(--accent-purple) 2.61%, var(--accent-blue) 101.2%),
+      linear-gradient(107deg, var(--accent-purple) 21.61%, var(--accent-blue) 101.2%),
       linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
   }
 

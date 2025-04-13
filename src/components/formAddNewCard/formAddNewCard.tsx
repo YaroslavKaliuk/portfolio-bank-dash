@@ -13,7 +13,7 @@ export const FormAddNewCard = () => {
       <div className={styles.formAddNewCard__description}>{t('form.description')}</div>
       <div className={styles.formAddNewCard__inputs}>
         <Input type="text" title={t('form.cardType')} placeholder="Classic" />
-        <Input type="text" title={t('form.nameOnCard')} placeholder="Charlene Reed" />
+        <Input type="text" title={t('form.nameOnCard')} placeholder="Jada Jackson" />
         <Input
           type="text"
           title={t('form.cardNumber')}

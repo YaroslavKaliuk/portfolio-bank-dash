@@ -32,16 +32,17 @@ export default function DashboardClient() {
               holderName: t('creditCard.thirdCard.holderName'),
               number: t('creditCard.thirdCard.number'),
               isDark: true,
+              code: '456',
             },
             {
               balanceTitle: t('creditCard.balanceTitle'),
-              balanceValue: t('creditCard.secondCard.balanceValue'),
+              balanceValue: t('creditCard.firstCard.balanceValue'),
               validThruTitle: t('creditCard.validThruTitle'),
-              validThruDate: t('creditCard.secondCard.validThruDate'),
+              validThruDate: t('creditCard.firstCard.validThruDate'),
               holderTitle: t('creditCard.holderTitle'),
-              holderName: t('creditCard.secondCard.holderName'),
-              number: t('creditCard.secondCard.number'),
-              isLight: true,
+              holderName: t('creditCard.firstCard.holderName'),
+              number: t('creditCard.firstCard.number'),
+              code: '123',
             },
           ]}
         />

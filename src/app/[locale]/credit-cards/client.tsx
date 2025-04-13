@@ -29,6 +29,7 @@ export default function CreditCardsClient() {
               holderTitle: t('creditCard.holderTitle'),
               holderName: t('creditCard.firstCard.holderName'),
               number: t('creditCard.firstCard.number'),
+              code: '123',
             },
             {
               balanceTitle: t('creditCard.balanceTitle'),
@@ -39,6 +40,7 @@ export default function CreditCardsClient() {
               holderName: t('creditCard.secondCard.holderName'),
               number: t('creditCard.secondCard.number'),
               isLight: true,
+              code: '987',
             },
             {
               balanceTitle: t('creditCard.balanceTitle'),
@@ -49,6 +51,7 @@ export default function CreditCardsClient() {
               holderName: t('creditCard.thirdCard.holderName'),
               number: t('creditCard.thirdCard.number'),
               isDark: true,
+              code: '456',
             },
           ]}
         />

@@ -14,7 +14,7 @@ export const FormSettings = () => {
         <Avatar isEditable />
       </div>
       <div className={styles.formSettings__inputs}>
-        <Input type="text" title={t('form.yourName')} defaultValue="Charlene Reed" />
+        <Input type="text" title={t('form.yourName')} defaultValue="Jada Jackson" />
         <Input type="text" title={t('form.userName')} defaultValue="Charlene777" />
         <Input type="email" title={t('form.email')} defaultValue="charlenereed@gmail.com" />
         <Input type="password" title={t('form.password')} defaultValue="00000000" />
