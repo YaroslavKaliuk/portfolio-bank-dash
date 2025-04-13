@@ -57,10 +57,10 @@ export default function CreditCardsClient() {
         <Title title={t('titles.cardList')} />
         <LayoutBlock>
           <ChartBar
-            type="simple"
+            type="double"
             height={320}
             legendText={t('charts.spent')}
-            showLegend={false}
+            showLegend={true}
             data={[
               { name: t('charts.mon'), value1: 4000, value2: 3000 },
               { name: t('charts.tue'), value1: 3000, value2: 2000 },

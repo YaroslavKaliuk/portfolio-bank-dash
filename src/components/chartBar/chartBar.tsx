@@ -1,4 +1,7 @@
 'use client';
+
+import React from 'react';
+
 import {
   BarChart,
   Bar,
@@ -11,6 +14,8 @@ import {
   Cell,
 } from 'recharts';
 import styles from './styles.module.scss';
+
+export type ChartType = 'single' | 'double' | 'triangle' | 'composed';
 
 export interface ChartData {
   name: string;
@@ -27,7 +32,7 @@ export interface ChartSummary {
 }
 
 export interface ChartBarProps {
-  type: 'tiny' | 'simple' | 'triangle';
+  type: ChartType;
   data: ChartData[];
   summary?: ChartSummary[];
   height?: number;
@@ -78,8 +83,8 @@ const TriangleBar = (props: any) => {
 };
 
 export const ChartBar = ({
-  data,
   type,
+  data,
   margin,
   summary,
   height = 264,
@@ -98,14 +103,67 @@ export const ChartBar = ({
     'var(--accent-pink)',
   ],
 }: ChartBarProps) => {
-  const hasIncome = data.some((d) => d.income !== undefined);
-  const hasExpenses = data.some((d) => d.expenses !== undefined);
-  const hasValue = data.some((d) => d.value !== undefined);
-  const hasValue1 = data.some((d) => d.value1 !== undefined);
-  const hasValue2 = data.some((d) => d.value2 !== undefined);
-
   const formatValue = (value: number) => {
     return `${currencySymbol}${value.toLocaleString()}`;
+  };
+
+  const renderBar = (
+    dataKey: string,
+    fill: string,
+    name: string,
+    radius: [number, number, number, number],
+    stackId?: string,
+  ) => (
+    <Bar
+      dataKey={dataKey}
+      fill={fill}
+      name={name}
+      radius={radius}
+      stackId={stackId}
+      label={{ position: 'top', formatter: formatValue }}
+    />
+  );
+
+  const getBars = () => {
+    switch (type) {
+      case 'single':
+        return renderBar('value', 'url(#barGradient)', legendText, [8, 8, 0, 0]);
+      case 'double':
+        return [
+          { k: 'bar1', d: 'value1', s: 'a' },
+          { k: 'bar2', d: 'value2', s: 'b' },
+        ].map(({ k, d, s }) => (
+          <Bar
+            key={k}
+            dataKey={d}
+            fill="url(#barGradient)"
+            name={legendText}
+            radius={[8, 8, 0, 0]}
+            stackId={s}
+            label={{ position: 'top', formatter: formatValue }}
+          />
+        ));
+      case 'triangle':
+        return (
+          <Bar
+            dataKey="value"
+            name={legendText}
+            shape={<TriangleBar />}
+            label={{ position: 'top', formatter: formatValue }}
+          >
+            {data.map((entry, index) => (
+              <Cell key={`cell-${entry.name}-${index}`} fill={colors[index % colors.length]} />
+            ))}
+          </Bar>
+        );
+      case 'composed':
+        return [
+          renderBar('expenses', 'url(#expensesGradient)', legendExpensesText, [0, 0, 0, 0], 'a'),
+          renderBar('income', 'url(#incomeGradient)', legendIncomeText, [8, 8, 0, 0], 'a'),
+        ].map((bar, i) => React.cloneElement(bar, { key: i }));
+      default:
+        return null;
+    }
   };
 
   return (
@@ -134,86 +192,15 @@ export const ChartBar = ({
             cursor={{ fill: 'var(--base-light-blue)' }}
             contentStyle={{
               backgroundColor: 'var(--base-white)',
-              borderRadius: '0.5rem',
+              borderRadius: 'var(--radius-md)',
               border: 'none',
             }}
             labelStyle={{ color: 'var(--text-secondary)' }}
             itemStyle={{ color: 'var(--text-primary)' }}
-            formatter={(value: number) => formatValue(value)}
+            formatter={formatValue}
           />
           {showLegend && <Legend iconType="circle" />}
-
-          {type === 'tiny' && hasValue && (
-            <Bar dataKey="value" fill="url(#barGradient)" name={legendText} radius={[8, 8, 0, 0]} />
-          )}
-
-          {/* {type === 'simple' && hasValue1 && hasValue2 && (
-            <>
-              <Bar
-                dataKey="value1"
-                // fill="url(#barGradient)"
-                name={legendText}
-                radius={[8, 8, 0, 0]}
-              />
-              <Bar
-                dataKey="value2"
-                // fill="url(#barGradient)"
-                name={legendText}
-                radius={[8, 8, 0, 0]}
-              />
-            </>
-          )} */}
-
-          {hasValue1 && (
-            <Bar
-              dataKey="value1"
-              fill="url(#barGradient)"
-              name={legendText}
-              radius={[8, 8, 0, 0]}
-            />
-          )}
-
-          {hasValue2 && (
-            <Bar
-              dataKey="value2"
-              fill="url(#barGradient)"
-              name={legendText}
-              radius={[8, 8, 0, 0]}
-            />
-          )}
-
-          {type === 'triangle' && hasValue && (
-            <Bar
-              dataKey="value"
-              name={legendText}
-              shape={<TriangleBar />}
-              label={{ position: 'top', formatter: (value: number) => formatValue(value) }}
-            >
-              {data.map((entry, index) => (
-                <Cell key={`cell-${entry.name}`} fill={colors[index % colors.length]} />
-              ))}
-            </Bar>
-          )}
-
-          {hasExpenses && (
-            <Bar
-              dataKey="expenses"
-              stackId="a"
-              fill="url(#expensesGradient)"
-              name={legendExpensesText}
-              radius={[0, 0, 0, 0]}
-            />
-          )}
-
-          {hasIncome && (
-            <Bar
-              dataKey="income"
-              stackId="a"
-              fill="url(#incomeGradient)"
-              name={legendIncomeText}
-              radius={[8, 8, 0, 0]}
-            />
-          )}
+          {getBars()}
         </BarChart>
       </ResponsiveContainer>
     </div>

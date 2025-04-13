@@ -59,7 +59,7 @@ export default function DashboardClient() {
         <Title title={t('titles.weeklyActivity')} />
         <LayoutBlock>
           <ChartBar
-            type="tiny"
+            type="single"
             legendText={t('charts.spent')}
             showLegend={false}
             data={[

@@ -13,6 +13,7 @@ export default function TransactionsClient() {
         <Title title={t('titles.myExpense')} />
         <LayoutBlock>
           <ChartBar
+            type="composed"
             showLegend
             legendIncomeText={t('charts.income')}
             legendExpensesText={t('charts.expenses')}
