@@ -16,7 +16,7 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
-export interface ChartData {
+export interface VerticalChartData {
   month: string;
   income: number;
   expenses: number;
@@ -24,7 +24,7 @@ export interface ChartData {
 }
 
 export interface ChartVerticalComposedProps {
-  data?: ChartData[];
+  data?: VerticalChartData[];
   height?: number;
   showLegend?: boolean;
   gridColor?: string;

@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "classnames": "^2.5.1",
-    "framer-motion": "^12.6.3",
     "next": "15.1.6",
     "next-intl": "^3.26.5",
     "react": "^19.0.0",

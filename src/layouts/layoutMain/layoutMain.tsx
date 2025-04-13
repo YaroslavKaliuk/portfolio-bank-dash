@@ -4,7 +4,6 @@ import cn from 'classnames';
 import React, { FC, ReactNode } from 'react';
 import { usePathname } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import { motion } from 'framer-motion';
 import styles from './styles.module.scss';
 
 export interface LayoutMainProps {
@@ -22,18 +21,15 @@ export const LayoutMain: FC<LayoutMainProps> = ({ children }) => {
   const pageName = segments.slice(1).join('-') || 'home';
 
   return (
-    <motion.main
-      key={pathname}
-      initial={{ opacity: 0, y: -96 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+    <main
       className={cn(styles.layoutMain)}
+      key={pathname}
       data-page={pageName}
       data-locale={locale}
     >
       <div className={styles.layoutMain__scroll}>
         <div className={styles.layoutMain__container}>{children}</div>
       </div>
-    </motion.main>
+    </main>
   );
 };

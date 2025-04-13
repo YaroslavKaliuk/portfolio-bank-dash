@@ -4,6 +4,7 @@ import {
   Caption,
   Copyright,
   LanguageSwitcher,
+  Loader,
   Logo,
   Nav,
   NavToggle,
@@ -15,6 +16,7 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import '@styles/index.scss';
+import { Suspense } from 'react';
 
 type Locale = (typeof routing.locales)[number];
 
@@ -61,7 +63,9 @@ export default async function RootLayout({
               <ThemeSwitcher isAside />
               <Nav />
             </LayoutAside>
-            <LayoutMain>{children}</LayoutMain>
+            <LayoutMain>
+              <Suspense fallback={<Loader />}>{children}</Suspense>
+            </LayoutMain>
             <LayoutFooter>
               <Copyright />
             </LayoutFooter>

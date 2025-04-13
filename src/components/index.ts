@@ -7,6 +7,7 @@ export * from './graph';
 export * from './table';
 export * from './button';
 export * from './avatar';
+export * from './loader';
 export * from './search';
 export * from './caption';
 export * from './switcher';

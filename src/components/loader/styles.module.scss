@@ -1,0 +1,102 @@
+/* .loader
+-------------------------------------------------------------*/
+$r: '.loader';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  inset: 0;
+  display: grid;
+  place-items: center;
+  position: absolute;
+
+  // element
+  //---------------------------------------------------------
+  &__inner {
+    width: 2rem;
+    height: 5.625rem;
+    position: relative;
+    border-radius: 50% 50% 0 0;
+    border-bottom: 0.625rem solid var(--primary);
+    background:
+      radial-gradient(
+          ellipse at center,
+          var(--base-light-blue) 34%,
+          var(--primary) 35%,
+          var(--primary) 54%,
+          var(--base-light-blue) 55%
+        )
+        center 1.25rem / 1.75rem 1.75rem no-repeat,
+      linear-gradient(var(--primary) 0.625rem, transparent 0) center 0 / auto no-repeat
+        var(--base-light-blue);
+    animation: animLoaderBack 1s linear infinite alternate;
+
+    &::before,
+    &::after {
+      content: '';
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+    }
+
+    &::before {
+      top: 4.1875rem;
+      width: 4rem;
+      height: 2.75rem;
+      border-radius: 50%;
+      box-shadow: 0 0.9375rem var(--primary) inset;
+    }
+
+    &::after {
+      top: 112%;
+      width: 2.125rem;
+      height: 2.125rem;
+      background: radial-gradient(
+        ellipse at center,
+        var(--primary) 8%,
+        var(--accent-red) 24%,
+        transparent 100%
+      );
+      border-radius: 50% 50% 0;
+      transform: translateX(-50%) rotate(45deg);
+      box-shadow: 0.25rem 0.25rem 0.75rem 0 var(--accent-red);
+      animation: animLoader 1s linear infinite alternate;
+    }
+  }
+
+  @keyframes animLoaderBack {
+    0%,
+    30%,
+    70% {
+      transform: translateY(0);
+    }
+    20%,
+    40%,
+    100% {
+      transform: translateY(-0.3125rem);
+    }
+  }
+
+  @keyframes animLoader {
+    0% {
+      width: 2.125rem;
+      height: 2.125rem;
+      background-size: 6.25rem 6.25rem;
+      background-position: -2.75rem -2.75rem;
+      box-shadow: 0.25rem 0.25rem 0.75rem 0.125rem var(--accent-red);
+    }
+    100% {
+      width: 1.875rem;
+      height: 1.75rem;
+      background-size: 5rem 5rem;
+      background-position: -2.25rem -2.25rem;
+      box-shadow: 0.125rem 0.125rem 0.5rem 0 var(--accent-red);
+    }
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}
+
+// influence
+//-----------------------------------------------------------
