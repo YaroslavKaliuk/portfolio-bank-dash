@@ -52,7 +52,7 @@ export default async function RootLayout({
               <Search isHeader />
               <LanguageSwitcher isHeader />
               <ThemeSwitcher isHeader />
-              <Avatar count={10} />
+              <Avatar />
             </LayoutHeader>
             <LayoutAside>
               <Logo />
