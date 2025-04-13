@@ -30,7 +30,7 @@ $r: '.creditCard';
     padding: 1.5rem;
     font-family: var(--font-family-secondary);
     aspect-ratio: 16 / 10;
-    border-radius: 1.5rem;
+    border-radius: var(--border-radius-large);
     background-size:
       auto,
       100% 5rem;

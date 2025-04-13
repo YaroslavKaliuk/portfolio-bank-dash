@@ -3,6 +3,13 @@
 html {
   --font-family-primary: 'Inter';
   --font-family-secondary: 'Lato';
+
+  --border-radius-small: 0.5rem;
+  --border-radius-medium: 1rem;
+  --border-radius-large: 1.5rem;
+
+  --box-shadow-primary: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.1);
+
   --base-white: #ffffff;
   --base-pale-blue: #e6eff5;
   --base-light-blue: #dfeaf2;

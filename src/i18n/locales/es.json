@@ -158,6 +158,7 @@
     "topExpenses": "Gastos Top",
     "weeklyActivity": "Actividad Semanal",
     "recentTransaction": "Transacción Reciente",
+    "debitCreditOverview": "Resumen de Débito y Crédito",
     "cardList": "Lista de Tarjetas",
     "cardBalance": "Saldo de Tarjeta",
     "addNewCard": "Agregar Nueva Tarjeta",
@@ -384,7 +385,9 @@
     "brazil": "Brasil",
     "spain": "España",
     "italy": "Italia",
-    "portugal": "Portugal"
+    "portugal": "Portugal",
+    "debit": "Débito",
+    "credit": "Crédito"
   },
   "quickTransfer": {
     "sentTo": "Enviado a",

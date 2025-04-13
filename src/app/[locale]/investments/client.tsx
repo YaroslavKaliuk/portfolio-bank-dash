@@ -40,7 +40,14 @@ export default function InvestmentsClient() {
             type="triangle"
             height={386}
             showLegend={false}
-            legendText={t('charts.invested')}
+            config={[
+              {
+                dataKey: 'value',
+                name: t('charts.invested'),
+                gradientId: 'barGradient',
+                colors: ['var(--accent-purple)', 'var(--accent-blue)'],
+              },
+            ]}
             data={[
               { name: t('charts.china'), value: 24000 },
               { name: t('charts.india'), value: 34000 },

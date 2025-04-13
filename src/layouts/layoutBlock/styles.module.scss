@@ -13,12 +13,12 @@ $r: '.layoutBlock';
 
   @media (width < 63.9375rem) {
     padding: 1rem;
-    border-radius: 1rem;
+    border-radius: var(--border-radius-medium);
   }
 
   @media (width >= 64rem) {
     padding: 1.5rem;
-    border-radius: 1.5rem;
+    border-radius: var(--border-radius-large);
   }
 
   // element

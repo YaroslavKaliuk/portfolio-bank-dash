@@ -20,7 +20,7 @@ $r: '.swiperSlider';
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 1.5rem;
+    border-radius: var(--border-radius-large);
   }
 
   // modifier

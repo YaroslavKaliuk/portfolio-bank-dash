@@ -19,11 +19,7 @@ export type ChartType = 'single' | 'double' | 'triangle' | 'composed';
 
 export interface ChartData {
   name: string;
-  value?: number;
-  value1?: number;
-  value2?: number;
-  income?: number;
-  expenses?: number;
+  [key: string]: number | string;
 }
 
 export interface ChartSummary {
@@ -31,17 +27,25 @@ export interface ChartSummary {
   value: string;
 }
 
+export interface ChartBarConfig {
+  dataKey: string;
+  name: string;
+  gradientId: string;
+  label?: boolean;
+  radius?: [number, number, number, number];
+  stackId?: string;
+  colors?: string[];
+}
+
 export interface ChartBarProps {
   type: ChartType;
   data: ChartData[];
+  config: ChartBarConfig[];
   summary?: ChartSummary[];
   height?: number;
   showLegend?: boolean;
   gridColor?: string;
-  legendText?: string;
   currencySymbol?: string;
-  legendIncomeText?: string;
-  legendExpensesText?: string;
   colors?: string[];
   margin?: {
     top?: number;
@@ -51,21 +55,21 @@ export interface ChartBarProps {
   };
 }
 
-const GradientBar = () => (
+const GradientBar = ({ gradients }: { gradients: { id: string; colors: string[] }[] }) => (
   <svg>
     <defs>
-      <linearGradient id="barGradient" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="50%" stopColor="var(--accent-purple)" stopOpacity={0.8} />
-        <stop offset="100%" stopColor="var(--accent-blue)" stopOpacity={0.8} />
-      </linearGradient>
-      <linearGradient id="incomeGradient" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="var(--accent-green)" stopOpacity={0.8} />
-        <stop offset="100%" stopColor="var(--accent-teal)" stopOpacity={0.8} />
-      </linearGradient>
-      <linearGradient id="expensesGradient" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="var(--accent-red)" stopOpacity={0.8} />
-        <stop offset="100%" stopColor="var(--accent-pink)" stopOpacity={0.8} />
-      </linearGradient>
+      {gradients.map(({ id, colors }) => (
+        <linearGradient key={id} id={id} x1="0" y1="0" x2="0" y2="1">
+          {colors.map((color, index) => (
+            <stop
+              key={index}
+              offset={`${(index * 100) / (colors.length - 1)}%`}
+              stopColor={color}
+              stopOpacity={0.8}
+            />
+          ))}
+        </linearGradient>
+      ))}
     </defs>
   </svg>
 );
@@ -85,15 +89,13 @@ const TriangleBar = (props: any) => {
 export const ChartBar = ({
   type,
   data,
+  config,
   margin,
   summary,
   height = 264,
   showLegend = true,
   gridColor = 'var(--base-light-blue)',
-  legendText = 'Value',
   currencySymbol = '$',
-  legendIncomeText = 'Income',
-  legendExpensesText = 'Expenses',
   colors = [
     'var(--accent-purple)',
     'var(--accent-blue)',
@@ -107,47 +109,30 @@ export const ChartBar = ({
     return `${currencySymbol}${value.toLocaleString()}`;
   };
 
-  const renderBar = (
-    dataKey: string,
-    fill: string,
-    name: string,
-    radius: [number, number, number, number],
-    stackId?: string,
-  ) => (
+  const renderBar = (config: ChartBarConfig, index: number) => (
     <Bar
-      dataKey={dataKey}
-      fill={fill}
-      name={name}
-      radius={radius}
-      stackId={stackId}
-      label={{ position: 'top', formatter: formatValue }}
+      key={`bar-${config.dataKey}-${index}`}
+      dataKey={config.dataKey}
+      fill={`url(#${config.gradientId})`}
+      name={config.name}
+      radius={config.radius || [8, 8, 0, 0]}
+      stackId={config.stackId}
+      label={config.label ? { position: 'top', formatter: formatValue } : undefined}
     />
   );
 
   const getBars = () => {
     switch (type) {
       case 'single':
-        return renderBar('value', 'url(#barGradient)', legendText, [8, 8, 0, 0]);
       case 'double':
-        return [
-          { k: 'bar1', d: 'value1', s: 'a' },
-          { k: 'bar2', d: 'value2', s: 'b' },
-        ].map(({ k, d, s }) => (
-          <Bar
-            key={k}
-            dataKey={d}
-            fill="url(#barGradient)"
-            name={legendText}
-            radius={[8, 8, 0, 0]}
-            stackId={s}
-            label={{ position: 'top', formatter: formatValue }}
-          />
-        ));
+      case 'composed':
+        return config.map((barConfig, index) => renderBar(barConfig, index));
       case 'triangle':
         return (
           <Bar
-            dataKey="value"
-            name={legendText}
+            key="triangle-bar"
+            dataKey={config[0].dataKey}
+            name={config[0].name}
             shape={<TriangleBar />}
             label={{ position: 'top', formatter: formatValue }}
           >
@@ -156,23 +141,24 @@ export const ChartBar = ({
             ))}
           </Bar>
         );
-      case 'composed':
-        return [
-          renderBar('expenses', 'url(#expensesGradient)', legendExpensesText, [0, 0, 0, 0], 'a'),
-          renderBar('income', 'url(#incomeGradient)', legendIncomeText, [8, 8, 0, 0], 'a'),
-        ].map((bar, i) => React.cloneElement(bar, { key: i }));
       default:
         return null;
     }
   };
 
+  const gradients = config.map(({ gradientId, colors: gradientColors }, index) => ({
+    id: gradientId,
+    colors: gradientColors || [colors[0], colors[1]],
+    key: `gradient-${gradientId}-${index}`,
+  }));
+
   return (
     <div className={styles.chartBar}>
-      <GradientBar />
+      <GradientBar gradients={gradients} />
       {summary && (
         <div className={styles.chartBar__summary}>
-          {summary.map((item, i) => (
-            <div key={i} className={styles.chartBar__summaryItem}>
+          {summary.map((item, index) => (
+            <div key={`summary-${item.name}-${index}`} className={styles.chartBar__summaryItem}>
               <span className={styles.chartBar__summaryName}>{item.name}:</span>
               <span className={styles.chartBar__summaryValue}>{item.value}</span>
             </div>
@@ -191,9 +177,10 @@ export const ChartBar = ({
           <Tooltip
             cursor={{ fill: 'var(--base-light-blue)' }}
             contentStyle={{
-              backgroundColor: 'var(--base-white)',
-              borderRadius: 'var(--radius-md)',
               border: 'none',
+              boxShadow: 'var(--box-shadow-primary)',
+              borderRadius: 'var(--border-radius-small)',
+              backgroundColor: 'var(--base-white)',
             }}
             labelStyle={{ color: 'var(--text-secondary)' }}
             itemStyle={{ color: 'var(--text-primary)' }}

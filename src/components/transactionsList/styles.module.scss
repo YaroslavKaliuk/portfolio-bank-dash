@@ -42,7 +42,7 @@ $r: '.transactionsList';
 
     svg {
       font-size: 3rem;
-      border-radius: 1rem;
+      border-radius: var(--border-radius-small);
 
       &[data-icon='IconLogoApple'],
       &[data-icon='IconLogoAmazon'],

@@ -15,8 +15,24 @@ export default function TransactionsClient() {
           <ChartBar
             type="composed"
             showLegend
-            legendIncomeText={t('charts.income')}
-            legendExpensesText={t('charts.expenses')}
+            config={[
+              {
+                dataKey: 'expenses',
+                name: t('charts.expenses'),
+                gradientId: 'expensesGradient',
+                colors: ['var(--accent-red)', 'var(--accent-pink)'],
+                radius: [0, 0, 0, 0],
+                stackId: 'a',
+              },
+              {
+                dataKey: 'income',
+                name: t('charts.income'),
+                gradientId: 'incomeGradient',
+                colors: ['var(--accent-green)', 'var(--accent-teal)'],
+                radius: [8, 8, 0, 0],
+                stackId: 'a',
+              },
+            ]}
             data={[
               { name: t('charts.jan'), income: 12000, expenses: 8000 },
               { name: t('charts.feb'), income: 10000, expenses: 7000 },

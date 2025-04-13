@@ -69,9 +69,10 @@ export const ChartVerticalComposed: FC<ChartVerticalComposedProps> = ({
           <Tooltip
             cursor={{ fill: 'var(--base-light-blue)' }}
             contentStyle={{
-              backgroundColor: 'var(--base-white)',
-              borderRadius: '0.5rem',
               border: 'none',
+              boxShadow: 'var(--box-shadow-primary)',
+              borderRadius: 'var(--border-radius-small)',
+              backgroundColor: 'var(--base-white)',
             }}
             labelStyle={{ color: 'var(--text-secondary)' }}
             itemStyle={{ color: 'var(--text-primary)' }}

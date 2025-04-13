@@ -46,7 +46,7 @@ $r: '.nav';
         bottom: 0;
         width: 0.38rem;
         position: absolute;
-        border-radius: 0rem 0.625rem 0.625rem 0rem;
+        border-radius: 0rem var(--border-radius-small) var(--border-radius-small) 0rem;
         transform: scaleY(0);
         transform-origin: center;
         transition: transform 0.3s;

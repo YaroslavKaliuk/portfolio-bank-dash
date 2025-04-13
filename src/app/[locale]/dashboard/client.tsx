@@ -60,8 +60,16 @@ export default function DashboardClient() {
         <LayoutBlock>
           <ChartBar
             type="single"
-            legendText={t('charts.spent')}
             showLegend={false}
+            config={[
+              {
+                label: false,
+                dataKey: 'value',
+                name: t('charts.spent'),
+                gradientId: 'barGradient',
+                radius: [8, 8, 0, 0],
+              },
+            ]}
             data={[
               { name: t('charts.mon'), value: 4000 },
               { name: t('charts.tue'), value: 3000 },

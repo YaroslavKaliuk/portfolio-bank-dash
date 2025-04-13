@@ -54,13 +54,30 @@ export default function CreditCardsClient() {
         />
       </LayoutRow>
       <LayoutRow>
-        <Title title={t('titles.cardList')} />
+        <Title title={t('titles.debitCreditOverview')} />
         <LayoutBlock>
           <ChartBar
             type="double"
             height={320}
-            legendText={t('charts.spent')}
             showLegend={true}
+            config={[
+              {
+                dataKey: 'value1',
+                name: t('charts.debit'),
+                gradientId: 'barGradient1',
+                colors: ['var(--accent-purple)', 'var(--accent-blue)'],
+                radius: [8, 8, 0, 0],
+                stackId: 'a',
+              },
+              {
+                dataKey: 'value2',
+                name: t('charts.credit'),
+                gradientId: 'barGradient2',
+                colors: ['var(--accent-green)', 'var(--accent-teal)'],
+                radius: [8, 8, 0, 0],
+                stackId: 'b',
+              },
+            ]}
             data={[
               { name: t('charts.mon'), value1: 4000, value2: 3000 },
               { name: t('charts.tue'), value1: 3000, value2: 2000 },

@@ -158,7 +158,7 @@
     "topExpenses": "Top Expenses",
     "weeklyActivity": "Weekly Activity",
     "recentTransaction": "Recent Transaction",
-    "cardList": "Card List",
+    "debitCreditOverview": "Debit & Credit Overview",
     "cardBalance": "Card Balance",
     "addNewCard": "Add New Card",
     "cardSetting": "Card Setting",
@@ -384,7 +384,9 @@
     "brazil": "Brazil",
     "spain": "Spain",
     "italy": "Italy",
-    "portugal": "Portugal"
+    "portugal": "Portugal",
+    "debit": "Debit",
+    "credit": "Credit"
   },
   "quickTransfer": {
     "sentTo": "Sent to",
