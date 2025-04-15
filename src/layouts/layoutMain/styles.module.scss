@@ -44,6 +44,7 @@ $r: '.layoutMain';
 
   // modifier
   //---------------------------------------------------------
+  &[data-page='promo'],
   &[data-page='accounts'],
   &[data-page='dashboard'],
   &[data-page='transactions'],

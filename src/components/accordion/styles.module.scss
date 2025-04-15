@@ -1,0 +1,113 @@
+/* .accordion
+-------------------------------------------------------------*/
+$r: '.accordion';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid var(--base-light-blue);
+
+  // element
+  //---------------------------------------------------------
+  &__item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-bottom: 0.0625rem solid var(--base-light-blue);
+
+    &:last-of-type {
+      border-bottom: 0;
+    }
+
+    &:has(:checked) {
+      #{$r}__main {
+        grid-template-rows: 1fr;
+        padding-bottom: 1rem;
+      }
+
+      #{$r}__icon::after {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__header {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem;
+  }
+
+  &__title {
+    flex-grow: 1;
+    font-size: 1rem;
+    color: var(--primary-light);
+  }
+
+  &__icon {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    position: relative;
+    pointer-events: none;
+
+    &::after,
+    &::before {
+      content: '';
+      inset: 0;
+      width: 100%;
+      height: 0.0625rem;
+      margin: auto;
+      position: absolute;
+      background-color: var(--primary-light);
+      transition: opacity 0.3s;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__main {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+
+  &__content {
+    min-height: 0;
+    width: calc(100% - 2rem);
+    margin-inline: auto;
+  }
+
+  [type='checkbox'] {
+    inset: 0;
+    position: absolute;
+    pointer-events: none;
+
+    &:focus-visible {
+      z-index: 1;
+    }
+
+    &:disabled {
+      z-index: 1;
+      cursor: not-allowed;
+      pointer-events: all;
+
+      ~ * {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}

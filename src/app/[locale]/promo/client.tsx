@@ -3,13 +3,36 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { LayoutBlock, LayoutRow } from '@/layouts';
-import { FinancialOverview, ServicesList, Button, Title, TransactionsList } from '@/components';
+import {
+  FinancialOverview,
+  ServicesList,
+  Button,
+  Title,
+  SwiperSlider,
+  FormPromo,
+  Accordion,
+} from '@/components';
 import * as Icons from '@/icons';
+import Image from 'next/image';
 
 export default function ServicesClient() {
   const t = useTranslations();
   return (
     <>
+      <LayoutRow>
+        <SwiperSlider
+          items={[
+            <Image src="/banner_2.jpg" alt="Promo" width={860} height={486} loading="lazy" />,
+            <Image src="/banner_1.jpg" alt="Promo" width={860} height={486} loading="lazy" />,
+          ]}
+        />
+      </LayoutRow>
+      <LayoutRow>
+        <Title title={t('titles.onlineCardApplication')} />
+        <LayoutBlock>
+          <FormPromo />
+        </LayoutBlock>
+      </LayoutRow>
       <LayoutRow isFinancialOverview>
         <LayoutBlock>
           <FinancialOverview
@@ -33,7 +56,7 @@ export default function ServicesClient() {
           />
         </LayoutBlock>
       </LayoutRow>
-      <LayoutRow>
+      <LayoutRow isGridColumnFull>
         <Title title={t('titles.bankServicesList')} />
         <ServicesList
           rows={[
@@ -140,71 +163,35 @@ export default function ServicesClient() {
           ]}
         />
       </LayoutRow>
-
-      <LayoutRow>
-        <Title title={t('titles.lastTransactions')} />
+      <LayoutRow isGridColumnFull>
+        <Title title={t('titles.bankPromotionsSpecialOffers')} />
         <LayoutBlock>
-          <TransactionsList
-            transactions={[
+          <Accordion
+            items={[
               {
-                icon: <Icons.IconService />,
-                title: t('transactions.list.mobileService'),
-                date: '25 Jan 2025',
-                category: t('transactions.list.categories.service'),
-                card: '**** 1234',
-                status: t('transactions.list.status.completed'),
-                amount: '-$150',
+                title: 'Exclusive Credit Card Offers',
+                content:
+                  'Get our premium credit card with 0% APR for the first 12 months and earn 3% cashback on all purchases. Limited time offer!',
               },
               {
-                icon: <Icons.IconLogoSpotify />,
-                title: t('transactions.list.spotifySubscription'),
-                date: '25 Jan 2025',
-                category: t('transactions.list.categories.shopping'),
-                card: '**** 1234',
-                status: t('transactions.list.status.pending'),
-                amount: '-$150',
+                title: 'Mortgage Rate Special',
+                content:
+                  'Lock in our lowest-ever mortgage rates at 3.25% APR for 30-year fixed loans. Apply before December 31st to qualify.',
               },
               {
-                icon: <Icons.IconUser />,
-                title: t('transactions.list.emilyWilson'),
-                date: '25 Jan 2025',
-                category: t('transactions.list.categories.transfer'),
-                card: '**** 1234',
-                status: t('transactions.list.status.completed'),
-                amount: '+$780',
-              },
-            ]}
-          />
-        </LayoutBlock>
-      </LayoutRow>
-      <LayoutRow>
-        <Title title={t('titles.invoicesSent')} />
-        <LayoutBlock>
-          <TransactionsList
-            transactions={[
-              {
-                icon: <Icons.IconLogoApple />,
-                title: t('transactions.list.appleMusic'),
-                date: `${t('transactions.list.time.hours.one')} ${t('transactions.list.time.ago')}`,
-                amount: '$1450',
+                title: 'New Customer Bonus',
+                content:
+                  'Open a new checking account with $500 minimum deposit and receive a $300 welcome bonus. Terms and conditions apply.',
               },
               {
-                icon: <Icons.IconUser />,
-                title: t('transactions.list.michael'),
-                date: `${t('transactions.list.time.hours.two')} ${t('transactions.list.time.ago')}`,
-                amount: '$700',
+                title: 'Business Banking Solutions',
+                content:
+                  'Special business accounts with no monthly fees for the first year. Includes free transactions and dedicated account manager.',
               },
               {
-                icon: <Icons.IconLogoAmazon />,
-                title: t('transactions.list.amazonShopping'),
-                date: `${t('transactions.list.time.hours.three')} ${t('transactions.list.time.ago')}`,
-                amount: '$895',
-              },
-              {
-                icon: <Icons.IconLogoGoogle />,
-                title: t('transactions.list.googlePlay'),
-                date: `${t('transactions.list.time.hours.five')} ${t('transactions.list.time.ago')}`,
-                amount: '$3610',
+                title: 'Wealth Management Promo',
+                content:
+                  'Free financial planning consultation for deposits over $50,000. Grow your wealth with our expert advisors.',
               },
             ]}
           />

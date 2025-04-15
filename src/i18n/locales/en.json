@@ -61,7 +61,11 @@
     "nameOnCard": "Name on Card",
     "cardNumber": "Card Number",
     "expirationDate": "Expiration Date",
-    "addCard": "Add Card"
+    "addCard": "Add Card",
+    "phone": "Phone",
+    "send": "Send",
+    "subscribeToPromo": "Subscribe to promo",
+    "iAgree": "I agree to data processing"
   },
   "meta": {
     "title": "BankDash",
@@ -164,7 +168,9 @@
     "cardSetting": "Card Setting",
     "activeLoansOverview": "Active Loans Overview",
     "myExpense": "My Expenses",
-    "recentTransactions": "Recent Transactions"
+    "recentTransactions": "Recent Transactions",
+    "onlineCardApplication": "Online card application",
+    "bankPromotionsSpecialOffers": "Bank Promotions & Special Offers"
   },
   "table": {
     "number": "#",
@@ -172,7 +178,7 @@
     "price": "Price",
     "return": "Return",
     "description": "Description",
-    "transactionId": "Transaction ID",
+    "transactionId": "Transaction",
     "type": "Type",
     "card": "Card",
     "date": "Date",

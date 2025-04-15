@@ -19,7 +19,7 @@ $r: '.button';
   white-space: nowrap;
   border-radius: 100vw;
   background-color: var(--primary);
-  transition: background-color 0.3s;
+  transition: opacity 0.3s, background-color 0.3s;
 
   &:disabled {
     opacity: 0.3;
@@ -33,7 +33,7 @@ $r: '.button';
     }
   }
 
-  &:active {
+  &:not(:disabled):active {
     transform: translateY(0.25rem);
   }
 

@@ -61,7 +61,11 @@
     "nameOnCard": "Nombre en la Tarjeta",
     "cardNumber": "Número de Tarjeta",
     "expirationDate": "Fecha de Expiración",
-    "addCard": "Agregar Tarjeta"
+    "addCard": "Agregar Tarjeta",
+    "phone": "Teléfono",
+    "send": "Enviar",
+    "subscribeToPromo": "Suscribirse a promo",
+    "iAgree": "Acepto el tratamiento de datos"
   },
   "meta": {
     "title": "BankDash",
@@ -165,7 +169,9 @@
     "cardSetting": "Configuración de Tarjeta",
     "activeLoansOverview": "Resumen de Préstamos Activos",
     "myExpense": "Mis Gastos",
-    "recentTransactions": "Transacciones Recientes"
+    "recentTransactions": "Transacciones Recientes",
+    "onlineCardApplication": "Solicitud de tarjeta en línea",
+    "bankPromotionsSpecialOffers": "Promociones y Ofertas Bancarias"
   },
   "table": {
     "number": "#",
@@ -173,7 +179,7 @@
     "price": "Precio",
     "return": "Retorno",
     "description": "Descripción",
-    "transactionId": "ID de Transacción",
+    "transactionId": "Transacción",
     "type": "Tipo",
     "card": "Tarjeta",
     "date": "Fecha",

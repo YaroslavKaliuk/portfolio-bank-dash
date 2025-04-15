@@ -106,10 +106,6 @@ $r: '.chartPie';
       align-self: end;
       padding-bottom: 0.5rem;
     }
-
-    :global(.recharts-wrapper) {
-      aspect-ratio: 2 / 1;
-    }
   }
 }
 
@@ -117,9 +113,5 @@ $r: '.chartPie';
 //-----------------------------------------------------------
 :global(.recharts-wrapper) {
   width: 100% !important;
-  aspect-ratio: 1;
-
-  @media (width < 23.380rem) {
-    height: 100% !important;
-  }
+  height: 100% !important;
 }

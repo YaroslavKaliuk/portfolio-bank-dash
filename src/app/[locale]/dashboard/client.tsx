@@ -14,9 +14,14 @@ import {
 } from '@/components';
 import * as Icons from '@/icons';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function DashboardClient() {
   const t = useTranslations();
+  const pathname = usePathname();
+  const locale = pathname.split('/')[1] || 'en';
+
   return (
     <>
       <LayoutRow>
@@ -51,8 +56,12 @@ export default function DashboardClient() {
         <Title title={t('titles.promo')} />
         <SwiperSlider
           items={[
-            <Image src="/banner_2.jpg" alt="Promo" width={860} height={486} loading="lazy" />,
-            <Image src="/banner_1.jpg" alt="Promo" width={860} height={486} loading="lazy" />,
+            <Link href={`/${locale}/promo`}>
+              <Image src="/banner_2.jpg" alt="Promo" width={860} height={486} loading="lazy" />
+            </Link>,
+            <Link href={`/${locale}/promo`}>
+              <Image src="/banner_1.jpg" alt="Promo" width={860} height={486} loading="lazy" />
+            </Link>,
           ]}
         />
       </LayoutRow>
