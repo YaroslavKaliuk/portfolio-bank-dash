@@ -64,7 +64,9 @@ export default async function RootLayout({
               <Nav />
             </LayoutAside>
             <LayoutMain>
-              <Suspense fallback={<Loader />}>{children}</Suspense>
+              <Suspense fallback={<Loader />} unstable_expectedLoadTime={2000}>
+                {children}
+              </Suspense>
             </LayoutMain>
             <LayoutFooter>
               <Copyright />
