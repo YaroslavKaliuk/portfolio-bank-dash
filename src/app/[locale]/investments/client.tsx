@@ -45,7 +45,7 @@ export default function InvestmentsClient() {
                 dataKey: 'value',
                 name: t('charts.invested'),
                 gradientId: 'barGradient',
-                colors: ['var(--accent-purple)', 'var(--accent-blue)'],
+                colors: ['var(--primary)', 'var(--accent-purple)'],
               },
             ]}
             data={[

@@ -11,7 +11,7 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
-  Cell,
+  BarProps,
 } from 'recharts';
 import styles from './styles.module.scss';
 
@@ -126,7 +126,11 @@ export const ChartBar = ({
       radius={config.radius || [8, 8, 0, 0]}
       stackId={config.stackId}
       label={config.label ? { position: 'top', formatter: formatValue } : undefined}
-      shape={type === 'triangle' ? TriangleBar : undefined}
+      shape={
+        type === 'triangle'
+          ? (props: BarProps) => <TriangleBar {...(props as TriangleBarProps)} />
+          : undefined
+      }
     />
   );
 
@@ -143,7 +147,7 @@ export const ChartBar = ({
             dataKey={config[0].dataKey}
             name={config[0].name}
             fill={`url(#${config[0].gradientId})`}
-            shape={TriangleBar}
+            shape={(props: BarProps) => <TriangleBar {...(props as TriangleBarProps)} />}
             label={{ position: 'top', formatter: formatValue }}
           />
         );

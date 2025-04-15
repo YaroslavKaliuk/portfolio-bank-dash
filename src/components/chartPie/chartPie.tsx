@@ -1,5 +1,5 @@
 'use client';
-import { PieChart, Pie, Cell, ResponsiveContainer, Sector } from 'recharts';
+import { PieChart, Pie, Cell, ResponsiveContainer, Sector, PieProps } from 'recharts';
 import { useState } from 'react';
 import styles from './styles.module.scss';
 import cn from 'classnames';
@@ -36,7 +36,7 @@ interface LabelProps {
   name: string;
 }
 
-interface ActiveShapeProps {
+type RenderActiveShapeProps = {
   cx: number;
   cy: number;
   innerRadius: number;
@@ -45,7 +45,11 @@ interface ActiveShapeProps {
   endAngle: number;
   fill: string;
   stroke: string;
-}
+  payload?: {
+    name: string;
+    value: number;
+  };
+};
 
 export const ChartPie = ({
   data,
@@ -113,43 +117,37 @@ export const ChartPie = ({
       </>
     );
   };
-  const renderActiveShape = ({
-    cx,
-    cy,
-    innerRadius,
-    outerRadius,
-    startAngle,
-    endAngle,
-    fill,
-    stroke,
-  }: ActiveShapeProps) => (
-    <g>
-      <Sector
-        cx={cx}
-        cy={cy}
-        innerRadius={innerRadius}
-        outerRadius={outerRadius}
-        startAngle={startAngle}
-        endAngle={endAngle}
-        fill={fill}
-        stroke={stroke}
+  const renderActiveShape = (props: RenderActiveShapeProps) => {
+    const { cx, cy, innerRadius, outerRadius, startAngle, endAngle, fill, stroke } = props;
+    return (
+      <g>
+        <Sector
+          cx={cx}
+          cy={cy}
+          innerRadius={innerRadius}
+          outerRadius={outerRadius}
+          startAngle={startAngle}
+          endAngle={endAngle}
+          fill={fill}
+          stroke={stroke}
         strokeWidth={strokeWidth}
-        cornerRadius={8}
-      />
-      <Sector
-        cx={cx}
-        cy={cy}
-        innerRadius={outerRadius + outerSectorGap}
-        outerRadius={outerRadius + outerSectorWidth}
-        startAngle={startAngle}
-        endAngle={endAngle}
-        fill={fill}
-        stroke={stroke}
+          cornerRadius={8}
+        />
+        <Sector
+          cx={cx}
+          cy={cy}
+          innerRadius={outerRadius + outerSectorGap}
+          outerRadius={outerRadius + outerSectorWidth}
+          startAngle={startAngle}
+          endAngle={endAngle}
+          fill={fill}
+          stroke={stroke}
         strokeWidth={strokeWidth}
-        cornerRadius={8}
-      />
-    </g>
-  );
+          cornerRadius={8}
+        />
+      </g>
+    );
+  };
   const renderCenter = () =>
     showValue ? (
       <div className={styles.chartPie__circleInfo}>
@@ -180,7 +178,7 @@ export const ChartPie = ({
               onMouseLeave={() => setActiveIndex(0)}
               labelLine={false}
               {...(showLabels && { label: renderLabel })}
-              activeShape={renderActiveShape}
+              activeShape={renderActiveShape as PieProps['activeShape']}
               startAngle={startAngle}
               endAngle={endAngle}
               cornerRadius={8}
