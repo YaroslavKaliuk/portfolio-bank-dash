@@ -48,7 +48,8 @@ $r: '.formPreferences';
 
   &__switchers {
     gap: 1rem;
-    display: grid;
+    display: flex;
+    flex-direction: column;
 
     &Title {
       font-size: 1rem;

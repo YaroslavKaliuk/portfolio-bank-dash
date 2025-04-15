@@ -40,6 +40,7 @@ export default function InvestmentsClient() {
             type="triangle"
             height={386}
             showLegend={false}
+            margin={{ top: 16}}
             config={[
               {
                 dataKey: 'value',
@@ -50,12 +51,11 @@ export default function InvestmentsClient() {
             ]}
             data={[
               { name: t('charts.china'), value: 24000 },
-              { name: t('charts.india'), value: 34000 },
+              { name: t('charts.india'), value: 32600 },
               { name: t('charts.france'), value: 22000 },
               { name: t('charts.brazil'), value: 22780 },
               { name: t('charts.spain'), value: 25890 },
-              { name: t('charts.italy'), value: 16390 },
-              { name: t('charts.portugal'), value: 34490 },
+
             ]}
           />
         </LayoutBlock>
