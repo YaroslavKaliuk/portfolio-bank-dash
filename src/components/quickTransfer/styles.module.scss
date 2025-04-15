@@ -93,21 +93,21 @@ $r: '.quickTransfer';
 
   // modifier
   //---------------------------------------------------------
+  :global(.swiper-button-next),
+  :global(.swiper-button-prev) {
+    display: grid;
+    place-items: center;
+    border-radius: 100%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--base-white);
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
 }
 
 // influence
 //-----------------------------------------------------------
-:global(.swiper-button-next),
-:global(.swiper-button-prev) {
-  display: grid;
-  place-items: center;
-  border-radius: 100%;
-  width: 2.5rem;
-  height: 2.5rem;
-  background-color: var(--base-white);
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
-
-  &:active {
-    transform: scale(0.9);
-  }
-}

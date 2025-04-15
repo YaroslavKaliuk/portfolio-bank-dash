@@ -42,11 +42,11 @@ $r: '.chartBar';
 
   // modifier
   //---------------------------------------------------------
+  :global(.recharts-legend-item-text) {
+    color: var(--primary-light);
+    font-size: 0.875rem;
+  }
 }
 
 // influence
 //-----------------------------------------------------------
-:global(.recharts-legend-item-text) {
-  color: var(--primary-light);
-  font-size: 0.875rem;
-}
