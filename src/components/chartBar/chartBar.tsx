@@ -121,11 +121,12 @@ export const ChartBar = ({
     <Bar
       key={`bar-${config.dataKey}-${index}`}
       dataKey={config.dataKey}
-      fill={`url(#${config.gradientId})`}
       name={config.name}
+      fill={`url(#${config.gradientId})`}
       radius={config.radius || [8, 8, 0, 0]}
       stackId={config.stackId}
       label={config.label ? { position: 'top', formatter: formatValue } : undefined}
+      shape={type === 'triangle' ? TriangleBar : undefined}
     />
   );
 
@@ -141,13 +142,10 @@ export const ChartBar = ({
             key="triangle-bar"
             dataKey={config[0].dataKey}
             name={config[0].name}
-            shape={<TriangleBar />}
+            fill={`url(#${config[0].gradientId})`}
+            shape={TriangleBar}
             label={{ position: 'top', formatter: formatValue }}
-          >
-            {data.map((entry, index) => (
-              <Cell key={`cell-${entry.name}-${index}`} fill={colors[index % colors.length]} />
-            ))}
-          </Bar>
+          />
         );
       default:
         return null;
