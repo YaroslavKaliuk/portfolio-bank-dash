@@ -55,6 +55,14 @@ export interface ChartBarProps {
   };
 }
 
+interface TriangleBarProps {
+  fill: string;
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+}
+
 const GradientBar = ({ gradients }: { gradients: { id: string; colors: string[] }[] }) => (
   <svg>
     <defs>
@@ -81,7 +89,7 @@ const getTrianglePath = (x: number, y: number, width: number, height: number) =>
   Z`;
 };
 
-const TriangleBar = (props: any) => {
+const TriangleBar = (props: TriangleBarProps) => {
   const { fill, x, y, width, height } = props;
   return <path d={getTrianglePath(x, y, width, height)} stroke="none" fill={fill} />;
 };

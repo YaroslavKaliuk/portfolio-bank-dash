@@ -3,7 +3,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { LayoutBlock, LayoutRow } from '@/layouts';
-import { Table, ServicesList, FinancialOverview, Graph, Title, ChartBar } from '@/components';
+import { Table, ServicesList, FinancialOverview, Title, ChartBar } from '@/components';
 import * as Icons from '@/icons';
 
 export default function InvestmentsClient() {

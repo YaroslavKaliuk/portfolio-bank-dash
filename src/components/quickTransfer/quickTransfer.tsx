@@ -1,7 +1,7 @@
 'use client';
 
 import cn from 'classnames';
-import { FC, useState, useEffect } from 'react';
+import { FC, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';

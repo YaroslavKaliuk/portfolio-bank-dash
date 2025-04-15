@@ -3,6 +3,7 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Sector } from 'recharts';
 import { useState } from 'react';
 import styles from './styles.module.scss';
 import cn from 'classnames';
+
 interface ChartPieProps {
   data: { name: string; value?: number; stroke?: string; strokeWidth?: number }[];
   strokeWidth?: number;
@@ -24,6 +25,28 @@ interface ChartPieProps {
   endAngle?: number;
   isSemiCircle?: boolean;
 }
+
+interface LabelProps {
+  cx: number;
+  cy: number;
+  midAngle: number;
+  innerRadius: number;
+  outerRadius: number;
+  value: number;
+  name: string;
+}
+
+interface ActiveShapeProps {
+  cx: number;
+  cy: number;
+  innerRadius: number;
+  outerRadius: number;
+  startAngle: number;
+  endAngle: number;
+  fill: string;
+  stroke: string;
+}
+
 export const ChartPie = ({
   data,
   strokeWidth = 4,
@@ -63,7 +86,7 @@ export const ChartPie = ({
         ? v.toLocaleString()
         : v.toString();
   const RADIAN = Math.PI / 180;
-  const renderLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, value, name }: any) => {
+  const renderLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, value, name }: LabelProps) => {
     const r = innerRadius + (outerRadius - innerRadius) * 0.5;
     const x = cx + r * Math.cos(-midAngle * RADIAN);
     const y = cy + r * Math.sin(-midAngle * RADIAN);
@@ -99,7 +122,7 @@ export const ChartPie = ({
     endAngle,
     fill,
     stroke,
-  }: any) => (
+  }: ActiveShapeProps) => (
     <g>
       <Sector
         cx={cx}

@@ -4,7 +4,7 @@ import cn from 'classnames';
 import { FC } from 'react';
 import styles from './styles.module.scss';
 
-export interface LoaderProps {}
+export interface LoaderProps extends object {}
 
 export const Loader: FC<LoaderProps> = () => {
   return (

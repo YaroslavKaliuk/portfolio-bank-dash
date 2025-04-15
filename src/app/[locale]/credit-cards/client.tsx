@@ -3,15 +3,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { LayoutBlock, LayoutRow } from '@/layouts';
-import {
-  ServicesList,
-  Button,
-  CreditCard,
-  Title,
-  FormAddNewCard,
-  ChartPie,
-  ChartBar,
-} from '@/components';
+import { ServicesList, CreditCard, Title, FormAddNewCard, ChartPie, ChartBar } from '@/components';
 import * as Icons from '@/icons';
 
 export default function CreditCardsClient() {

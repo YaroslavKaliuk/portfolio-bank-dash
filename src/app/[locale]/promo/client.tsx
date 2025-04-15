@@ -22,8 +22,22 @@ export default function ServicesClient() {
       <LayoutRow>
         <SwiperSlider
           items={[
-            <Image src="/banner_2.jpg" alt="Promo" width={860} height={486} loading="lazy" />,
-            <Image src="/banner_1.jpg" alt="Promo" width={860} height={486} loading="lazy" />,
+            <Image
+              key="banner2"
+              src="/banner_2.jpg"
+              alt="Promo"
+              width={860}
+              height={486}
+              loading="lazy"
+            />,
+            <Image
+              key="banner1"
+              src="/banner_1.jpg"
+              alt="Promo"
+              width={860}
+              height={486}
+              loading="lazy"
+            />,
           ]}
         />
       </LayoutRow>

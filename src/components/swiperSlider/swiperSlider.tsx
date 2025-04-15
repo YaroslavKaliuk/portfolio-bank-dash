@@ -1,7 +1,7 @@
 'use client';
 
 import cn from 'classnames';
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay, EffectCoverflow } from 'swiper/modules';
 import 'swiper/css';
@@ -11,7 +11,7 @@ import 'swiper/css/effect-coverflow';
 import styles from './styles.module.scss';
 
 export interface SwiperSliderProps {
-  items: any[];
+  items: ReactNode[];
 }
 
 export const SwiperSlider: FC<SwiperSliderProps> = ({ items }) => {

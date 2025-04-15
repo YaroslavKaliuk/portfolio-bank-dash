@@ -2,7 +2,7 @@
 
 import cn from 'classnames';
 import styles from './styles.module.scss';
-import { Input, Button, Avatar } from '@/components';
+import { Input, Button } from '@/components';
 import { useTranslations } from 'next-intl';
 
 export const FormAddNewCard = () => {

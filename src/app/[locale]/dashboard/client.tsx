@@ -56,10 +56,10 @@ export default function DashboardClient() {
         <Title title={t('titles.promo')} />
         <SwiperSlider
           items={[
-            <Link href={`/${locale}/promo`}>
+            <Link key="banner2" href={`/${locale}/promo`}>
               <Image src="/banner_2.jpg" alt="Promo" width={860} height={486} loading="lazy" />
             </Link>,
-            <Link href={`/${locale}/promo`}>
+            <Link key="banner1" href={`/${locale}/promo`}>
               <Image src="/banner_1.jpg" alt="Promo" width={860} height={486} loading="lazy" />
             </Link>,
           ]}

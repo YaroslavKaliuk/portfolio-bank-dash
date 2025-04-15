@@ -7,10 +7,8 @@ import {
   ChartPie,
   ChartVerticalComposed,
   FinancialOverview,
-  ServicesList,
   Title,
   TransactionsList,
-  Button,
 } from '@/components';
 import * as Icons from '@/icons';
 
