@@ -399,5 +399,9 @@
     "sentTo": "Enviado a",
     "writeMessage": "Escribe un mensaje...",
     "button": "Enviar"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "button": "Volver al Inicio"
   }
 }

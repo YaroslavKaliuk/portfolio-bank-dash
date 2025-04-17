@@ -398,5 +398,9 @@
     "sentTo": "Sent to",
     "writeMessage": "Write a message...",
     "button": "Send"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "button": "Back to Home"
   }
 }

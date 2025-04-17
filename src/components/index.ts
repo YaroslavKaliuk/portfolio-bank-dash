@@ -13,6 +13,7 @@ export * from './caption';
 export * from './switcher';
 export * from './chartPie';
 export * from './chartBar';
+export * from './error404';
 export * from './accordion';
 export * from './copyright';
 export * from './navToggle';

@@ -11,11 +11,11 @@ import {
   Search,
   ThemeSwitcher,
 } from '@/components';
+import '@styles/index.scss';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import '@styles/index.scss';
 import { Suspense } from 'react';
 
 type Locale = (typeof routing.locales)[number];

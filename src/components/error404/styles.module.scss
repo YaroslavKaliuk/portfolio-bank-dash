@@ -1,0 +1,33 @@
+/* .error404
+-------------------------------------------------------------*/
+$r: '.error404';
+
+// block
+//-----------------------------------------------------------
+#{$r} {
+  gap: 2rem;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  inset: 0;
+  padding: 1rem;
+  position: absolute;
+  background-color: var(--base-light-gray);
+
+  // element
+  //---------------------------------------------------------
+  &__title {
+    line-height: 1;
+    font-size: clamp(2rem, 30vw, 10rem);
+  }
+
+  &__description {
+    font-size: clamp(1rem, 10vw, 2rem);
+  }
+
+  // modifier
+  //---------------------------------------------------------
+}
+
+// influence
+//-----------------------------------------------------------
