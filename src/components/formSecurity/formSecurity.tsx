@@ -11,19 +11,15 @@ export const FormSecurity = () => {
   return (
     <form className={cn(styles.formSecurity)}>
       <div className={styles.formSecurity__inputs}>
-        <Input type="password" translationKey="form.currentPassword" defaultValue="00000000" />
-        <Input type="password" translationKey="form.newPassword" defaultValue="11111111" />
+        <Input type="password" title={t('form.currentPassword')} defaultValue="00000000" />
+        <Input type="password" title={t('form.newPassword')} defaultValue="11111111" />
       </div>
       <div className={styles.formSecurity__switchers}>
         <h3 className={styles.formSecurity__switchersTitle}>{t('form.twoFactorAuth')}</h3>
-        <Switcher
-          type="checkbox"
-          translationKey="form.enableTwoFactor"
-          defaultChecked={true}
-        />
+        <Switcher type="checkbox" title={t('form.enableTwoFactor')} defaultChecked={true} />
       </div>
       <div className={styles.formSecurity__button}>
-        <Button translationKey="common.save" />
+        <Button title={t('common.save')} />
       </div>
     </form>
   );

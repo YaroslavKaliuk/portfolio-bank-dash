@@ -4,14 +4,12 @@ import cn from 'classnames';
 import { FC, useState, ChangeEvent } from 'react';
 import styles from './styles.module.scss';
 import * as Icons from '@/icons';
-import { useTranslations } from 'next-intl';
 
 export interface InputProps
   extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
   title?: string;
   error?: string;
   defaultValue?: string;
-  translationKey?: string;
 }
 
 export const Input: FC<InputProps> = ({
@@ -21,10 +19,8 @@ export const Input: FC<InputProps> = ({
   value,
   onChange,
   type,
-  translationKey,
   ...props
 }) => {
-  const t = useTranslations();
   const [inputValue, setInputValue] = useState(defaultValue || '');
   const [showPassword, setShowPassword] = useState(false);
 
@@ -36,7 +32,6 @@ export const Input: FC<InputProps> = ({
   const togglePassword = () => setShowPassword(!showPassword);
 
   const inputType = type === 'password' && showPassword ? 'text' : type;
-  const inputTitle = translationKey ? t(translationKey) : title;
 
   return (
     <label className={cn(styles.input, error && styles.input__error)}>
@@ -51,7 +46,7 @@ export const Input: FC<InputProps> = ({
           {showPassword ? <Icons.IconEyeSlash /> : <Icons.IconEye />}
         </button>
       )}
-      {inputTitle && <span className={styles.input__title}>{inputTitle}</span>}
+      {title && <span className={styles.input__title}>{title}</span>}
       {error && <span className={styles.input__message}>{error}</span>}
     </label>
   );

@@ -11,29 +11,21 @@ export const FormPreferences = () => {
   return (
     <form className={cn(styles.formPreferences)}>
       <div className={styles.formPreferences__inputs}>
-        <Input type="text" translationKey="form.currency" defaultValue="USD" />
+        <Input type="text" title={t('form.currency')} defaultValue="USD" />
         <Input
           type="text"
-          translationKey="form.timeZone"
+          title={t('form.timeZone')}
           defaultValue="(GMT-12:00) International Date Line West"
         />
       </div>
       <div className={styles.formPreferences__switchers}>
         <h3 className={styles.formPreferences__switchersTitle}>{t('form.notification')}</h3>
-        <Switcher
-          type="checkbox"
-          translationKey="form.digitalCurrency"
-          defaultChecked={true}
-        />
-        <Switcher type="checkbox" translationKey="form.merchantOrder" />
-        <Switcher
-          type="checkbox"
-          translationKey="form.accountRecommendations"
-          defaultChecked={true}
-        />
+        <Switcher type="checkbox" title={t('form.digitalCurrency')} defaultChecked={true} />
+        <Switcher type="checkbox" title={t('form.merchantOrder')} />
+        <Switcher type="checkbox" title={t('form.accountRecommendations')} defaultChecked={true} />
       </div>
       <div className={styles.formPreferences__button}>
-        <Button translationKey="common.save" />
+        <Button title={t('common.save')} />
       </div>
     </form>
   );

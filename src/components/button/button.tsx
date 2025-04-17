@@ -9,7 +9,6 @@ type ButtonProps = {
   title?: string;
   iconLeft?: ReactNode;
   iconRight?: ReactNode;
-  translationKey?: string;
   isOutline?: boolean;
   href?: string;
 } & (
@@ -21,7 +20,6 @@ export const Button: FC<ButtonProps> = ({
   title,
   iconLeft,
   iconRight,
-  translationKey,
   isOutline,
   href,
   ...props

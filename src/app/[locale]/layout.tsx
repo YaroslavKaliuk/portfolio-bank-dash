@@ -44,36 +44,32 @@ export default async function RootLayout({
   const messages = await getMessages({ locale });
 
   return (
-    <html lang={locale}>
-      <body>
-        <NextIntlClientProvider messages={messages}>
-          <LayoutApp>
-            <LayoutHeader>
-              <NavToggle />
-              <Caption />
-              <Search isHeader />
-              <LanguageSwitcher isHeader />
-              <ThemeSwitcher isHeader />
-              <Avatar />
-            </LayoutHeader>
-            <LayoutAside>
-              <Logo />
-              <Search isAside />
-              <LanguageSwitcher isAside />
-              <ThemeSwitcher isAside />
-              <Nav />
-            </LayoutAside>
-            <LayoutMain>
-              <Suspense fallback={<Loader />} unstable_expectedLoadTime={2000}>
-                {children}
-              </Suspense>
-            </LayoutMain>
-            <LayoutFooter>
-              <Copyright />
-            </LayoutFooter>
-          </LayoutApp>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages}>
+      <LayoutApp>
+        <LayoutHeader>
+          <NavToggle />
+          <Caption />
+          <Search isHeader />
+          <LanguageSwitcher isHeader />
+          <ThemeSwitcher isHeader />
+          <Avatar />
+        </LayoutHeader>
+        <LayoutAside>
+          <Logo />
+          <Search isAside />
+          <LanguageSwitcher isAside />
+          <ThemeSwitcher isAside />
+          <Nav />
+        </LayoutAside>
+        <LayoutMain>
+          <Suspense fallback={<Loader />} unstable_expectedLoadTime={2000}>
+            {children}
+          </Suspense>
+        </LayoutMain>
+        <LayoutFooter>
+          <Copyright />
+        </LayoutFooter>
+      </LayoutApp>
+    </NextIntlClientProvider>
   );
 }

@@ -16,10 +16,10 @@ export const FormPromo = () => {
       <Input type="email" title={t('form.email')} defaultValue="charlenereed@gmail.com" />
       <Input type="text" title={t('form.phone')} defaultValue="+123 456 7890" />
       <div className={styles.formPromo__switchers}>
-        <Switcher type="checkbox" translationKey="form.subscribeToPromo" defaultChecked={true} />
+        <Switcher type="checkbox" title={t('form.subscribeToPromo')} defaultChecked={true} />
         <Switcher
           type="checkbox"
-          translationKey="form.iAgree"
+          title={t('form.iAgree')}
           onChange={(e) => setIsAgreed(e.target.checked)}
         />
       </div>
