@@ -403,5 +403,17 @@
   "notFound": {
     "title": "Página no encontrada",
     "button": "Volver al Inicio"
+  },
+  "accordion": {
+    "title1": "Ofertas Exclusivas de Tarjetas de Crédito",
+    "content1": "Obtén nuestra tarjeta de crédito premium con 0% de APR para los primeros 12 meses y gana 3% de devolución en todas tus compras. Oferta limitada!",
+    "title2": "Promoción de Tasas de Hipoteca",
+    "content2": "Bloquea nuestras tasas de hipoteca más bajas nunca antes ofrecidas al 3.25% APR para préstamos hipotecarios de 30 años fijos. Aplica antes del 31 de diciembre para calificar.",
+    "title3": "Bono de Nuevo Cliente",
+    "content3": "Abre una nueva cuenta de cheques con un depósito mínimo de $500 y recibe un bono de bienvenida de $300. Términos y condiciones aplican.",
+    "title4": "Soluciones de Banca Empresarial",
+    "content4": "Cuentas empresariales especiales con sin cargos mensuales para el primer año. Incluye transacciones gratuitas y un administrador de cuenta dedicado.",
+    "title5": "Promoción de Gestión de Patrimonio",
+    "content5": "Consulta financiera gratuita para depósitos superiores a $50,000. Crece tu riqueza con nuestros asesores expertos."
   }
 }

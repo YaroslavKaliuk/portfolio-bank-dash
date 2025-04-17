@@ -183,29 +183,24 @@ export default function ServicesClient() {
           <Accordion
             items={[
               {
-                title: 'Exclusive Credit Card Offers',
-                content:
-                  'Get our premium credit card with 0% APR for the first 12 months and earn 3% cashback on all purchases. Limited time offer!',
+                title: t('accordion.title1'),
+                content: t('accordion.content1'),
               },
               {
-                title: 'Mortgage Rate Special',
-                content:
-                  'Lock in our lowest-ever mortgage rates at 3.25% APR for 30-year fixed loans. Apply before December 31st to qualify.',
+                title: t('accordion.title2'),
+                content: t('accordion.content2'),
               },
               {
-                title: 'New Customer Bonus',
-                content:
-                  'Open a new checking account with $500 minimum deposit and receive a $300 welcome bonus. Terms and conditions apply.',
+                title: t('accordion.title3'),
+                content: t('accordion.content3'),
               },
               {
-                title: 'Business Banking Solutions',
-                content:
-                  'Special business accounts with no monthly fees for the first year. Includes free transactions and dedicated account manager.',
+                title: t('accordion.title4'),
+                content: t('accordion.content4'),
               },
               {
-                title: 'Wealth Management Promo',
-                content:
-                  'Free financial planning consultation for deposits over $50,000. Grow your wealth with our expert advisors.',
+                title: t('accordion.title5'),
+                content: t('accordion.content5'),
               },
             ]}
           />

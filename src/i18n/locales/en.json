@@ -402,5 +402,17 @@
   "notFound": {
     "title": "Page Not Found",
     "button": "Back to Home"
+  },
+  "accordion": {
+    "title1": "Exclusive Credit Card Offers",
+    "content1": "Get our premium credit card with 0% APR for the first 12 months and earn 3% cashback on all purchases. Limited time offer!",
+    "title2": "Mortgage Rate Special",
+    "content2": "Lock in our lowest-ever mortgage rates at 3.25% APR for 30-year fixed loans. Apply before December 31st to qualify.",
+    "title3": "New Customer Bonus",
+    "content3": "Open a new checking account with $500 minimum deposit and receive a $300 welcome bonus. Terms and conditions apply.",
+    "title4": "Business Banking Solutions",
+    "content4": "Special business accounts with no monthly fees for the first year. Includes free transactions and dedicated account manager.",
+    "title5": "Wealth Management Promo",
+    "content5": "Free financial planning consultation for deposits over $50,000. Grow your wealth with our expert advisors."
   }
 }
