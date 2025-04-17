@@ -2,6 +2,7 @@ import React from 'react';
 import { getMessages } from 'next-intl/server';
 import { Metadata } from 'next';
 import AccountsClient from './client';
+import { i18nConfig } from '@/i18n/config';
 
 type PageProps = {
   params: Promise<{ locale: string }>;
@@ -24,5 +25,5 @@ export default function Page() {
 }
 
 export async function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'es' }];
+  return i18nConfig.locales.map((locale) => ({ locale }));
 }
