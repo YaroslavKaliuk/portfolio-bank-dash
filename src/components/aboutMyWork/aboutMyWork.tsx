@@ -79,7 +79,7 @@ export const AboutMyWork: FC = () => {
         </ul>
       </Dialog>
       <Button
-        title={t('aboutMyWork.button')}
+        title={t('common.aboutMyWork')}
         iconLeft={<Icons.IconStars />}
         onClick={aboutMyWork.open}
       />
