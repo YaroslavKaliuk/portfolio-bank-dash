@@ -38,7 +38,7 @@ export const ChartVerticalComposed: FC<ChartVerticalComposedProps> = ({
   data,
   height = 600,
   showLegend = true,
-  gridColor = 'var(--base-light-blue)',
+  gridColor = 'var(--color-base-light-blue)',
   legendIncomeText,
   legendExpensesText,
   legendSavingsText,
@@ -55,48 +55,48 @@ export const ChartVerticalComposed: FC<ChartVerticalComposedProps> = ({
           <CartesianGrid strokeDasharray="3 3" stroke={gridColor} />
           <XAxis
             type="number"
-            stroke="var(--primary-light)"
-            tick={{ fill: 'var(--primary-light)' }}
+            stroke="var(--color-primary-light)"
+            tick={{ fill: 'var(--color-primary-light)' }}
             tickFormatter={formatValue}
           />
           <YAxis
             dataKey="month"
             type="category"
             scale="band"
-            stroke="var(--primary-light)"
-            tick={{ fill: 'var(--primary-light)' }}
+            stroke="var(--color-primary-light)"
+            tick={{ fill: 'var(--color-primary-light)' }}
           />
           <Tooltip
-            cursor={{ fill: 'var(--base-light-blue)' }}
+            cursor={{ fill: 'var(--color-base-light-blue)' }}
             contentStyle={{
               border: 'none',
               boxShadow: 'var(--box-shadow-primary)',
               borderRadius: 'var(--border-radius-small)',
-              backgroundColor: 'var(--base-white)',
+              backgroundColor: 'var(--color-base-white)',
             }}
-            labelStyle={{ color: 'var(--text-secondary)' }}
-            itemStyle={{ color: 'var(--text-primary)' }}
+            labelStyle={{ color: 'var(--color-text-secondary)' }}
+            itemStyle={{ color: 'var(--color-text-primary)' }}
             formatter={(value: number) => formatValue(value)}
           />
           {showLegend && <Legend iconType="circle" />}
 
           <Bar
             dataKey="income"
-            fill="var(--accent-teal)"
+            fill="var(--color-accent-teal)"
             name={legendIncomeText}
             radius={[0, 8, 8, 0]}
           />
           <Bar
             dataKey="expenses"
-            fill="var(--accent-pink)"
+            fill="var(--color-accent-pink)"
             name={legendExpensesText}
             radius={[0, 8, 8, 0]}
           />
           <Line
             dataKey="savings"
-            stroke="var(--primary)"
+            stroke="var(--color-primary)"
             name={legendSavingsText}
-            dot={{ fill: 'var(--primary)', r: 4 }}
+            dot={{ fill: 'var(--color-primary)', r: 4 }}
             activeDot={{ r: 6 }}
           />
         </ComposedChart>

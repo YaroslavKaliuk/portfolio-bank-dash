@@ -20,7 +20,7 @@ $r: '.switcher';
     position: relative;
     aspect-ratio: 16/9;
     border-radius: 100vw;
-    background-color: var(--base-light-blue);
+    background-color: var(--color-base-light-blue);
     transition: background-color 0.3s;
 
     &::before {
@@ -31,13 +31,13 @@ $r: '.switcher';
       aspect-ratio: 1/1;
       position: absolute;
       border-radius: 100%;
-      background-color: var(--base-white);
+      background-color: var(--color-base-white);
       transform: translate3d(-48%, 0, 0);
       transition: transform 0.3s;
     }
 
     &:checked {
-      background-color: var(--accent-teal);
+      background-color: var(--color-accent-teal);
 
       &::before {
         transform: translate3d(48%, 0, 0);

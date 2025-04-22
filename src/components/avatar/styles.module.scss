@@ -8,7 +8,7 @@ $r: '.avatar';
   display: inline-flex;
   position: relative;
 
-  @media (width < 63.9375rem) {
+  @include media($laptop, 'max-width') {
     width: 2.5rem;
     height: 2.5rem;
   }
@@ -45,14 +45,14 @@ $r: '.avatar';
       bottom: 0;
       width: 3rem;
       height: 3rem;
-      color: var(--base-white);
+      color: var(--color-base-white);
       position: absolute;
       border-radius: 50%;
-      background-color: var(--primary);
+      background-color: var(--color-primary);
       transition: background-color 0.3s;
 
       &:hover {
-        background-color: var(--primary-dark);
+        background-color: var(--color-primary-dark);
       }
     }
   }

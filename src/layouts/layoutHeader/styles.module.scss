@@ -9,15 +9,15 @@ $r: '.layoutHeader';
   z-index: 2;
   position: sticky;
   padding-block: 1rem;
-  background-color: var(--base-white);
-  border-bottom: 0.0625rem solid var(--base-pale-blue);
+  background-color: var(--color-base-white);
+  border-bottom: 0.0625rem solid var(--color-base-pale-blue);
 
-  @media (width < 63.9375rem) {
+  @include media($laptop, 'max-width') {
     height: 4.5rem;
     padding-inline: 1rem;
   }
 
-  @media (width >= 64rem) {
+  @include media($laptop) {
     height: 6rem;
     padding-inline: 2rem;
   }
@@ -29,7 +29,7 @@ $r: '.layoutHeader';
     display: flex;
     align-items: center;
 
-    @media (width >= 80rem) {
+    @include media($desktop) {
       gap: 1.5rem;
     }
   }

@@ -5,7 +5,7 @@
     "selectTheme": "Selecciona un tema",
     "selectLanguage": "Selecciona un idioma",
     "notifications": "Notificaciones",
-    "save": "Guardar",
+    "save": "Guardar cambios",
     "avatar": "Avatar del usuario",
     "unknown": "Desconocido",
     "loading": "Cargando...",
@@ -14,7 +14,8 @@
     "cancel": "Cancelar",
     "delete": "Eliminar",
     "edit": "Editar",
-    "back": "Atrás"
+    "back": "Atrás",
+    "aboutMyWork": "Sobre mi trabajo"
   },
   "nav": {
     "en": "Inglés",
@@ -415,5 +416,23 @@
     "content4": "Cuentas empresariales especiales con sin cargos mensuales para el primer año. Incluye transacciones gratuitas y un administrador de cuenta dedicado.",
     "title5": "Promoción de Gestión de Patrimonio",
     "content5": "Consulta financiera gratuita para depósitos superiores a $50,000. Crece tu riqueza con nuestros asesores expertos."
+  },
+  "aboutMyWork": {
+    "title": "Sobre mi trabajo",
+    "button": "Mi LinkedIn",
+    "list": {
+      "template": "Plantilla hecha en Next.js 15 versión",
+      "responsive": "Diseño totalmente responsive",
+      "browser": "Soporte para las últimas versiones de navegadores",
+      "graphics": "Gráficos hechos con <Recharts />",
+      "carousel": "Carousel creados con <Swiper />",
+      "components": "Componentes creados desde cero, sin usar ningún framework de CSS!",
+      "multilanguage": "Soporte para múltiples idiomas",
+      "darkLight": "Soporte para versiones oscuras y claras de la plantilla",
+      "scss": "SCSS escrito usando la metodología BEM",
+      "animations": "Diferentes tipos de animaciones CSS",
+      "charts": "Diferentes tipos de gráficos",
+      "table": "Tablas largas con datos, con encabezado fijo y pie de página al desplazarse por la página"
+    }
   }
 }

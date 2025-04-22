@@ -7,7 +7,7 @@ $r: '.layoutMain';
 #{$r} {
   min-width: 0;
   position: relative;
-  background-color: var(--base-light-gray);
+  background-color: var(--color-base-light-gray);
 
   // element
   //---------------------------------------------------------
@@ -16,11 +16,11 @@ $r: '.layoutMain';
     position: absolute;
     overflow: hidden auto;
 
-    @media (width < 63.9375rem) {
+    @include media($laptop, 'max-width') {
       padding-inline: 1rem;
     }
 
-    @media (width >= 64rem) {
+    @include media($laptop) {
       padding-inline: 2rem;
     }
   }
@@ -33,11 +33,11 @@ $r: '.layoutMain';
     max-width: 80rem;
     margin-inline: auto;
 
-    @media (width < 63.9375rem) {
+    @include media($laptop, 'max-width') {
       padding-block: 1rem;
     }
 
-    @media (width >= 64rem) {
+    @include media($laptop) {
       padding-block: 2rem;
     }
   }
@@ -51,7 +51,7 @@ $r: '.layoutMain';
   &[data-page='investments'],
   &[data-page='credit-cards'] {
     #{$r}__container {
-      @media (width >= 80rem) {
+      @include media($desktop) {
         grid-template-columns: 0.68fr 0.32fr;
       }
     }

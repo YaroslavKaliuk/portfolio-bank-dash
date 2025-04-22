@@ -9,6 +9,7 @@ import {
   Nav,
   NavToggle,
   Search,
+  AboutMyWork,
   ThemeSwitcher,
 } from '@/components';
 import { NextIntlClientProvider } from 'next-intl';
@@ -16,7 +17,6 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Suspense } from 'react';
-
 type Locale = (typeof routing.locales)[number];
 
 export async function generateMetadata({ params }: { params: { locale: Locale } }) {
@@ -59,11 +59,10 @@ export default async function RootLayout({
           <LanguageSwitcher isAside />
           <ThemeSwitcher isAside />
           <Nav />
+          <AboutMyWork />
         </LayoutAside>
         <LayoutMain>
-          <Suspense fallback={<Loader />} unstable_expectedLoadTime={2000}>
-            {children}
-          </Suspense>
+          <Suspense fallback={<Loader />}>{children}</Suspense>
         </LayoutMain>
         <LayoutFooter>
           <Copyright />

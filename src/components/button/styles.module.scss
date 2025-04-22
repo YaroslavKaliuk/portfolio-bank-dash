@@ -11,15 +11,17 @@ $r: '.button';
   justify-content: center;
   height: 3rem;
   line-height: 1;
-  color: var(--base-white);
+  color: var(--color-base-white);
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  padding-inline: 4rem;
+  padding-inline: 1.5rem;
   white-space: nowrap;
   border-radius: 100vw;
-  background-color: var(--primary);
-  transition: opacity 0.3s, background-color 0.3s;
+  background-color: var(--color-primary);
+  transition:
+    opacity 0.3s,
+    background-color 0.3s;
 
   &:disabled {
     opacity: 0.3;
@@ -29,7 +31,7 @@ $r: '.button';
   @media (pointer: fine) {
     &:not(:disabled):hover,
     &:not(:disabled):focus-visible {
-      background-color: var(--primary-dark);
+      background-color: var(--color-primary-dark);
     }
   }
 
@@ -37,20 +39,74 @@ $r: '.button';
     transform: translateY(0.25rem);
   }
 
+  &:has(svg[data-icon='IconStar']) {
+    position: relative;
+    padding-inline: 0;
+    background-image: var(--gradient-secondary);
+  }
+
   // element
   //---------------------------------------------------------
   svg {
     font-size: 1.125rem;
+
+    &[data-icon='IconStar'] {
+      color: var(--color-accent-yellow);
+      opacity: 0;
+      position: absolute;
+      pointer-events: none;
+
+      &:nth-of-type(1) {
+        top: -16%;
+        left: 40%;
+        animation: twinkle 3s infinite;
+      }
+
+      &:nth-of-type(2) {
+        top: -4%;
+        right: 8%;
+        animation: twinkle 2.5s infinite 0.5s;
+      }
+
+      &:nth-of-type(3) {
+        left: 24%;
+        bottom: -8%;
+        animation: twinkle 3.5s infinite 1s;
+      }
+
+      &:nth-of-type(4) {
+        top: 72%;
+        right: 4%;
+        animation: twinkle 2s infinite 1.5s;
+      }
+
+      &:nth-of-type(5) {
+        top: 16%;
+        left: -2%;
+        animation: twinkle 4s infinite;
+      }
+
+      @keyframes twinkle {
+        0%,
+        100% {
+          opacity: 0;
+          transform: scale(0) rotate(0deg);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1) rotate(45deg);
+        }
+      }
+    }
   }
 
   // modifier
   //---------------------------------------------------------
   &__isOutline {
     height: 2.5rem;
-    color: var(--primary-light);
+    color: var(--color-primary-light);
     font-size: 0.938rem;
-    padding-inline: 1.5rem;
-    border: 0.0625rem solid var(--primary-light);
+    border: 0.0625rem solid var(--color-primary-light);
     background-color: transparent;
     transition:
       color 0.3s,
@@ -59,8 +115,8 @@ $r: '.button';
     @media (pointer: fine) {
       &:not(:disabled):hover,
       &:not(:disabled):focus-visible {
-        color: var(--primary);
-        border-color: var(--primary);
+        color: var(--color-primary);
+        border-color: var(--color-primary);
         background-color: transparent;
       }
     }

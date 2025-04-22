@@ -19,7 +19,7 @@ $r: '.loader';
     overflow: hidden;
     position: relative;
     border-radius: 100vw;
-    background-color: var(--base-light-blue);
+    background-color: var(--color-base-light-blue);
 
     &::after {
       content: '';
@@ -27,7 +27,7 @@ $r: '.loader';
       width: 50%;
       position: absolute;
       border-radius: 100vw;
-      background-color: var(--primary);
+      background-color: var(--color-primary);
       animation: loader 0.4s ease-in-out infinite alternate;
     }
   }

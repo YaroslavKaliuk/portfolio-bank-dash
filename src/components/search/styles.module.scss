@@ -10,9 +10,9 @@ $r: '.search';
   height: 40px;
   position: relative;
   border-radius: 100vw;
-  background-color: var(--base-light-gray);
+  background-color: var(--color-base-light-gray);
 
-  @media (width >= 64rem) {
+  @include media($laptop) {
     max-width: 16rem;
   }
 
@@ -26,7 +26,7 @@ $r: '.search';
     padding-inline: 2.8rem 1rem;
 
     &::placeholder {
-      color: var(--primary-light);
+      color: var(--color-primary-light);
     }
   }
 
@@ -36,7 +36,7 @@ $r: '.search';
     justify-content: center;
     inset: 0;
     right: auto;
-    color: var(--primary-light);
+    color: var(--color-primary-light);
     aspect-ratio: 1 / 1;
     position: absolute;
     border-radius: 100%;
@@ -46,21 +46,21 @@ $r: '.search';
 
     &:hover,
     &:focus {
-      color: var(--base-white);
-      background-color: var(--primary-light);
+      color: var(--color-base-white);
+      background-color: var(--color-primary-light);
     }
   }
 
   // modifier
   //---------------------------------------------------------
   &__isAside {
-    @media (width >= 64rem) {
+    @include media($laptop) {
       display: none;
     }
   }
 
   &__isHeader {
-    @media (width < 63.9375rem) {
+    @include media($laptop, 'max-width') {
       display: none;
     }
   }

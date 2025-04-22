@@ -59,15 +59,15 @@ export const ChartPie = ({
   width = 320,
   height = 320,
   colors = [
-    'var(--primary)',
-    'var(--accent-teal)',
-    'var(--accent-pink)',
-    'var(--accent-blue)',
-    'var(--accent-red)',
-    'var(--primary-light)',
-    'var(--accent-green)',
-    'var(--accent-purple)',
-    'var(--accent-yellow)',
+    'var(--color-primary)',
+    'var(--color-accent-teal)',
+    'var(--color-accent-pink)',
+    'var(--color-accent-blue)',
+    'var(--color-accent-red)',
+    'var(--color-primary-light)',
+    'var(--color-accent-green)',
+    'var(--color-accent-purple)',
+    'var(--color-accent-yellow)',
   ],
   showLegend = true,
   showValue = true,
@@ -130,7 +130,7 @@ export const ChartPie = ({
           endAngle={endAngle}
           fill={fill}
           stroke={stroke}
-        strokeWidth={strokeWidth}
+          strokeWidth={strokeWidth}
           cornerRadius={8}
         />
         <Sector
@@ -142,7 +142,7 @@ export const ChartPie = ({
           endAngle={endAngle}
           fill={fill}
           stroke={stroke}
-        strokeWidth={strokeWidth}
+          strokeWidth={strokeWidth}
           cornerRadius={8}
         />
       </g>
@@ -172,7 +172,7 @@ export const ChartPie = ({
               outerRadius={outerRadius}
               dataKey="value"
               nameKey="name"
-              stroke="var(--base-white)"
+              stroke="var(--color-base-white)"
               strokeWidth={strokeWidth}
               onMouseEnter={(_, i) => setActiveIndex(i)}
               onMouseLeave={() => setActiveIndex(0)}
@@ -187,7 +187,7 @@ export const ChartPie = ({
                 <Cell
                   key={i}
                   fill={colors[i % colors.length]}
-                  stroke={entry.stroke || 'var(--base-white)'}
+                  stroke={entry.stroke || 'var(--color-base-white)'}
                   strokeWidth={strokeWidth}
                 />
               ))}

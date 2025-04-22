@@ -102,15 +102,15 @@ export const ChartBar = ({
   summary,
   height = 264,
   showLegend = true,
-  gridColor = 'var(--base-light-blue)',
+  gridColor = 'var(--color-base-light-blue)',
   currencySymbol = '$',
   colors = [
-    'var(--accent-purple)',
-    'var(--accent-blue)',
-    'var(--accent-green)',
-    'var(--accent-teal)',
-    'var(--accent-red)',
-    'var(--accent-pink)',
+    'var(--color-accent-purple)',
+    'var(--color-accent-blue)',
+    'var(--color-accent-green)',
+    'var(--color-accent-teal)',
+    'var(--color-accent-red)',
+    'var(--color-accent-pink)',
   ],
 }: ChartBarProps) => {
   const formatValue = (value: number) => {
@@ -180,20 +180,23 @@ export const ChartBar = ({
           <CartesianGrid strokeDasharray="3 3" stroke={gridColor} />
           <XAxis
             dataKey="name"
-            stroke="var(--primary-light)"
-            tick={{ fill: 'var(--primary-light)' }}
+            stroke="var(--color-primary-light)"
+            tick={{ fill: 'var(--color-primary-light)' }}
           />
-          <YAxis stroke="var(--primary-light)" tick={{ fill: 'var(--primary-light)' }} />
+          <YAxis
+            stroke="var(--color-primary-light)"
+            tick={{ fill: 'var(--color-primary-light)' }}
+          />
           <Tooltip
-            cursor={{ fill: 'var(--base-light-blue)' }}
+            cursor={{ fill: 'var(--color-base-light-blue)' }}
             contentStyle={{
               border: 'none',
               boxShadow: 'var(--box-shadow-primary)',
               borderRadius: 'var(--border-radius-small)',
-              backgroundColor: 'var(--base-white)',
+              backgroundColor: 'var(--color-base-white)',
             }}
-            labelStyle={{ color: 'var(--text-secondary)' }}
-            itemStyle={{ color: 'var(--text-primary)' }}
+            labelStyle={{ color: 'var(--color-text-secondary)' }}
+            itemStyle={{ color: 'var(--color-text-primary)' }}
             formatter={formatValue}
           />
           {showLegend && <Legend iconType="circle" />}

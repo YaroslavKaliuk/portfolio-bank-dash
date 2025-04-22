@@ -1,6 +1,6 @@
 /* vars
 -------------------------------------------------------------*/
-html {
+:root {
   --font-family-primary: 'Inter';
   --font-family-secondary: 'Lato';
 
@@ -10,67 +10,46 @@ html {
 
   --box-shadow-primary: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.1);
 
-  --base-white: #ffffff;
-  --base-pale-blue: #e6eff5;
-  --base-light-blue: #dfeaf2;
-  --base-light-gray: #f5f7fa;
+  --color-base-white: #ffffff;
+  --color-base-pale-blue: #e6eff5;
+  --color-base-light-blue: #dfeaf2;
+  --color-base-light-gray: #f5f7fa;
+  --color-primary: #2d60ff;
+  --color-primary-dark: #343c6a;
+  --color-primary-light: #718ebf;
+  --color-text-primary: #232323;
+  --color-text-secondary: #999999;
+  --color-accent-red: #ff4b4a;
+  --color-accent-pink: #ff82ac;
+  --color-accent-teal: #16dbcc;
+  --color-accent-green: #16dbaa;
+  --color-accent-yellow: #ffbb38;
+  --color-accent-blue: #0a06f4;
+  --color-accent-purple: #4c49ed;
 
-  --primary: #2d60ff;
-  --primary-dark: #343c6a;
-  --primary-light: #718ebf;
-
-  --text-primary: #232323;
-  --text-secondary: #999999;
-
-  --accent-red: #ff4b4a;
-  --accent-pink: #ff82ac;
-  --accent-teal: #16dbcc;
-  --accent-green: #16dbaa;
-  --accent-yellow: #ffbb38;
-  --accent-blue: #0a06f4;
-  --accent-purple: #4c49ed;
+  --gradient-primary:
+    linear-gradient(107deg, var(--color-accent-purple) 21.61%, var(--color-accent-blue) 101.2%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+  --gradient-secondary:
+    linear-gradient(107deg, var(--color-primary) 2.61%, var(--color-accent-pink) 101.2%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
 
   &[data-theme='dark'] {
-    --base-white: #121218;
-    --base-pale-blue: #1a1a23;
-    --base-light-blue: #21212d;
-    --base-light-gray: #181820;
-
-    --primary: #5a6ae8;
-    --primary-dark: #6d7df8;
-    --primary-light: #4a5ac8;
-
-    --text-primary: #e0e2eb;
-    --text-secondary: #9598b0;
-
-    --accent-red: #e87e7e;
-    --accent-pink: #e893c0;
-    --accent-teal: #7ed4d4;
-    --accent-green: #7ed4a8;
-    --accent-yellow: #e8d47e;
-    --accent-blue: #7e9be8;
-    --accent-purple: #b37ee8;
+    --color-base-white: #121218;
+    --color-base-pale-blue: #1a1a23;
+    --color-base-light-blue: #21212d;
+    --color-base-light-gray: #181820;
+    --color-primary: #5a6ae8;
+    --color-primary-dark: #6d7df8;
+    --color-primary-light: #4a5ac8;
+    --color-text-primary: #e0e2eb;
+    --color-text-secondary: #9598b0;
+    --color-accent-red: #e87e7e;
+    --color-accent-pink: #e893c0;
+    --color-accent-teal: #7ed4d4;
+    --color-accent-green: #7ed4a8;
+    --color-accent-yellow: #e8d47e;
+    --color-accent-blue: #7e9be8;
+    --color-accent-purple: #b37ee8;
   }
 }
-
-/* breakpoints
--------------------------------------------------------------*/
-/*
-max-width: 374px => max-width: 23.380rem
-min-width: 375px => min-width: 23.4380rem
-
-max-width: 639px => max-width: 39.9375rem
-min-width: 640px => min-width: 40rem
-
-max-width: 767px => max-width: 47.9380rem
-min-width: 768px => min-width: 48rem
-
-max-width: 1023px => max-width: 63.9375rem
-min-width: 1024px => min-width: 64rem
-
-max-width: 1279px => max-width: 79.938rem
-min-width: 1280px => min-width: 80rem
-
-max-width: 1535px => max-width: 95.9375rem
-min-width: 1536px => min-width: 96rem
-*/

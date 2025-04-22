@@ -12,7 +12,7 @@ $r: '.financialOverview';
   grid-template-columns: max-content 1fr;
   margin-inline: auto;
 
-  @media (width < 79.938rem) {
+  @include media($desktop, 'max-width') {
     white-space: nowrap;
   }
 
@@ -30,37 +30,40 @@ $r: '.financialOverview';
       &[data-icon='IconUser'],
       &[data-icon='IconMoney'],
       &[data-icon='IconLifeInsurance'] {
-        color: var(--accent-teal);
-        box-shadow: inset 0 0 0 100vw color-mix(in srgb, var(--accent-teal), var(--base-white) 80%);
+        color: var(--color-accent-teal);
+        box-shadow: inset 0 0 0 100vw
+          color-mix(in srgb, var(--color-accent-teal), var(--color-base-white) 80%);
       }
 
       &[data-icon='IconSafety'],
       &[data-icon='IconService'],
       &[data-icon='IconRepeat'],
       &[data-icon='IconLoan'] {
-        color: var(--primary);
-        box-shadow: inset 0 0 0 100vw color-mix(in srgb, var(--primary), var(--base-white) 80%);
+        color: var(--color-primary);
+        box-shadow: inset 0 0 0 100vw
+          color-mix(in srgb, var(--color-primary), var(--color-base-white) 80%);
       }
 
       &[data-icon='IconGraph'],
       &[data-icon='IconPieChart'],
       &[data-icon='IconExpense'] {
-        color: var(--accent-pink);
-        box-shadow: inset 0 0 0 100vw color-mix(in srgb, var(--accent-pink), var(--base-white) 80%);
+        color: var(--color-accent-pink);
+        box-shadow: inset 0 0 0 100vw
+          color-mix(in srgb, var(--color-accent-pink), var(--color-base-white) 80%);
       }
 
       &[data-icon='IconShopping'],
       &[data-icon='IconBriefcase'],
       &[data-icon='IconSaving'] {
-        color: var(--accent-yellow);
+        color: var(--color-accent-yellow);
         box-shadow: inset 0 0 0 100vw
-          color-mix(in srgb, var(--accent-yellow), var(--base-white) 80%);
+          color-mix(in srgb, var(--color-accent-yellow), var(--color-base-white) 80%);
       }
     }
   }
   &__title {
     align-self: end;
-    color: var(--primary-light);
+    color: var(--color-primary-light);
   }
 
   &__value {

@@ -13,7 +13,7 @@ $r: '.languageSwitcher';
   padding: 0.125rem;
   position: relative;
   border-radius: 100%;
-  background-color: var(--base-light-gray);
+  background-color: var(--color-base-light-gray);
   transition: background-color 0.3s;
 
   // element
@@ -47,7 +47,7 @@ $r: '.languageSwitcher';
 
   &:hover,
   &:focus-within {
-    background-color: var(--base-pale-blue);
+    background-color: var(--color-base-pale-blue);
 
     #{$r}__list {
       opacity: 1;
@@ -59,13 +59,13 @@ $r: '.languageSwitcher';
   // modifier
   //---------------------------------------------------------
   &__isAside {
-    @media (width >= 64rem) {
+    @include media($laptop) {
       display: none;
     }
   }
 
   &__isHeader {
-    @media (width < 63.9375rem) {
+    @include media($laptop, 'max-width') {
       display: none;
     }
   }

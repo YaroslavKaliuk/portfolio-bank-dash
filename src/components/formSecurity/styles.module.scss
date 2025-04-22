@@ -7,11 +7,11 @@ $r: '.formSecurity';
 #{$r} {
   display: grid;
 
-  @media (width < 79.9380rem) {
+  @include media($desktop, 'max-width') {
     gap: 1rem 2rem;
   }
 
-  @media (width >= 80rem) {
+  @include media($desktop) {
     gap: 2rem 3rem;
   }
 
@@ -20,15 +20,15 @@ $r: '.formSecurity';
   &__inputs {
     display: grid;
 
-    @media (width >= 48rem) {
+    @include media($tablet) {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (width < 79.9380rem) {
+    @include media($desktop, 'max-width') {
       gap: 1rem 2rem;
     }
 
-    @media (width >= 80rem) {
+    @include media($desktop) {
       gap: 2rem 3rem;
     }
   }
@@ -36,12 +36,12 @@ $r: '.formSecurity';
   &__button {
     display: flex;
 
-    @media (width < 79.9380rem) {
+    @include media($desktop, 'max-width') {
       justify-content: center;
       margin-top: 1rem;
     }
 
-    @media (width >= 80rem) {
+    @include media($desktop) {
       justify-content: flex-end;
     }
   }

@@ -8,7 +8,7 @@ $r: '.accordion';
   display: flex;
   flex-direction: column;
   border-radius: 0.5rem;
-  border: 0.0625rem solid var(--base-light-blue);
+  border: 0.0625rem solid var(--color-base-light-blue);
 
   // element
   //---------------------------------------------------------
@@ -16,7 +16,7 @@ $r: '.accordion';
     display: flex;
     flex-direction: column;
     position: relative;
-    border-bottom: 0.0625rem solid var(--base-light-blue);
+    border-bottom: 0.0625rem solid var(--color-base-light-blue);
 
     &:last-of-type {
       border-bottom: 0;
@@ -45,7 +45,7 @@ $r: '.accordion';
   &__title {
     flex-grow: 1;
     font-size: 1rem;
-    color: var(--primary-light);
+    color: var(--color-primary-light);
   }
 
   &__icon {
@@ -66,7 +66,7 @@ $r: '.accordion';
       height: 0.0625rem;
       margin: auto;
       position: absolute;
-      background-color: var(--primary-light);
+      background-color: var(--color-primary-light);
       transition: opacity 0.3s;
     }
 

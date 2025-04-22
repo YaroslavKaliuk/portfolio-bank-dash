@@ -5,14 +5,14 @@ $r: '.layoutFooter';
 // block
 //-----------------------------------------------------------
 #{$r} {
-  background-color: var(--base-white);
-  border-top: 0.0625rem solid var(--base-pale-blue);
+  background-color: var(--color-base-white);
+  border-top: 0.0625rem solid var(--color-base-pale-blue);
 
-  @media (width < 63.9375rem) {
+  @include media($laptop, 'max-width') {
     padding: 1rem;
   }
 
-  @media (width >= 64rem) {
+  @include media($laptop) {
     padding: 1rem 2rem;
   }
 

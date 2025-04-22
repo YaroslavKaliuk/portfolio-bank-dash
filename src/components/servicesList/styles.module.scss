@@ -22,7 +22,7 @@ $r: '.servicesList';
     tr {
       td {
         padding: 1rem;
-        background-color: var(--base-white);
+        background-color: var(--color-base-white);
 
         &:first-of-type {
           width: 4.5rem;
@@ -61,38 +61,41 @@ $r: '.servicesList';
       &[data-icon='IconLogoApple'],
       &[data-icon='IconLogoSpotify'],
       &[data-icon='IconLoan'] {
-        color: var(--accent-teal);
-        box-shadow: inset 0 0 0 100vw color-mix(in srgb, var(--accent-teal), var(--base-white) 80%);
+        color: var(--color-accent-teal);
+        box-shadow: inset 0 0 0 100vw
+          color-mix(in srgb, var(--color-accent-teal), var(--color-base-white) 80%);
       }
 
       &[data-icon='IconLogoDigg'],
       &[data-icon='IconService'],
       &[data-icon='IconExpense'],
       &[data-icon='IconCreditCard'] {
-        color: var(--primary);
-        box-shadow: inset 0 0 0 100vw color-mix(in srgb, var(--primary), var(--base-white) 80%);
+        color: var(--color-primary);
+        box-shadow: inset 0 0 0 100vw
+          color-mix(in srgb, var(--color-primary), var(--color-base-white) 80%);
       }
 
       &[data-icon='IconUser'],
       &[data-icon='IconLogoGoogle'],
       &[data-icon='IconSafety'] {
-        color: var(--accent-pink);
-        box-shadow: inset 0 0 0 100vw color-mix(in srgb, var(--accent-pink), var(--base-white) 80%);
+        color: var(--color-accent-pink);
+        box-shadow: inset 0 0 0 100vw
+          color-mix(in srgb, var(--color-accent-pink), var(--color-base-white) 80%);
       }
 
       &[data-icon='IconLogoSlack'],
       &[data-icon='IconSaving'] {
-        color: var(--accent-yellow);
+        color: var(--color-accent-yellow);
         box-shadow: inset 0 0 0 100vw
-          color-mix(in srgb, var(--accent-yellow), var(--base-white) 80%);
+          color-mix(in srgb, var(--color-accent-yellow), var(--color-base-white) 80%);
       }
 
       &[data-icon='IconMoney'],
       &[data-icon='IconLogoYahoo'],
       &[data-icon='IconLogoAmazon'] {
-        color: var(--accent-yellow);
+        color: var(--color-accent-yellow);
         box-shadow: inset 0 0 0 100vw
-          color-mix(in srgb, var(--accent-yellow), var(--base-white) 80%);
+          color-mix(in srgb, var(--color-accent-yellow), var(--color-base-white) 80%);
       }
     }
   }
@@ -102,14 +105,14 @@ $r: '.servicesList';
   }
 
   &__value {
-    color: var(--primary-light);
+    color: var(--color-primary-light);
     font-size: 0.88rem;
   }
 
   &__button {
     display: flex;
 
-    @media (width >= 80rem) {
+    @include media($desktop) {
       justify-content: flex-end;
     }
   }
@@ -117,11 +120,11 @@ $r: '.servicesList';
   // modifier
   //---------------------------------------------------------
   &__isRed {
-    color: var(--accent-red);
+    color: var(--color-accent-red);
   }
 
   &__isGreen {
-    color: var(--accent-green);
+    color: var(--color-accent-green);
   }
 }
 

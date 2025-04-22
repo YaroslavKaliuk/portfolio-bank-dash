@@ -5,7 +5,7 @@ $r: '.quickTransfer';
 // block
 //-----------------------------------------------------------
 #{$r} {
-  --swiper-theme-color: var(--primary);
+  --swiper-theme-color: var(--color-primary);
   --swiper-navigation-size: 1.125rem;
 
   // element
@@ -26,7 +26,7 @@ $r: '.quickTransfer';
 
     &Active {
       #{$r}__image {
-        box-shadow: 0 0 0 4px var(--primary);
+        box-shadow: 0 0 0 4px var(--color-primary);
       }
     }
   }
@@ -60,7 +60,7 @@ $r: '.quickTransfer';
   }
 
   &__text {
-    color: var(--primary-light);
+    color: var(--color-primary-light);
     font-size: 0.875rem;
   }
 
@@ -69,11 +69,11 @@ $r: '.quickTransfer';
     display: grid;
     align-items: center;
     margin-top: 1rem;
-    background-color: var(--base-light-gray);
+    background-color: var(--color-base-light-gray);
     padding: 1rem;
     border-radius: 1rem;
 
-    @media (width >= 40rem) {
+    @include media($mobile) {
       grid-template-columns: 5rem 0.35fr 0.65fr max-content;
     }
 
@@ -85,7 +85,7 @@ $r: '.quickTransfer';
     button {
       padding-inline: 2.5rem;
 
-      @media (width < 39.9375rem) {
+      @include media($mobile, 'max-width') {
         grid-column: 1/-1;
       }
     }
@@ -100,7 +100,7 @@ $r: '.quickTransfer';
     border-radius: 100%;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: var(--base-white);
+    background-color: var(--color-base-white);
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
 
     &:active {

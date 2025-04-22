@@ -23,10 +23,10 @@ $r: '.input';
     height: 3rem;
     padding-inline: 1rem;
     border-radius: var(--border-radius-medium);
-    color: var(--primary-light);
+    color: var(--color-primary-light);
     font-size: 1rem;
-    border: 0.0625rem solid var(--base-light-blue);
-    background-color: var(--base-white);
+    border: 0.0625rem solid var(--color-base-light-blue);
+    background-color: var(--color-base-white);
     transition: 0.3s;
 
     &::placeholder {
@@ -35,7 +35,7 @@ $r: '.input';
 
     &:focus {
       outline: none;
-      border-color: var(--primary-light);
+      border-color: var(--color-primary-light);
     }
 
     &:disabled {
@@ -58,7 +58,7 @@ $r: '.input';
 
   &__message {
     display: none;
-    color: var(--accent-red);
+    color: var(--color-accent-red);
     font-size: 0.88rem;
   }
 
@@ -72,8 +72,8 @@ $r: '.input';
     [type='url'],
     [type='number'] {
       &:not(:disabled) {
-        color: var(--accent-red);
-        border-color: var(--accent-red);
+        color: var(--color-accent-red);
+        border-color: var(--color-accent-red);
       }
     }
 
@@ -92,11 +92,11 @@ $r: '.input';
     aspect-ratio: 1;
     font-size: 1.25rem;
     position: absolute;
-    color: var(--primary-light);
+    color: var(--color-primary-light);
     transition: color 0.3s;
 
     &:hover {
-      color: var(--primary);
+      color: var(--color-primary);
     }
   }
 

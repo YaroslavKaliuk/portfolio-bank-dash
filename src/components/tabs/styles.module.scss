@@ -17,11 +17,11 @@ $r: '.tabs';
   &__nav {
     display: flex;
     overflow: auto hidden;
-    border-bottom: 0.0625rem solid var(--base-pale-blue);
+    border-bottom: 0.0625rem solid var(--color-base-pale-blue);
 
     &Item {
       flex-grow: 1;
-      color: var(--primary-light);
+      color: var(--color-primary-light);
       font-weight: 500;
       padding: 1rem;
       cursor: pointer;
@@ -42,22 +42,22 @@ $r: '.tabs';
       }
 
       &:hover {
-        color: var(--primary);
+        color: var(--color-primary);
       }
 
       &:focus-visible {
         outline: none;
-        background-color: var(--base-pale-blue);
+        background-color: var(--color-base-pale-blue);
       }
     }
   }
 
   &__content {
-    @media (width < 47.9380rem) {
+    @include media($tablet, 'max-width') {
       padding-top: 2rem;
     }
 
-    @media (width >= 48rem) {
+    @include media($tablet) {
       padding-top: 3rem;
     }
 
@@ -69,10 +69,10 @@ $r: '.tabs';
   @for $i from 1 to 10 + 1 {
     & > :nth-of-type(#{$i}):is(:checked) {
       ~ #{$r}__nav :nth-of-type(#{$i}) {
-        color: var(--primary);
+        color: var(--color-primary);
 
         &::before {
-          background-color: var(--primary);
+          background-color: var(--color-primary);
         }
       }
 
@@ -82,7 +82,7 @@ $r: '.tabs';
     }
 
     & > :nth-of-type(#{$i}):is(:focus-visible) ~ #{$r}__nav :nth-of-type(#{$i}) {
-      background-color: var(--base-pale-blue);
+      background-color: var(--color-base-pale-blue);
     }
 
     & > :nth-of-type(#{$i}):is(:disabled) ~ * :nth-of-type(#{$i}) {

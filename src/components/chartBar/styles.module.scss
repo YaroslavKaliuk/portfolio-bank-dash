@@ -31,19 +31,19 @@ $r: '.chartBar';
     }
 
     &Name {
-      color: var(--primary-light);
+      color: var(--color-primary-light);
     }
 
     &Value {
       font-weight: 500;
-      color: var(--text-primary);
+      color: var(--color-text-primary);
     }
   }
 
   // modifier
   //---------------------------------------------------------
   :global(.recharts-legend-item-text) {
-    color: var(--primary-light);
+    color: var(--color-primary-light);
     font-size: 0.875rem;
   }
 }

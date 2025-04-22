@@ -5,7 +5,7 @@
     "selectTheme": "Select a theme",
     "selectLanguage": "Select a language",
     "notifications": "Notifications",
-    "save": "Save",
+    "save": "Save Changes",
     "avatar": "User avatar",
     "unknown": "Unknown",
     "loading": "Loading...",
@@ -14,7 +14,8 @@
     "cancel": "Cancel",
     "delete": "Delete",
     "edit": "Edit",
-    "back": "Back"
+    "back": "Back",
+    "aboutMyWork": "About my work"
   },
   "nav": {
     "en": "English",
@@ -414,5 +415,23 @@
     "content4": "Special business accounts with no monthly fees for the first year. Includes free transactions and dedicated account manager.",
     "title5": "Wealth Management Promo",
     "content5": "Free financial planning consultation for deposits over $50,000. Grow your wealth with our expert advisors."
+  },
+  "aboutMyWork": {
+    "title": "About my work",
+    "button": "My LinkedIn",
+    "list": {
+      "template": "Template is made on Next.js 15 version",
+      "responsive": "Fully responsive design",
+      "browser": "Support for the latest versions of browsers",
+      "graphics": "Graphics are built on <Recharts />",
+      "carousel": "Carousel are created on <Swiper />",
+      "components": "Components are created from scratch, without using any css frameworks!",
+      "multilanguage": "Multilanguage support",
+      "darkLight": "Support for dark and light versions of the template",
+      "scss": "SCSS is written using BEM methodology",
+      "animations": "Different types of css animations",
+      "charts": "Different types of charts",
+      "table": "Long tables with data, with fixed header and footer when scrolling the page"
+    }
   }
 }

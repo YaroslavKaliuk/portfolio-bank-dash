@@ -8,24 +8,24 @@ $r: '.layoutApp';
   display: grid;
   grid-template-rows: max-content 1fr max-content;
   min-height: 100dvh;
-  color: var(--text-primary);
+  color: var(--color-text-primary);
   font-size: 1rem;
-  background-color: var(--base-light-gray);
+  background-color: var(--color-base-light-gray);
 
-  @media (width >= 64rem) {
+  @include media($laptop) {
     grid-template-columns: 16rem 1fr;
   }
 
   // element
   //---------------------------------------------------------
   :focus-visible {
-    outline: 0.125rem solid var(--primary-light);
+    outline: 0.125rem solid var(--color-primary-light);
   }
 
   @media (pointer: fine) {
     @supports (-moz-appearance: none) {
       * {
-        scrollbar-color: var(--base-light-blue) var(--base-light-gray);
+        scrollbar-color: var(--color-base-light-blue) var(--color-base-light-gray);
         scrollbar-width: thin;
       }
     }
@@ -44,7 +44,7 @@ $r: '.layoutApp';
 
     ::-webkit-scrollbar-thumb {
       border-radius: 100vw;
-      background-color: var(--base-light-blue);
+      background-color: var(--color-base-light-blue);
     }
 
     ::-webkit-scrollbar-track {

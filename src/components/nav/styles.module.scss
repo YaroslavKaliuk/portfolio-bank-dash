@@ -8,7 +8,7 @@ $r: '.nav';
   display: flex;
   flex-direction: column;
 
-  @media (width < 63.9375rem) {
+  @include media($laptop, 'max-width') {
     grid-column: 1/-1;
     align-items: flex-start;
   }
@@ -19,7 +19,7 @@ $r: '.nav';
     gap: 1rem;
     display: flex;
     align-items: center;
-    color: var(--text-secondary);
+    color: var(--color-text-secondary);
     position: relative;
     padding-block: 1.25rem;
     transition: color 0.3s;
@@ -39,7 +39,7 @@ $r: '.nav';
     }
 
     &::before {
-      @media (width >= 64rem) {
+      @include media($laptop) {
         content: '';
         top: 0;
         left: -2rem;
@@ -56,17 +56,17 @@ $r: '.nav';
     &Active,
     &:focus-visible {
       outline: none;
-      color: var(--primary);
+      color: var(--color-primary);
 
       &::before {
         transform: scaleY(1);
-        background-color: var(--primary);
+        background-color: var(--color-primary);
       }
 
       #{$r}__title {
         &::before {
           transform: translateY(0);
-          color: var(--primary);
+          color: var(--color-primary);
         }
 
         &::after {
@@ -76,7 +76,7 @@ $r: '.nav';
     }
 
     &:hover {
-      color: var(--primary);
+      color: var(--color-primary);
 
       #{$r}__title {
         &::after {
@@ -85,7 +85,7 @@ $r: '.nav';
 
         &::before {
           transform: translateY(0);
-          color: var(--primary);
+          color: var(--color-primary);
         }
       }
     }
@@ -104,7 +104,7 @@ $r: '.nav';
     &::before {
       content: attr(data-title);
       inset: 0;
-      color: var(--text-secondary);
+      color: var(--color-text-secondary);
       position: absolute;
       transition: 0.3s;
     }

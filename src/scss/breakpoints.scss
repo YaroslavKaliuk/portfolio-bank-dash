@@ -1,0 +1,25 @@
+/* breakpoints
+-------------------------------------------------------------*/
+$mobile-small: 23.4375rem; // 375px
+$mobile: 40rem; // 640px
+$tablet: 48rem; // 768px
+$laptop: 64rem; // 1024px
+$desktop: 80rem; // 1280px
+$desktop-wide: 96rem; // 1536px
+
+@mixin media($p, $t: 'min-width') {
+  @media (#{$t}: if($t == 'max-width', $p - 0.0625rem, $p)) {
+    @content;
+  }
+}
+
+@mixin media-between($min, $max) {
+  $l: type-of($max) == 'list';
+  @media (min-width: $min) and (max-width: if($l and nth($max, 2) == 'max-width', nth($max, 1) - 0.0625rem, if($l, nth($max, 1), $max))) {
+    @content;
+  }
+}
+
+// @include media($tablet) {}
+// @include media($tablet, 'max-width') {}
+// @include media-between($mobile, ($desktop, 'max-width')) {}

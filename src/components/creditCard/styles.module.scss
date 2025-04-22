@@ -11,11 +11,11 @@ $r: '.creditCard';
   margin: -1.5rem;
   overflow: auto hidden;
 
-  @media (width < 63.9375rem) {
+  @include media($laptop, 'max-width') {
     gap: 1rem;
   }
 
-  @media (width >= 64rem) {
+  @include media($laptop) {
     gap: 2rem;
   }
 
@@ -30,7 +30,7 @@ $r: '.creditCard';
     perspective: 62.5rem;
     aspect-ratio: 16 / 10;
 
-    @media (width < 95.9375rem) {
+    @include media($desktop-wide, 'max-width') {
       min-height: 14rem;
     }
 
@@ -46,7 +46,7 @@ $r: '.creditCard';
     align-items: center;
     grid-template-columns: 1fr max-content;
     grid-template-rows: max-content 1fr max-content;
-    color: var(--base-white);
+    color: var(--color-base-white);
     font-family: var(--font-family-secondary);
     position: relative;
     border-radius: var(--border-radius-large);
@@ -56,9 +56,7 @@ $r: '.creditCard';
     background-repeat: no-repeat;
     background-blend-mode: overlay;
     background-position: center, bottom;
-    background-image:
-      linear-gradient(107deg, var(--primary) 2.61%, var(--accent-pink) 101.2%),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: var(--gradient-secondary);
     transition: transform 0.4s ease-in-out;
     transform-style: preserve-3d;
     container-type: inline-size;
@@ -89,9 +87,9 @@ $r: '.creditCard';
       justify-content: center;
       height: 2.5rem;
       line-height: 1;
-      color: var(--text-primary);
+      color: var(--color-text-primary);
       border-radius: var(--border-radius-small);
-      background-color: var(--base-light-gray);
+      background-color: var(--color-base-light-gray);
     }
 
     &Signature {
@@ -191,17 +189,15 @@ $r: '.creditCard';
   // modifier
   //---------------------------------------------------------
   &__isDark {
-    background-image:
-      linear-gradient(107deg, var(--accent-purple) 21.61%, var(--accent-blue) 101.2%),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: var(--gradient-primary);
   }
 
   &__isLight {
-    color: var(--primary-dark);
+    color: var(--color-primary-dark);
     background: unset;
     position: relative;
-    background-color: var(--base-white);
-    border: 0.0625rem solid var(--base-light-blue);
+    background-color: var(--color-base-white);
+    border: 0.0625rem solid var(--color-base-light-blue);
 
     &::before {
       content: '';
@@ -210,7 +206,7 @@ $r: '.creditCard';
       bottom: 5rem;
       height: 0.0625rem;
       position: absolute;
-      background-color: var(--base-light-blue);
+      background-color: var(--color-base-light-blue);
     }
   }
 }

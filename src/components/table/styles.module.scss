@@ -5,7 +5,7 @@ $r: '.table';
 // block
 //-----------------------------------------------------------
 #{$r} {
-  @media (width < 79.9380rem) {
+  @include media($desktop, 'max-width') {
     max-height: 50dvh;
     white-space: nowrap;
     overflow: auto visible;
@@ -20,13 +20,13 @@ $r: '.table';
   tr {
     th,
     td {
-      border-bottom: 1px solid var(--base-pale-blue);
+      border-bottom: 1px solid var(--color-base-pale-blue);
 
-      @media (width < 63.9375rem) {
+      @include media($laptop, 'max-width') {
         padding: 0.5rem;
       }
 
-      @media (width >= 64rem) {
+      @include media($laptop) {
         padding: 1rem;
       }
 
@@ -40,12 +40,12 @@ $r: '.table';
     th {
       top: 0;
       z-index: 1;
-      color: var(--primary-light);
+      color: var(--color-primary-light);
       font-weight: 500;
       position: sticky;
       text-align: left;
       vertical-align: bottom;
-      background-color: var(--base-white);
+      background-color: var(--color-base-white);
 
       &::before {
         content: '';
@@ -54,7 +54,7 @@ $r: '.table';
         bottom: 0;
         height: 0.125rem;
         position: absolute;
-        background-color: var(--base-pale-blue);
+        background-color: var(--color-base-pale-blue);
       }
     }
   }
@@ -76,7 +76,7 @@ $r: '.table';
         z-index: 1;
         font-weight: 600;
         position: sticky;
-        background-color: var(--base-white);
+        background-color: var(--color-base-white);
 
         &::before {
           content: '';
@@ -85,7 +85,7 @@ $r: '.table';
           right: 0;
           height: 0.125rem;
           position: absolute;
-          background-color: var(--base-pale-blue);
+          background-color: var(--color-base-pale-blue);
         }
       }
 
@@ -100,11 +100,11 @@ $r: '.table';
   // modifier
   //---------------------------------------------------------
   &__isRed {
-    color: var(--accent-red);
+    color: var(--color-accent-red);
   }
 
   &__isGreen {
-    color: var(--accent-green);
+    color: var(--color-accent-green);
   }
 }
 

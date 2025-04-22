@@ -21,8 +21,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@styles/*": ["src/scss/*"],
+      "@hooks/*": ["src/hooks/*"],
       "@icons/*": ["src/icons/*"],
+      "@styles/*": ["src/scss/*"],
       "@locales/*": ["src/i18n/locales/*"]
     }
   },

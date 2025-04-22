@@ -9,7 +9,7 @@ $r: '.chartPie';
   display: grid;
   align-items: start;
 
-  @media (40rem <= width < 79.938rem) {
+  @include media-between($mobile, ($desktop, 'max-width')) {
     grid-template-columns: 1fr max-content;
   }
 
@@ -39,7 +39,7 @@ $r: '.chartPie';
 
     &Name {
       font-size: 0.75rem;
-      color: var(--text-secondary);
+      color: var(--color-text-secondary);
     }
 
     &Value {
@@ -70,7 +70,7 @@ $r: '.chartPie';
 
       &:hover {
         td {
-          background-color: var(--base-light-gray);
+          background-color: var(--color-base-light-gray);
         }
       }
     }
@@ -82,12 +82,12 @@ $r: '.chartPie';
     }
 
     &Name {
-      color: var(--primary-light);
+      color: var(--color-primary-light);
     }
   }
 
   &__render {
-    fill: var(--base-white);
+    fill: var(--color-base-white);
 
     &Name {
       font-size: 0.875rem;
