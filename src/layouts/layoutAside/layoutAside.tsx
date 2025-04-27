@@ -11,6 +11,7 @@ export interface LayoutAsideProps {
 export const LayoutAside: FC<LayoutAsideProps> = ({ children }) => {
   return (
     <aside className={cn(styles.layoutAside)}>
+      <input type="checkbox" name="navToggle" hidden />
       <div className={styles.layoutAside__container}>{children}</div>
     </aside>
   );
