@@ -43,10 +43,9 @@ $r: '.formSettings';
   }
 
   &__button {
-    display: flex;
+    display: grid;
 
     @include media($desktop, 'max-width') {
-      justify-content: center;
       margin-top: 1rem;
     }
 

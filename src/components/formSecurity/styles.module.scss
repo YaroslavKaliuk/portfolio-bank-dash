@@ -34,14 +34,14 @@ $r: '.formSecurity';
   }
 
   &__button {
-    display: flex;
+    display: grid;
 
     @include media($desktop, 'max-width') {
-      justify-content: center;
       margin-top: 1rem;
     }
 
     @include media($desktop) {
+      grid-column: 1 / -1;
       justify-content: flex-end;
     }
   }

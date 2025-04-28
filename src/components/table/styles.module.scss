@@ -6,7 +6,7 @@ $r: '.table';
 //-----------------------------------------------------------
 #{$r} {
   @include media($desktop, 'max-width') {
-    max-height: 50dvh;
+    max-height: 70dvh;
     white-space: nowrap;
     overflow: auto visible;
   }

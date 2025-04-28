@@ -26,17 +26,6 @@ $r: '.layoutAside';
     grid-row: 1 / -1;
   }
 
-  :has([name='navToggle']:checked) {
-    #{$r} {
-      opacity: 1;
-      pointer-events: all;
-
-      &__container {
-        transform: scale(1);
-      }
-    }
-  }
-
   // element
   //---------------------------------------------------------
   &__container {
@@ -65,9 +54,29 @@ $r: '.layoutAside';
     }
   }
 
+  &__toggle {
+    display: none;
+    inset: 0;
+    position: absolute;
+
+    @include media($laptop, 'max-width') {
+      display: block;
+    }
+  }
+
   // modifier
   //---------------------------------------------------------
 }
 
 // influence
 //-----------------------------------------------------------
+:has([id='navToggle']:checked) {
+  #{$r} {
+    opacity: 1;
+    pointer-events: all;
+
+    &__container {
+      transform: scale(1);
+    }
+  }
+}

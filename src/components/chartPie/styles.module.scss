@@ -6,18 +6,22 @@ $r: '.chartPie';
 //-----------------------------------------------------------
 #{$r} {
   gap: 1rem;
-  display: grid;
+  display: flex;
   align-items: start;
+  flex-direction: column;
 
   @include media-between($mobile, ($desktop, 'max-width')) {
-    grid-template-columns: 1fr max-content;
+    flex-direction: row;
   }
 
   // element
   //---------------------------------------------------------
   &__circle {
+    flex-grow: 1;
     display: grid;
     place-items: center;
+    margin: auto;
+    max-width: 28rem;
     position: relative;
 
     &Info {
@@ -49,6 +53,10 @@ $r: '.chartPie';
   }
 
   &__table {
+    @include media-between($mobile, ($desktop, 'max-width')) {
+      width: fit-content;
+    }
+
     tr {
       cursor: default;
       border-radius: var(--border-radius-small);

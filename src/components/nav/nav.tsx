@@ -25,7 +25,7 @@ export const Nav: FC = () => {
   const locale = pathname.split('/')[1] || 'en';
 
   const handleClick = () =>
-    document.querySelector<HTMLInputElement>("input[name='navToggle']")?.click();
+    document.querySelector<HTMLInputElement>("input[id='navToggle']")?.click();
 
   return (
     <nav className={cn(styles.nav)}>

@@ -47,26 +47,27 @@ $r: '.navToggle';
     }
   }
 
+  &:has([id='navToggle']:checked) {
+    #{$r}__lines {
+      & {
+        background-color: unset;
+      }
+
+      &::after {
+        bottom: auto;
+        transform: rotate(45deg);
+      }
+
+      &::before {
+        top: auto;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
   // modifier
   //---------------------------------------------------------
 }
 
 // influence
 //-----------------------------------------------------------
-:has([name='navToggle']:checked) {
-  #{$r}__lines {
-    & {
-      background-color: unset;
-    }
-
-    &::after {
-      bottom: auto;
-      transform: rotate(45deg);
-    }
-
-    &::before {
-      top: auto;
-      transform: rotate(-45deg);
-    }
-  }
-}
