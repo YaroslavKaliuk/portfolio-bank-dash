@@ -6,6 +6,7 @@ export * from './title';
 export * from './table';
 export * from './button';
 export * from './avatar';
+export * from './notify';
 export * from './loader';
 export * from './search';
 export * from './dialog';

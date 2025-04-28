@@ -434,5 +434,11 @@
       "charts": "Diferentes tipos de gráficos",
       "table": "Tablas largas con datos, con encabezado fijo y pie de página al desplazarse por la página"
     }
+  },
+  "toast": {
+    "yourTransferHasBeenSent": "Your transfer has been sent!",
+    "newCardHasBeenAdded": "New card has been added!",
+    "settingsHasBeenUpdated": "Settings has been updated!",
+    "messageHasBeenSent": "Message has been sent!"
   }
 }

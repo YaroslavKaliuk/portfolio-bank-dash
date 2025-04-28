@@ -4,12 +4,18 @@ import cn from 'classnames';
 import styles from './styles.module.scss';
 import { Input, Button } from '@/components';
 import { useTranslations } from 'next-intl';
+import toast from 'react-hot-toast';
 
 export const FormAddNewCard = () => {
   const t = useTranslations();
 
+  const notify = () =>
+    toast(t('toast.newCardHasBeenAdded'), {
+      icon: '✅',
+    });
+
   return (
-    <form className={cn(styles.formAddNewCard)}>
+    <form className={cn(styles.formAddNewCard)} onSubmit={(e) => e.preventDefault()}>
       <div className={styles.formAddNewCard__description}>{t('form.description')}</div>
       <div className={styles.formAddNewCard__inputs}>
         <Input type="text" title={t('form.cardType')} placeholder="Classic" />
@@ -31,7 +37,7 @@ export const FormAddNewCard = () => {
         <Input type="date" title={t('form.expirationDate')} placeholder="2020-01-25" />
       </div>
       <div className={styles.formAddNewCard__button}>
-        <Button title={t('form.addCard')} />
+        <Button title={t('form.addCard')} onClick={notify} />
       </div>
     </form>
   );

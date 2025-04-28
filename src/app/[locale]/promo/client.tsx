@@ -92,7 +92,6 @@ export default function ServicesClient() {
                 title: t('services.checkingAccounts.security'),
                 value: t('services.checkingAccounts.securityValue'),
               },
-              { button: <Button title={t('services.checkingAccounts.button')} isOutline /> },
             ],
             [
               { icon: <Icons.IconSaving /> },
@@ -112,7 +111,6 @@ export default function ServicesClient() {
                 title: t('services.savingsAccounts.fees'),
                 value: t('services.savingsAccounts.feesValue'),
               },
-              { button: <Button title={t('services.savingsAccounts.button')} isOutline /> },
             ],
             [
               { icon: <Icons.IconLoan /> },
@@ -132,7 +130,6 @@ export default function ServicesClient() {
                 title: t('services.businessLoans.solutions'),
                 value: t('services.businessLoans.solutionsValue'),
               },
-              { button: <Button title={t('services.businessLoans.button')} isOutline /> },
             ],
             [
               { icon: <Icons.IconCreditCard /> },
@@ -152,7 +149,6 @@ export default function ServicesClient() {
                 title: t('services.debitCreditCards.protection'),
                 value: t('services.debitCreditCards.protectionValue'),
               },
-              { button: <Button title={t('services.debitCreditCards.button')} isOutline /> },
             ],
             [
               { icon: <Icons.IconSafety /> },
@@ -172,7 +168,6 @@ export default function ServicesClient() {
                 title: t('services.lifeInsurance.protection'),
                 value: t('services.lifeInsurance.protectionValue'),
               },
-              { button: <Button title={t('services.lifeInsurance.button')} isOutline /> },
             ],
           ]}
         />

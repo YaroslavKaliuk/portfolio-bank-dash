@@ -4,12 +4,18 @@ import cn from 'classnames';
 import styles from './styles.module.scss';
 import { Input, Button, Avatar } from '@/components';
 import { useTranslations } from 'next-intl';
+import toast from 'react-hot-toast';
 
 export const FormSettings = () => {
   const t = useTranslations();
 
+  const notify = () =>
+    toast(t('toast.settingsHasBeenUpdated'), {
+      icon: '✅',
+    });
+
   return (
-    <form className={cn(styles.formSettings)}>
+    <form className={cn(styles.formSettings)} onSubmit={(e) => e.preventDefault()}>
       <div className={styles.formSettings__avatar}>
         <Avatar isEditable />
       </div>
@@ -34,7 +40,7 @@ export const FormSettings = () => {
         <Input type="text" title={t('form.country')} defaultValue="USA" />
       </div>
       <div className={styles.formSettings__button}>
-        <Button title={t('common.save')} />
+        <Button title={t('common.save')} onClick={notify} />
       </div>
     </form>
   );

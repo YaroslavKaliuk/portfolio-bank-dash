@@ -433,5 +433,11 @@
       "charts": "Different types of charts",
       "table": "Long tables with data, with fixed header and footer when scrolling the page"
     }
+  },
+  "toast": {
+    "yourTransferHasBeenSent": "Your transfer has been sent!",
+    "newCardHasBeenAdded": "New card has been added!",
+    "settingsHasBeenUpdated": "Settings has been updated!",
+    "messageHasBeenSent": "Message has been sent!"
   }
 }

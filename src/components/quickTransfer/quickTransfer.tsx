@@ -13,6 +13,7 @@ import { Title } from '../title';
 import { Button } from '../button';
 import * as Icons from '@/icons';
 import { useTranslations } from 'next-intl';
+import toast from 'react-hot-toast';
 
 export interface QuickTransferProps {
   items: {
@@ -31,6 +32,11 @@ export const QuickTransfer: FC<QuickTransferProps> = ({ items }) => {
     setActiveIndex(index);
     setSentTo(title || '');
   };
+
+  const notify = () =>
+    toast(t('toast.yourTransferHasBeenSent'), {
+      icon: '✅',
+    });
 
   return (
     <div className={cn(styles.quickTransfer)}>
@@ -79,12 +85,16 @@ export const QuickTransfer: FC<QuickTransferProps> = ({ items }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <form className={styles.quickTransfer__form}>
+      <form className={styles.quickTransfer__form} onSubmit={(e) => e.preventDefault()}>
         <Title title="instantTransfers" />
-        <Input type="number" placeholder="$100" min={1} required />
+        <Input type="number" placeholder="$100" min={1} />
         <Input type="text" placeholder={t('quickTransfer.sentTo')} value={sentTo} readOnly />
         <Input type="text" placeholder={t('quickTransfer.writeMessage')} />
-        <Button title={t('quickTransfer.button')} iconRight={<Icons.IconPaperPlane />} />
+        <Button
+          title={t('quickTransfer.button')}
+          iconRight={<Icons.IconPaperPlane />}
+          onClick={notify}
+        />
       </form>
     </div>
   );
