@@ -12,13 +12,13 @@ import {
   AboutMyWork,
   ThemeSwitcher,
   Notify,
+  Notifications,
 } from '@/components';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Suspense } from 'react';
-
 
 type Locale = (typeof routing.locales)[number];
 
@@ -52,6 +52,7 @@ export default async function RootLayout({
           <NavToggle />
           <Caption />
           <Search isHeader />
+          <Notifications />
           <LanguageSwitcher isHeader />
           <ThemeSwitcher isHeader />
           <Avatar />

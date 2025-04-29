@@ -25,6 +25,7 @@ export * from './servicesList';
 export * from './formSecurity';
 export * from './formSettings';
 export * from './swiperSlider';
+export * from './notifications';
 export * from './quickTransfer';
 export * from './themeSwitcher';
 export * from './formAddNewCard';

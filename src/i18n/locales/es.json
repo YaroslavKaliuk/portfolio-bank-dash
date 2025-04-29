@@ -5,6 +5,7 @@
     "selectTheme": "Selecciona un tema",
     "selectLanguage": "Selecciona un idioma",
     "notifications": "Notificaciones",
+    "noNotifications": "No notificaciones",
     "save": "Guardar cambios",
     "avatar": "Avatar del usuario",
     "unknown": "Desconocido",
@@ -34,7 +35,7 @@
     "creditCards": "Tarjetas de crédito"
   },
   "search": {
-    "placeholder": "Busca algo..."
+    "placeholder": "Busca..."
   },
   "form": {
     "yourName": "Tu Nombre",

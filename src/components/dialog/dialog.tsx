@@ -38,7 +38,7 @@ export const Dialog: FC<DialogProps> = ({ id, onClose, children, title, footer }
     <dialog className={cn(styles.dialog)} id={id} ref={ref} onClose={onClose}>
       <div className={styles.dialog__header}>
         {title && <h2 className={styles.dialog__title}>{title}</h2>}
-        <button type="button" className={styles.dialog__close} onClick={() => ref.current?.close()}>
+        <button className={styles.dialog__close} type="button" onClick={() => ref.current?.close()}>
           <Icons.IconClose />
         </button>
       </div>

@@ -1,6 +1,6 @@
 export { default as IconLogo } from './iconLogo';
+export { default as IconBell } from './iconBell';
 export { default as IconGraph } from './iconGraph';
-export { default as IconBell } from './iconLifeInsurance';
 export { default as IconHome } from './iconHome';
 export { default as IconTransfer } from './iconTransfer';
 export { default as IconUser } from './iconUser';
@@ -14,6 +14,7 @@ export { default as IconFlagUK } from './iconFlagUK';
 export { default as IconSun } from './iconSun';
 export { default as IconMoon } from './iconMoon';
 export { default as IconEye } from './iconEye';
+export { default as IconTrash } from './iconTrash';
 export { default as IconEyeSlash } from './iconEyeSlash';
 export { default as IconPen } from './iconPen';
 export { default as IconMoney } from './iconMoney';

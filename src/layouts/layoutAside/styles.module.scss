@@ -38,10 +38,10 @@ $r: '.layoutAside';
 
     @include media($laptop, 'max-width') {
       gap: 1rem;
-      grid-template-columns: 1fr max-content max-content;
+      grid-template-columns: 1fr max-content max-content max-content;
       padding: 1rem;
       padding-bottom: 3rem;
-      max-width: clamp(15rem, 100vw, 20rem);
+      max-width: clamp(375px, 100vw, 20rem);
       transform: scale(0.9);
       transition:
         transform 0.3s,

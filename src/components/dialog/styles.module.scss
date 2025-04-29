@@ -12,10 +12,15 @@ $r: '.dialog';
   width: min(calc(100% - 2rem), 40rem);
   border-radius: var(--border-radius-small);
   background-color: var(--color-base-white);
+  animation: dialogClose 0.3s forwards;
   transition:
     display 0.3s allow-discrete,
     overlay 0.3s allow-discrete;
-  animation: dialogClose 0.3s forwards;
+
+  @supports (hanging-punctuation: first) and (font: -apple-system-body) and
+    (-webkit-appearance: none) {
+    transition: none;
+  }
 
   &__header {
     gap: 1rem;
@@ -69,6 +74,10 @@ $r: '.dialog';
     position: relative;
     transition: color 0.3s;
 
+    &:focus {
+      outline: none;
+    }
+
     @media (pointer: fine) {
       &:hover {
         color: currentcolor;
@@ -110,11 +119,9 @@ $r: '.dialog';
   // element
   //---------------------------------------------------------
   &::backdrop {
+    opacity: 0;
     backdrop-filter: blur(0.125rem);
     background-color: rgba(0, 0, 0, 0.5);
-    transition: backdrop-filter 0.3s;
-
-    opacity: 0;
     transition:
       opacity 0.3s,
       backdrop-filter 0.3s,

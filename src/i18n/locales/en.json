@@ -5,6 +5,7 @@
     "selectTheme": "Select a theme",
     "selectLanguage": "Select a language",
     "notifications": "Notifications",
+    "noNotifications": "No notifications",
     "save": "Save Changes",
     "avatar": "User avatar",
     "unknown": "Unknown",
@@ -34,7 +35,7 @@
     "transactions": "Transactions"
   },
   "search": {
-    "placeholder": "Search for something..."
+    "placeholder": "Search..."
   },
   "form": {
     "yourName": "Your Name",
