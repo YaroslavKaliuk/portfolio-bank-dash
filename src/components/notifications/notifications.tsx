@@ -1,24 +1,27 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import cn from 'classnames';
 import styles from './styles.module.scss';
 import * as Icons from '@/icons';
 import { useTranslations } from 'next-intl';
 
-const initial = [
-  '💳 Payment received! $250.00',
-  '🚨 Low balance alert! $12.45',
-  '✅ Transfer complete: $100',
-  '🔐 New device logged in',
-  '💰 Deposit cleared: $1,200',
-  '📱 Bill paid: $75.99',
-  '🏦 Loan approved! $5,000',
-];
-
 export const Notifications = () => {
-  const [items, setItems] = useState(initial);
   const t = useTranslations();
+  const initial = useMemo(
+    () => [
+      t('notification.message1'),
+      t('notification.message2'),
+      '✅ Transfer complete: $100',
+      '🔐 New device logged in',
+      '💰 Deposit cleared: $1,200',
+      '📱 Bill paid: $75.99',
+      '🏦 Loan approved! $5,000',
+    ],
+    [t],
+  );
+  const [items, setItems] = useState(initial);
+
   return (
     <div className={cn(styles.notifications)}>
       <input type="checkbox" id="notifications" hidden />
@@ -43,7 +46,7 @@ export const Notifications = () => {
               </div>
             ))
           ) : (
-            <div className={styles.notifications__empty}>{t('common.noNotifications')}</div>
+            <div className={styles.notifications__empty}>{t('notification.noNotifications')}</div>
           )}
         </div>
       </div>

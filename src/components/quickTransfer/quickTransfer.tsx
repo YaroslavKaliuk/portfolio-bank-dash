@@ -86,7 +86,7 @@ export const QuickTransfer: FC<QuickTransferProps> = ({ items }) => {
         ))}
       </Swiper>
       <form className={styles.quickTransfer__form} onSubmit={(e) => e.preventDefault()}>
-        <Title title="instantTransfers" />
+        <Title title={t('titles.instantTransfers')} />
         <Input type="number" placeholder="$100" min={1} />
         <Input type="text" placeholder={t('quickTransfer.sentTo')} value={sentTo} readOnly />
         <Input type="text" placeholder={t('quickTransfer.writeMessage')} />

@@ -5,7 +5,6 @@
     "selectTheme": "Select a theme",
     "selectLanguage": "Select a language",
     "notifications": "Notifications",
-    "noNotifications": "No notifications",
     "save": "Save Changes",
     "avatar": "User avatar",
     "unknown": "Unknown",
@@ -440,5 +439,15 @@
     "newCardHasBeenAdded": "New card has been added!",
     "settingsHasBeenUpdated": "Settings has been updated!",
     "messageHasBeenSent": "Message has been sent!"
+  },
+  "notification": {
+    "noNotifications": "No notifications",
+    "message1": "💳 Payment received! $250.00",
+    "message2": "🚨 Low balance alert! $12.45",
+    "message3": "✅ Transfer complete: $100",
+    "message4": "🔐 New device logged in",
+    "message5": "💰 Deposit cleared: $1,200",
+    "message6": "📱 Bill paid: $75.99",
+    "message7": "🏦 Loan approved! $5,000"
   }
 }
