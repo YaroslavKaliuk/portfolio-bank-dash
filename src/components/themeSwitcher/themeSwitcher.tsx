@@ -15,7 +15,8 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ isAside, isHeader }) => 
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const theme = localStorage.getItem('theme') === 'dark';
+    const savedTheme = localStorage.getItem('theme');
+    const theme = savedTheme ? savedTheme === 'dark' : true;
     setDark(theme);
     document.documentElement.setAttribute('data-theme', theme ? 'dark' : 'light');
     setMounted(true);
